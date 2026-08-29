@@ -43,7 +43,7 @@ SCILAWS-BENCH/
 │   ├── README.md         # Hugging Face dataset card
 │   ├── task_index.csv    # 118 tasks: discipline, target, row counts, license
 │   └── LICENSES.md       # per-task upstream data licenses
-├── scripts/              # dataset export, homepage build, local preview
+├── scripts/              # dataset export, local site preview
 └── tasks/                # ← downloaded from Hugging Face; not tracked here
 ```
 
