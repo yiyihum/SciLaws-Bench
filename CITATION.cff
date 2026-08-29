@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use SciLaws-Bench, please cite the paper."
+title: "SciLaws-Bench: Can LLMs Discover Scientific Laws in Real and Parallel Worlds?"
+authors:
+  - family-names: Huang
+    given-names: Yiming
+  - family-names: Liu
+    given-names: Ziche
+  - family-names: Wu
+    given-names: Zhuohang
+  - family-names: Wang
+    given-names: Yiqian
+  - family-names: Cui
+    given-names: Junxia
+  - family-names: Zou
+    given-names: Xinkai
+  - family-names: Mao
+    given-names: Linjun
+  - family-names: Huang
+    given-names: Nan
+  - family-names: Yu
+    given-names: Naicheng
+  - family-names: Zhu
+    given-names: Kaijie
+  - family-names: Ma
+    given-names: Yue
+  - family-names: Zhou
+    given-names: Kun
+  - family-names: Peng
+    given-names: Letian
+  - family-names: Shang
+    given-names: Jingbo
+year: 2026

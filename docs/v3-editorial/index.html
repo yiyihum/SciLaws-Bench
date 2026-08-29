@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SciLaws-Bench — Can LLMs Discover Scientific Laws in Real and Parallel Worlds?</title>
+<meta name="description" content="A paper-grounded benchmark of 118 scientific law-discovery problems, evaluated on fixed real records and inside residual-calibrated parallel worlds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-2:#f6f8fb; --card:#f6f8fb;
+  --fg:#0f1722; --fg-2:#4d5a6d; --fg-3:#8494a8;
+  --line:#e2e8f0; --line-2:#f0f4f8;
+  --brand:#2563eb; --brand-2:#dbeafe;
+  --real:#0d9488; --real-2:#ccfbf1;
+  --par:#7c3aed; --par-2:#ede9fe;
+  --warn:#d97706;
+  --railw:230px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:40px}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+a:hover{color:#1d4ed8}
+.serif{font-family:Newsreader,Georgia,serif}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+.shell{display:grid;grid-template-columns:var(--railw) minmax(0,1fr);gap:0;
+  max-width:1240px;margin:0 auto}
+@media(max-width:980px){.shell{grid-template-columns:1fr}}
+
+/* ---- left rail ---- */
+.rail{border-right:1px solid var(--line);padding:44px 28px 60px}
+.rail .inner{position:sticky;top:44px}
+@media(max-width:980px){.rail{border-right:none;border-bottom:1px solid var(--line);padding:26px 26px 22px}
+  .rail .inner{position:static}}
+.mark{font-family:Newsreader,serif;font-size:21px;font-weight:600;letter-spacing:-.01em;line-height:1.25;
+  margin-bottom:4px}
+.mark em{font-style:normal;color:var(--brand)}
+.mark-sub{font-size:12.5px;color:var(--fg-3);font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.04em;margin-bottom:30px}
+.toc{list-style:none;padding:0;margin:0 0 30px;font-size:14.5px}
+.toc li{margin-bottom:2px}
+.toc a{display:flex;gap:10px;color:var(--fg-2);text-decoration:none;padding:5px 0;
+  border-left:2px solid transparent;padding-left:12px;margin-left:-14px;transition:.15s}
+.toc a:hover{color:var(--fg);border-left-color:var(--line)}
+.toc a.on{color:var(--brand);border-left-color:var(--brand);font-weight:600}
+.toc .nm{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--fg-3);padding-top:1px}
+.railbtns{display:flex;flex-direction:column;gap:8px}
+@media(max-width:980px){.railbtns{flex-direction:row;flex-wrap:wrap}.toc{display:none}}
+.rb{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;
+  border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);
+  font-size:14px;font-weight:600;text-decoration:none;transition:.15s}
+.rb:hover{border-color:var(--brand);color:var(--brand)}
+.rb.solid{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.rb.solid:hover{background:#1f2937;color:#fff}
+.rb span{font-family:"IBM Plex Mono",monospace;font-size:11px;opacity:.6}
+
+/* ---- main column ---- */
+main{padding:52px 56px 80px;max-width:860px}
+@media(max-width:980px){main{padding:38px 26px 70px}}
+
+.dateline{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:20px;
+  display:flex;align-items:center;gap:12px}
+.dateline:after{content:"";flex:1;height:1px;background:var(--line)}
+h1{font-family:Newsreader,Georgia,serif;font-size:clamp(34px,5.2vw,54px);line-height:1.1;
+  letter-spacing:-.022em;font-weight:600;margin:0 0 22px}
+.standfirst{font-family:Newsreader,serif;font-size:21px;line-height:1.55;color:var(--fg-2);
+  margin:0 0 34px;max-width:52ch}
+.standfirst b{color:var(--fg);font-weight:600}
+.byline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:18px 0;margin-bottom:40px;font-size:15px;color:var(--fg-2);line-height:1.9}
+.byline b{color:var(--fg);font-weight:600}
+.byline sup{color:var(--brand);font-size:11px}
+.byline .aff{display:block;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--fg-3);
+  margin-top:9px;letter-spacing:.02em}
+
+section{padding:52px 0;border-top:1px solid var(--line-2)}
+h2{font-family:Newsreader,serif;font-size:32px;font-weight:600;letter-spacing:-.018em;
+  line-height:1.2;margin:0 0 6px}
+.dek{font-size:16.5px;color:var(--fg-3);margin:0 0 26px;max-width:56ch}
+p{margin:0 0 18px;max-width:64ch;color:var(--fg-2)}
+p b, li b{color:var(--fg);font-weight:600}
+.first p:first-of-type:first-letter{font-family:Newsreader,serif;float:left;font-size:60px;
+  line-height:.86;font-weight:600;padding:5px 10px 0 0;color:var(--brand)}
+
+figure{margin:26px 0 0}
+figure img{width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figcaption{font-size:13.5px;color:var(--fg-3);margin-top:10px;line-height:1.6;
+  padding-left:14px;border-left:2px solid var(--line)}
+figcaption b{color:var(--fg-2)}
+
+/* pull numbers */
+.figures{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);
+  border-radius:4px;overflow:hidden;background:var(--card);margin:8px 0 0}
+@media(max-width:700px){.figures{grid-template-columns:repeat(2,1fr)}}
+.figures div{padding:20px 18px;border-right:1px solid var(--line-2)}
+.figures div:last-child{border-right:none}
+.figures .n{font-family:Newsreader,serif;font-size:32px;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+.figures .l{font-size:12.5px;color:var(--fg-3);margin-top:3px;letter-spacing:.03em}
+
+/* setting blocks */
+.setting{border-left:3px solid var(--line);padding:4px 0 4px 24px;margin:30px 0}
+.setting.real{border-left-color:var(--real)}
+.setting.par{border-left-color:var(--par)}
+.setting .hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.setting h3{font-family:Newsreader,serif;font-size:24px;font-weight:600;margin:0;letter-spacing:-.015em}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 9px;border-radius:3px}
+.setting.real .chip{background:var(--real-2);color:var(--real)}
+.setting.par .chip{background:var(--par-2);color:var(--par)}
+.deflist{margin:18px 0 0;padding:0;list-style:none}
+.deflist li{padding:12px 0;border-top:1px dotted var(--line);font-size:15.5px;color:var(--fg-2);max-width:62ch}
+.deflist .t{font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;color:var(--fg);
+  display:block;margin-bottom:3px}
+.eq{font-family:"IBM Plex Mono",monospace;font-size:14px;background:var(--bg-2);
+  border:1px solid var(--line);border-radius:3px;padding:11px 14px;margin-top:14px;color:var(--fg-2);
+  display:inline-block}
+
+/* domain list */
+.domlist{margin:20px 0 0;border-top:1px solid var(--line)}
+.domrow{display:grid;grid-template-columns:190px 1fr 46px;gap:16px;align-items:center;
+  padding:11px 0;border-bottom:1px solid var(--line-2);font-size:15px}
+.domrow .nm{font-weight:500}
+.domrow .bar{height:9px;background:var(--bg-2);border-radius:2px;overflow:hidden}
+.domrow .bar i{display:block;height:100%;background:var(--brand);opacity:.75}
+.domrow .ct{font-family:"IBM Plex Mono",monospace;text-align:right;color:var(--fg-3);font-size:14px}
+@media(max-width:620px){.domrow{grid-template-columns:1fr 46px}.domrow .bar{display:none}}
+
+/* table */
+.tablewrap{overflow-x:auto;margin:24px 0 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
+caption{text-align:left;font-size:13.5px;color:var(--fg-3);padding-bottom:10px}
+th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--fg-3);font-weight:600;padding:9px 12px;text-align:right;border-bottom:1.5px solid var(--fg);white-space:nowrap}
+th:first-child{text-align:left}
+td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line-2);font-variant-numeric:tabular-nums;
+  font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--fg-2)}
+td:first-child{text-align:left;font-family:Inter,sans-serif;font-weight:600;color:var(--fg);
+  white-space:nowrap}
+tr:hover td{background:var(--card)}
+td.hi{color:var(--brand);font-weight:600}
+tbody tr:first-child td{background:var(--brand-2)}
+tbody tr:first-child:hover td{background:#c7ddfd}
+
+/* findings */
+.find{padding:34px 0;border-top:1px solid var(--line-2)}
+.find:first-of-type{border-top:none;padding-top:8px}
+.find .no{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+  color:var(--brand);text-transform:uppercase;margin-bottom:10px}
+.find h3{font-family:Newsreader,serif;font-size:26px;font-weight:600;letter-spacing:-.018em;
+  margin:0 0 14px;max-width:26ch}
+.marginal{border:1px solid var(--line);background:var(--card);border-radius:4px;padding:16px 18px;
+  margin:20px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px}
+.marginal .n{font-family:Newsreader,serif;font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.marginal .l{font-size:12.5px;color:var(--fg-3);margin-top:2px;line-height:1.45}
+.n.t{color:var(--real)} .n.p{color:var(--par)} .n.o{color:var(--warn)}
+
+pre{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;
+  overflow-x:auto;font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.7;
+  color:var(--fg-2);margin:20px 0 0}
+pre b{color:var(--brand);font-weight:500}
+footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-size:14px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<aside class="rail"><div class="inner">
+  <div class="mark serif">SciLaws<em>-</em>Bench</div>
+  <div class="mark-sub">Preprint · 2026</div>
+  <ul class="toc" id="toc">
+    <li><a href="#lede"><span class="nm">00</span> Overview</a></li>
+    <li><a href="#abstract"><span class="nm">01</span> Abstract</a></li>
+    <li><a href="#corpus"><span class="nm">02</span> The corpus</a></li>
+    <li><a href="#settings"><span class="nm">03</span> Two settings</a></li>
+    <li><a href="#results"><span class="nm">04</span> Results</a></li>
+    <li><a href="#findings"><span class="nm">05</span> Findings</a></li>
+    <li><a href="#cite"><span class="nm">06</span> Citation</a></li>
+  </ul>
+  <div class="railbtns">
+    <a class="rb solid" href="#" data-link="arxiv">arXiv <span>↗</span></a>
+    <a class="rb" href="../assets/scilaws_bench_paper.pdf">Paper PDF <span>↗</span></a>
+    <a class="rb" href="#" data-link="code">Code <span>↗</span></a>
+    <a class="rb" href="#" data-link="data">Dataset <span>↗</span></a>
+  </div>
+</div></aside>
+
+<main>
+  <div id="lede">
+    <div class="dateline">A benchmark for scientific law discovery</div>
+    <h1>Can LLMs Discover Scientific Laws in Real and Parallel Worlds?</h1>
+    <p class="standfirst">We took <b>118 open problems out of 381 scientific papers</b> — the kind a research community is still arguing about — and asked frontier models to find the law twice: once from the measurements science already has, and once inside a world whose law has never been written down.</p>
+
+    <div class="byline">
+      <b>Yiming Huang</b><sup>1*</sup>, <b>Ziche Liu</b><sup>1*</sup>, Zhuohang Wu<sup>2</sup>, Yiqian Wang<sup>3</sup>, Junxia Cui<sup>1</sup>, Xinkai Zou<sup>1</sup>, Linjun Mao<sup>1</sup>, Nan Huang<sup>1</sup>, Naicheng Yu<sup>1</sup>, Kaijie Zhu<sup>4</sup>, Yue Ma<sup>1</sup>, Kun Zhou<sup>1</sup>, Letian Peng<sup>1†</sup>, Jingbo Shang<sup>1†</sup>
+      <span class="aff">1 UC San Diego · 2 UC Irvine · 3 Cushing Academy · 4 UC Santa Barbara &nbsp;&nbsp;|&nbsp;&nbsp; *equal contribution &nbsp;†corresponding authors</span>
+    </div>
+
+    <figure style="margin-top:0">
+      <img src="../assets/figures/main-f1.png" alt="Overview of SciLaws-Bench.">
+      <figcaption><b>The construction, in one picture.</b> Every curated problem is instantiated twice — as a fixed-record <b>Real</b> task scored on predictive fit and scientific validity, and as a queryable <b>Parallel</b> world scored on how much of a hidden law the model recovers.</figcaption>
+    </figure>
+  </div>
+
+  <section id="abstract" class="first">
+    <h2>Abstract</h2>
+    <p>Scientific equation discovery has long been central to scientific progress, proceeding through iterative cycles of hypothesis generation, observational testing, and refinement under scientific constraints. As LLM capabilities advance and their role in AI for Science expands, it remains an open problem whether they can genuinely discover scientific laws — and how that ability should be evaluated. Existing evaluations either simplify discovery through synthetic settings or reuse published targets that may already be familiar to the models.</p>
+    <p>We introduce <b>SciLaws-Bench</b>, a benchmark for scientific law discovery built from published research and real scientific data: 118 problems drawn from 381 papers, covering 291 candidate laws and roughly 8M real data points across six disciplines. Each problem is instantiated in two complementary settings. <b>SciLaws-Real</b> asks models to propose laws from fixed real observations, evaluating held-out predictive fit and scientific validity derived from the source literature. <b>SciLaws-Parallel</b> asks models to actively query residual-calibrated worlds and recover synthesized hidden laws derived from published forms.</p>
+    <p>We find that predictive fit can diverge from scientific validity, that memorization shapes whether models reproduce or move beyond published formulas, and that a best-of-<i>N</i> study reveals a selection bottleneck.</p>
+    <div class="figures" id="figs"></div>
+  </section>
+
+  <section id="corpus">
+    <h2>The corpus</h2>
+    <p class="dek">Mined from active, data-driven literature — not textbooks — with human verification of every eligibility decision that matters.</p>
+    <p>A problem is admitted only when three things hold at once: the paper states an established closed-form law with enough validity constraints to check it; the dataset is public and large enough to evaluate on; and, jointly, the target does not leak into the inputs while at least one published formula beats a naive baseline. That last clause is what keeps the benchmark honest — every task has a real law that really works, and a real gap left to close.</p>
+    <p><b>66 problems are single-group:</b> one global law, one parameter set. <b>52 are multi-group:</b> related groups share a functional form while a few parameter values differ, so a model must find a law that <em>transfers</em> rather than fit each group on its own. No prior benchmark covers that setting.</p>
+    <div class="domlist" id="domlist"></div>
+    <figure>
+      <img src="../assets/figures/20260826_0054_pipeline.png" alt="The SciLaws-Bench construction pipeline.">
+      <figcaption><b>Curation pipeline.</b> LLM-assisted search and screening, human verification, standardization into executable task packages, then hidden-law synthesis and residual calibration for the Parallel worlds.</figcaption>
+    </figure>
+  </section>
+
+  <section id="settings">
+    <h2>Two settings</h2>
+    <p class="dek">Both inherit the same scientific context, admissible ranges, validity constraints, and group structure. What differs is where the evidence comes from — and whether a ground truth exists at all.</p>
+
+    <div class="setting real">
+      <div class="hd"><h3>SciLaws-Real</h3><span class="chip">fixed records</span></div>
+      <p style="margin-bottom:0">The measurements have already been collected. A model reads the scientific context and the training records and proposes a closed-form law. Published formulas act as reference baselines, not as recovery targets — a model is free, and rewarded, for going past them.</p>
+      <ul class="deflist">
+        <li><span class="t">S_N — numeric fit</span>Reference-relative on held-out data: the strongest published formula scores 0.5, a perfect predictor 1.0. Splits test interpolation, input-range extrapolation, temporal transfer, cross-condition generalization, or entirely held-out groups.</li>
+        <li><span class="t">S_V — scientific validity</span>A code-enabled judge executes each item of a frozen, source-grounded rubric, behind a global anti-hacking gate that rejects lookup tables and runaway free parameters.
+          <div class="eq">S_V(t) = a_t · M_t / N_t</div></li>
+      </ul>
+    </div>
+
+    <div class="setting par">
+      <div class="hd"><h3>SciLaws-Parallel</h3><span class="chip">active queries</span></div>
+      <p style="margin-bottom:0">The same problem, rebuilt as a world you can run experiments in. Its generating mechanism is a newly synthesized structural variant of the published formula — data-consistent, physically screened, and absent from the literature. The model starts with no observations at all.</p>
+      <ul class="deflist">
+        <li><span class="t">S_S — structure recovery</span>Five levels: 0 unrelated · 0.25 right variables or trends · 0.5 the published base form · 0.75 base plus most added terms · 1.0 the complete hidden structure.</li>
+        <li><span class="t">Residual calibration</span>Parameters fitted on the real records, residuals debiased and resampled by k-NN bootstrap so the empirical scatter survives, noise scaled to keep the law identifiable inside the query budget.
+          <div class="eq">y = f(X) + α · resample(X)</div></li>
+      </ul>
+      <figure>
+        <img src="../assets/figures/sim3_worlds.png" alt="Parallel worlds and the corresponding real records.">
+        <figcaption><b>Calibrated worlds against their real counterparts.</b> (a)–(c) single-group tasks; (d) a multi-group task with one shared functional form and group-specific parameters.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="results">
+    <h2>Results</h2>
+    <p class="dek">Nine frontier models, one fixed harness: a ReAct-style agent with a Python sandbox, up to 30 turns, and a fixed experimentation budget in the Parallel setting. Only the base model varies.</p>
+    <div class="tablewrap">
+      <table id="lb"><caption>All values are percentages. <b>Single</b> = one global law; <b>Multi</b> = shared form with per-group parameters. Best per column in blue.</caption></table>
+    </div>
+    <p style="font-size:14px;color:var(--fg-3);margin-top:16px">S<sub>V</sub>, S<sub>S</sub> and the memorization verdict are LLM-judged. Against majority labels from five domain experts, the judges reach Cohen's κ = 0.82, 0.84 and 0.77 — all inside the corresponding human–human ranges.</p>
+  </section>
+
+  <section id="findings">
+    <h2>Findings</h2>
+
+    <div class="find">
+      <div class="no">Finding one</div>
+      <h3>A better fit is not a better law</h3>
+      <p>Across 3,616 within-task model pairs with unequal fit, numeric fit and scientific validity agree only 54.9% of the time — and reach 69.5% only once the fit margin exceeds ΔS<sub>N</sub> ≥ 0.4. On a nuclear-physics task the best-fitting submission introduces a resonance peak that does not exist. On the proton form-factor task the failure runs the other way: all nine models submit physically valid forms, and seven still lose to the published reference.</p>
+      <div class="marginal">
+        <div><div class="n t">54.9%</div><div class="l">fit–validity concordance</div></div>
+        <div><div class="n t">69.5%</div><div class="l">only at ΔS<sub>N</sub> ≥ 0.4</div></div>
+        <div><div class="n o">7 / 9</div><div class="l">valid yet below reference</div></div>
+      </div>
+      <figure><img src="../assets/figures/coupling_domain_performance.png" alt="Fit-validity concordance and per-domain leaders."><figcaption><b>(a)</b> concordance as a function of fit margin. <b>(b)</b> aggregate rankings hide the domain picture — GPT-5.5 leads fit in five of six domains and ranks seventh in Biology.</figcaption></figure>
+    </div>
+
+    <div class="find">
+      <div class="no">Finding two</div>
+      <h3>Memory hands back the published form, never the new terms</h3>
+      <p>A cold-recall audit sorts the tasks into <b>Canon</b>, <b>Mid</b> and <b>Moat</b>. Only 11.9% of problems are recalled by all nine models; 47.5% by none. On Real, models beat the published baseline <em>more</em> often precisely where they cannot recall it — GPT-5.5 goes from 21% to 54% between Canon and Moat. On Parallel, recall lifts recovery of the published base form from 0.59 to 0.85, yet recovery of the complete hidden law stays flat near 0.08 at every tier, moving only with capability: 0% for GPT-4o-mini, 21% for GPT-5.5.</p>
+      <div class="marginal">
+        <div><div class="n p">47.5%</div><div class="l">recalled by no model — the discovery moat</div></div>
+        <div><div class="n p">11.9%</div><div class="l">recalled by all nine</div></div>
+        <div><div class="n o">0.08</div><div class="l">full-law recovery, flat across tiers</div></div>
+      </div>
+      <figure><img src="../assets/figures/mem_figure5.png" alt="Cold recall and recovery across the two settings."></figure>
+    </div>
+
+    <div class="find">
+      <div class="no">Finding three</div>
+      <h3>Models write better laws than they can pick</h3>
+      <p>Draw 20 candidates per task, then let the same model run a knockout tournament over them. From N=5 to N=20 the oracle gains 4.5 points of fit and 5.3 points of validity; self-selection captures under 2 points of either. Inside the five-candidate groups the selector actually sees, 60% of its winners are Pareto-dominated by a sibling candidate — beaten on one metric and no worse on the other. The bottleneck is not generation.</p>
+      <div class="marginal">
+        <div><div class="n o">0.93</div><div class="l">oracle joint balance at N=20</div></div>
+        <div><div class="n t">0.61</div><div class="l">self-selected</div></div>
+        <div><div class="n o">60%</div><div class="l">winners Pareto-dominated</div></div>
+      </div>
+      <figure><img src="../assets/figures/repeated_sampling.png" alt="Self-selected versus oracle best-of-N performance."></figure>
+    </div>
+  </section>
+
+  <section id="cite">
+    <h2>Citation</h2>
+<pre><b>@article</b>{huang2026scilaws,
+  title   = {Can LLMs Discover Scientific Laws in Real and Parallel Worlds?},
+  author  = {Huang, Yiming and Liu, Ziche and Wu, Zhuohang and Wang, Yiqian and
+             Cui, Junxia and Zou, Xinkai and Mao, Linjun and Huang, Nan and
+             Yu, Naicheng and Zhu, Kaijie and Ma, Yue and Zhou, Kun and
+             Peng, Letian and Shang, Jingbo},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre>
+    <footer>
+      <div>SciLaws-Bench · University of California San Diego</div>
+      <div class="mono">118 problems / 291 laws / 381 papers</div>
+    </footer>
+  </section>
+</main>
+</div>
+
+<script src="../assets/data.js"></script>
+<script>
+(function(){
+  const D=window.SCILAWS,S=D.stats;
+  document.getElementById('figs').innerHTML=[[S.problems,'Scientific problems'],[S.laws,'Candidate laws'],
+    [S.papers,'Source papers'],[S.datapoints,'Real data points']]
+    .map(function(c){return '<div><div class="n">'+c[0]+'</div><div class="l">'+c[1]+'</div></div>'}).join('');
+
+  const mx=Math.max.apply(null,D.domains.map(function(d){return d.count}));
+  document.getElementById('domlist').innerHTML=D.domains.map(function(d){
+    return '<div class="domrow"><div class="nm">'+d.name+'</div>'+
+      '<div class="bar"><i style="width:'+(100*d.count/mx)+'%"></i></div>'+
+      '<div class="ct">'+d.count+'</div></div>'}).join('');
+
+  const L=D.leaderboard,K=['sn_single','sn_multi','sn_all','sv_single','sv_multi','sv_all','ss_single','ss_multi','ss_all'];
+  const best={};K.forEach(function(k){best[k]=Math.max.apply(null,L.map(function(r){return r[k]}))});
+  let h='<thead><tr><th>Base model</th>'+
+    '<th>S<sub>N</sub> single</th><th>multi</th><th>all</th>'+
+    '<th>S<sub>V</sub> single</th><th>multi</th><th>all</th>'+
+    '<th>S<sub>S</sub> single</th><th>multi</th><th>all</th></tr></thead><tbody>';
+  L.forEach(function(r){
+    h+='<tr><td>'+r.model+'</td>'+K.map(function(k){
+      return '<td class="'+(r[k]===best[k]?'hi':'')+'">'+r[k].toFixed(1)+'</td>'}).join('')+'</tr>';
+  });
+  const t=document.getElementById('lb');
+  t.insertAdjacentHTML('beforeend',h+'</tbody>');
+
+  // scroll spy
+  const links=[].slice.call(document.querySelectorAll('.toc a'));
+  const secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  const io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){
+      links.forEach(function(a){a.classList.remove('on')});
+      const i=secs.indexOf(e.target); if(i>-1) links[i].classList.add('on');
+    }});
+  },{rootMargin:'-15% 0px -70% 0px'});
+  secs.forEach(function(s){ if(s) io.observe(s) });
+})();
+</script>
+</body>
+</html>

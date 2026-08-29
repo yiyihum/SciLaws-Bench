@@ -1,0 +1,9 @@
+TODO: choose a code license before publishing this repository.
+
+This file governs the code in harness/, baseline_agent/ and scripts/ only.
+Task DATA carries the license of its upstream source; see dataset/LICENSES.md.
+
+Common choices for a benchmark of this kind:
+  MIT           — shortest, most permissive
+  Apache-2.0    — permissive plus an explicit patent grant
+  CC-BY-4.0     — attribution, but written for content rather than code

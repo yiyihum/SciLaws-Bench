@@ -1,0 +1,4376 @@
+{
+  "models": [
+    "claude-opus-4-8-fg",
+    "deepseek-v4-pro",
+    "gemini-3.5-flash-fg",
+    "glm-5.2",
+    "gpt-4o-mini",
+    "gpt-5-mini",
+    "gpt-5.5",
+    "gpt5.4-mini",
+    "qwen3.7-max"
+  ],
+  "n_tasks": 118,
+  "score_groups": {
+    "real_numeric": "numeric_score (real split: numeric fit, per-task metric)",
+    "real_validity": "validity_score (real split: fraction of validity rubrics satisfied, 0-1)",
+    "parallel_structure": "structure_score (parallel split: formula-structure match vs GT, 0-1)"
+  },
+  "tasks": {
+    "baseball_pythagorean_winpct_lahman__win_pct": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.499746209738256,
+        "deepseek-v4-pro": 0.5006827872205425,
+        "gemini-3.5-flash-fg": 0.49842162304945425,
+        "glm-5.2": 0.5007010569841993,
+        "gpt-4o-mini": 0.21189532808598477,
+        "gpt-5-mini": 0.4959120409064418,
+        "gpt-5.5": 0.5006188731534276,
+        "gpt5.4-mini": 0.4989711046880516,
+        "qwen3.7-max": 0.5006188728977267
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.7142857142857143,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "materials_project_elastic_birch_murnaghan__K_VRH": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.7260875559797428,
+        "deepseek-v4-pro": 0.7257801112050589,
+        "gemini-3.5-flash-fg": 0.7301076255157943,
+        "glm-5.2": 0.7257846665277965,
+        "gpt-4o-mini": 0.6810933389233158,
+        "gpt-5-mini": 0.726259442499321,
+        "gpt-5.5": 0.7289726780177839,
+        "gpt5.4-mini": 0.723189773694185,
+        "qwen3.7-max": 0.7267813118075446
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8571428571428571,
+        "deepseek-v4-pro": 0.7142857142857143,
+        "gemini-3.5-flash-fg": 0.7142857142857143,
+        "glm-5.2": 0.8571428571428571,
+        "gpt-4o-mini": 0.2857142857142857,
+        "gpt-5-mini": 0.5714285714285714,
+        "gpt-5.5": 0.5714285714285714,
+        "gpt5.4-mini": 0.42857142857142855,
+        "qwen3.7-max": 0.8571428571428571
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "cloud_cover_parameterization__cloud_cover": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6657670398072648,
+        "deepseek-v4-pro": 0.6820016160557681,
+        "gemini-3.5-flash-fg": 0.665098437539394,
+        "glm-5.2": 0.6992130893896504,
+        "gpt-4o-mini": 0.5414809704099115,
+        "gpt-5-mini": 0.5328671624460283,
+        "gpt-5.5": 0.7164885520820199,
+        "gpt5.4-mini": 0.6545645609008848,
+        "qwen3.7-max": 0.7066441546301501
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "solar_flat_plate_collector_graz_efficiency__eta_thermal": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4981435053092206,
+        "deepseek-v4-pro": 0.4981435407636857,
+        "gemini-3.5-flash-fg": 0.6013519583803033,
+        "glm-5.2": 0.6063558259944613,
+        "gpt-4o-mini": 0.10975436663724325,
+        "gpt-5-mini": 0.49814635534834384,
+        "gpt-5.5": 0.6117007753021093,
+        "gpt5.4-mini": 0.597539594663044,
+        "qwen3.7-max": 0.49814635534834384
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "hacks_law_river_length_hydrosheds__main_length_km": {
+      "type": "typeI",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5970079941364572,
+        "deepseek-v4-pro": 0.5422813266218962,
+        "gemini-3.5-flash-fg": 0.5387294876008626,
+        "glm-5.2": 0.5776325831692315,
+        "gpt-4o-mini": 0.48832581999598923,
+        "gpt-5-mini": 0.59719499470556,
+        "gpt-5.5": 0.5799363732229579,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5883898853536563
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.6,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "ttauri_accretion__L_acc": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5878465455159512,
+        "deepseek-v4-pro": 0.5041914318972932,
+        "gemini-3.5-flash-fg": 0.4619060552800571,
+        "glm-5.2": 0.5583901170785222,
+        "gpt-4o-mini": 0.5280420898865398,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.46425642290482005,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5411428926207615
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "ground_motion_ita18__log10_pga": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.48299823611381243,
+        "deepseek-v4-pro": 0.4890102309428277,
+        "gemini-3.5-flash-fg": 0.5709026426513968,
+        "glm-5.2": 0.4945769009005746,
+        "gpt-4o-mini": 0.46806324726734894,
+        "gpt-5-mini": 0.4699008426255914,
+        "gpt-5.5": 0.5687507214013247,
+        "gpt5.4-mini": 0.4824353028570324,
+        "qwen3.7-max": 0.5651434328978573
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.875,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "exfor_neutron_capture_resonance_gold__sigma_E": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.7210476978982585,
+        "deepseek-v4-pro": 0.6307051405997208,
+        "gemini-3.5-flash-fg": 0.6450129654092674,
+        "glm-5.2": 0.7278201055104927,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4999997052218573,
+        "gpt-5.5": 0.7110753732897186,
+        "gpt5.4-mini": 0.5144147619023335,
+        "qwen3.7-max": 0.7292102802292285
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.6,
+        "gpt-4o-mini": 0.8,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 0.8,
+        "gpt5.4-mini": 0.6,
+        "qwen3.7-max": 0.4
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "ghg_emission_drivers__CDE": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5055299664151224,
+        "deepseek-v4-pro": 0.37626535263099004,
+        "gemini-3.5-flash-fg": 0.23404362819371882,
+        "glm-5.2": 0.48426223580097816,
+        "gpt-4o-mini": 0.43220766689988566,
+        "gpt-5-mini": 0.09092236867283499,
+        "gpt-5.5": 0.6332530232917568,
+        "gpt5.4-mini": 0.3998230078446461,
+        "qwen3.7-max": 0.6037859318189892
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.7777777777777778,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.8888888888888888,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.8888888888888888,
+        "gpt-5.5": 0.8888888888888888,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.8888888888888888
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "lpbf_meltpool_rosenthal_inconel__depth": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6477178413046966,
+        "deepseek-v4-pro": 0.6477413964664983,
+        "gemini-3.5-flash-fg": 0.6460256454860567,
+        "glm-5.2": 0.6476989241731284,
+        "gpt-4o-mini": 0.6718686555714781,
+        "gpt-5-mini": 0.6658510973487666,
+        "gpt-5.5": 0.6471543907068023,
+        "gpt5.4-mini": 0.46692058478775833,
+        "qwen3.7-max": 0.6477395816642293
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6666666666666666,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.6666666666666666,
+        "gpt-4o-mini": 0.6666666666666666,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.6666666666666666,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "bns_merger_disk_ejecta__Mdisk": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.47818962435662027,
+        "deepseek-v4-pro": 0.45577447348983013,
+        "gemini-3.5-flash-fg": 0.4481284343676928,
+        "glm-5.2": 0.412803836931125,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.40959687715192505,
+        "gpt5.4-mini": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "ghg_emission_drivers__ME": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.550306735636384,
+        "deepseek-v4-pro": 0.600064547989976,
+        "gemini-3.5-flash-fg": 0.5575503527137807,
+        "glm-5.2": 0.5526383852151902,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4954200279758324,
+        "gpt-5.5": 0.5785568632316109,
+        "gpt5.4-mini": 0.5516456213604969,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "eclipsing_binary_mass_luminosity_debcat__log_L_Lsun": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4970187945554446,
+        "deepseek-v4-pro": 0.5197210413612872,
+        "gemini-3.5-flash-fg": 0.5813502503185122,
+        "glm-5.2": 0.5218870268647389,
+        "gpt-4o-mini": 0.529104861089186,
+        "gpt-5-mini": 0.514417239059611,
+        "gpt-5.5": 0.5213258445471954,
+        "gpt5.4-mini": 0.5651372280296121,
+        "qwen3.7-max": 0.5827691193305498
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.6666666666666666,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "binary_pulsar_post_keplerian_atnf__PBDOT": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4199268469431955,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.4209188818270425,
+        "glm-5.2": 0.4214799989916418,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.581177995933687,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.4209188803314029
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5714285714285714,
+        "gpt-5-mini": 0.2857142857142857,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8571428571428571,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "tree_biomass_allometry_chave__agb": {
+      "type": "typeI",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.503526741382063,
+        "deepseek-v4-pro": 0.4749680987408921,
+        "gemini-3.5-flash-fg": 0.49079740626414925,
+        "glm-5.2": 0.4949194879678882,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5041898676663139,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5035267466843487
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "dna_melting_temperature_khandelwal__Tm": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.7307299296875016,
+        "deepseek-v4-pro": 0.7340160559040565,
+        "gemini-3.5-flash-fg": 0.7434688500822288,
+        "glm-5.2": 0.7706506979761432,
+        "gpt-4o-mini": 0.330820674283296,
+        "gpt-5-mini": 0.7369239001583571,
+        "gpt-5.5": 0.7882685611458138,
+        "gpt5.4-mini": 0.5634673318783276,
+        "qwen3.7-max": 0.7417784686798555
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "life_expectancy_preston__e0_vs_gdppc": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4834671299479023,
+        "deepseek-v4-pro": 0.4739956618088218,
+        "gemini-3.5-flash-fg": 0.4740404959285087,
+        "glm-5.2": 0.4740411821308824,
+        "gpt-4o-mini": 0.19980809059414206,
+        "gpt-5-mini": 0.47404048658470643,
+        "gpt-5.5": 0.4917554371127776,
+        "gpt5.4-mini": 0.48346714825355164,
+        "qwen3.7-max": 0.48666529847513795
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "magnet_3c90_core_loss__log_P_vol": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.5515764849180222,
+        "gemini-3.5-flash-fg": 0.6341294032768454,
+        "glm-5.2": 0.6423139371078515,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4776735402998189,
+        "gpt-5.5": 0.5718616717314831,
+        "gpt5.4-mini": 0.5746517914235765,
+        "qwen3.7-max": 0.5395163973708281
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": null,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8,
+        "glm-5.2": 0.8,
+        "gpt-4o-mini": 0.4,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.8
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "mincer_earnings_acs_pums__log_wage": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4981922105717418,
+        "deepseek-v4-pro": 0.5076448650908919,
+        "gemini-3.5-flash-fg": 0.5084748885877555,
+        "glm-5.2": 0.5085041698137966,
+        "gpt-4o-mini": 0.4983879373290654,
+        "gpt-5-mini": 0.5047531143983279,
+        "gpt-5.5": 0.5088443373233777,
+        "gpt5.4-mini": 0.5078203750547381,
+        "qwen3.7-max": 0.5086631084608628
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "proton_em_form_factor__GE_over_GD": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.2976341289073322,
+        "gpt5.4-mini": 0.43647856156943166,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "nuclear_binding_energy_ame2020__BE_per_A": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.2960098372175751,
+        "deepseek-v4-pro": 0.38410370969916474,
+        "gemini-3.5-flash-fg": 0.24922667807753196,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.20050520101841074,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.14797933926487017
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.42857142857142855,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "commuting_gravity_lodes__flow_Tij": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6427783345973337,
+        "deepseek-v4-pro": 0.6388638487659353,
+        "gemini-3.5-flash-fg": 0.7184104016504291,
+        "glm-5.2": 0.6489346195357614,
+        "gpt-4o-mini": 0.22470225198319682,
+        "gpt-5-mini": 0.6481407550916953,
+        "gpt-5.5": 0.6948160125052081,
+        "gpt5.4-mini": 0.6391472316372525,
+        "qwen3.7-max": 0.6429590310029107
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.3333333333333333,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "rock_core_permeability_norweg__log_k": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5559832677802421,
+        "deepseek-v4-pro": 0.5642230298943551,
+        "gemini-3.5-flash-fg": 0.5642048505262021,
+        "glm-5.2": 0.5642443957916992,
+        "gpt-4o-mini": 0.5142793459744013,
+        "gpt-5-mini": 0.55854513073022,
+        "gpt-5.5": 0.5636044684607867,
+        "gpt5.4-mini": 0.5572143958071605,
+        "qwen3.7-max": 0.5540733858838738
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.6666666666666666,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "pfas_soil_sorption__log_kd": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4313476488695501,
+        "deepseek-v4-pro": 0.333513314735716,
+        "gemini-3.5-flash-fg": 0.5352696840420288,
+        "glm-5.2": 0.4981408541875515,
+        "gpt-4o-mini": 0.3205955608836998,
+        "gpt-5-mini": 0.4916246425145132,
+        "gpt-5.5": 0.4619146616065052,
+        "gpt5.4-mini": 0.3686844284619808,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.3333333333333333,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.3333333333333333,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "cepheid_period_luminosity__M_W": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.26104892426432236,
+        "deepseek-v4-pro": 0.26104892426432236,
+        "gemini-3.5-flash-fg": 0.5248220943473814,
+        "glm-5.2": 0.2610664734796453,
+        "gpt-4o-mini": 0.26106640731918285,
+        "gpt-5-mini": 0.49240890374880775,
+        "gpt-5.5": 0.4820983720108113,
+        "gpt5.4-mini": 0.26106642212979714,
+        "qwen3.7-max": 0.26106642119542645
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "smbh_mass_sigma_relation__log_M_BH": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4556986261201069,
+        "deepseek-v4-pro": 0.45569935961944585,
+        "gemini-3.5-flash-fg": 0.45943441489744763,
+        "glm-5.2": 0.44141996092394564,
+        "gpt-4o-mini": 0.4564420032726846,
+        "gpt-5-mini": 0.4556986288583911,
+        "gpt-5.5": 0.45399930244039965,
+        "gpt5.4-mini": 0.4644608761093102,
+        "qwen3.7-max": 0.45752892435631853
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "drosophila_isolation_by_distance_dest__M_stat": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.40682297847144855,
+        "deepseek-v4-pro": 0.36294704132577205,
+        "gemini-3.5-flash-fg": 0.42486369093153065,
+        "glm-5.2": 0.40682297847144855,
+        "gpt-4o-mini": 0.40682272721394175,
+        "gpt-5-mini": 0.3629470561754098,
+        "gpt-5.5": 0.4248638052890551,
+        "gpt5.4-mini": 0.42476739446667877,
+        "qwen3.7-max": 0.42486369105636135
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 0.8333333333333334,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 0.8333333333333334,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "galaxy_mass_metallicity_sdss__oh": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5240653692818453,
+        "deepseek-v4-pro": 0.525689864447509,
+        "gemini-3.5-flash-fg": 0.5379324812972115,
+        "glm-5.2": 0.5346119216550296,
+        "gpt-4o-mini": 0.5034836838244048,
+        "gpt-5-mini": 0.5177630480498729,
+        "gpt-5.5": 0.5415168911260274,
+        "gpt5.4-mini": 0.5297225194686059,
+        "qwen3.7-max": 0.5331313213783719
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "budyko_partitioning_mach__et_over_p": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5631882915118704,
+        "deepseek-v4-pro": 0.5363848226302345,
+        "gemini-3.5-flash-fg": 0.5034293941288801,
+        "glm-5.2": 0.545358870141216,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.573817922015035,
+        "gpt-5.5": 0.5523097582576283,
+        "gpt5.4-mini": 0.5631894626247067,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.6666666666666666,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "bns_merger_disk_ejecta__vej": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5136393864745933,
+        "deepseek-v4-pro": 0.370922695896874,
+        "gemini-3.5-flash-fg": 0.3841144594378245,
+        "glm-5.2": 0.44533089152093175,
+        "gpt-4o-mini": 0.5483461523711075,
+        "gpt-5-mini": 0.5662426492452277,
+        "gpt-5.5": 0.49384865334738126,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.3831766644510868
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 0.8333333333333334,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "gutenberg_richter_b_value_usgs__gr_freq_mag": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5001049797462549,
+        "deepseek-v4-pro": 0.5001050361302908,
+        "gemini-3.5-flash-fg": 0.5001050360540866,
+        "glm-5.2": 0.5001132564819859,
+        "gpt-4o-mini": 0.5001049797462549,
+        "gpt-5-mini": 0.5001089020546703,
+        "gpt-5.5": 0.5001050361303372,
+        "gpt5.4-mini": 0.5001050361302934,
+        "qwen3.7-max": 0.5001089020546703
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "wind_turbine_power_curve_engie__power_kW": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5254612860532804,
+        "deepseek-v4-pro": 0.5204924826914801,
+        "gemini-3.5-flash-fg": 0.5236690512302213,
+        "glm-5.2": 0.5236691854597006,
+        "gpt-4o-mini": 0.4823126622726628,
+        "gpt-5-mini": 0.46985761218076494,
+        "gpt-5.5": 0.5246027773394994,
+        "gpt5.4-mini": 0.4372257836818694,
+        "qwen3.7-max": 0.5205822681224357
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6666666666666666,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.6666666666666666,
+        "gpt-4o-mini": 0.3333333333333333,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.5555555555555556,
+        "gpt5.4-mini": 0.8888888888888888,
+        "qwen3.7-max": 0.5555555555555556
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "parker_spiral_imf__B_phi": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5365350311905245,
+        "deepseek-v4-pro": 0.5569500723197642,
+        "gemini-3.5-flash-fg": 0.5365355323166456,
+        "glm-5.2": 0.5569500723197642,
+        "gpt-4o-mini": 0.5430195471918848,
+        "gpt-5-mini": 0.542304030765475,
+        "gpt-5.5": 0.5438959867159414,
+        "gpt5.4-mini": 0.5148861085557506,
+        "qwen3.7-max": 0.5569500723197642
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "ghg_emission_drivers__NOE": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6465940419373268,
+        "deepseek-v4-pro": 0.5976636337610848,
+        "gemini-3.5-flash-fg": 0.5735353780425734,
+        "glm-5.2": 0.6554235988354291,
+        "gpt-4o-mini": 0.5143140657766986,
+        "gpt-5-mini": 0.6473970325570477,
+        "gpt-5.5": 0.6415120698913583,
+        "gpt5.4-mini": 0.3883115358287822,
+        "qwen3.7-max": 0.5951193435250437
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.625,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.875,
+        "gpt-4o-mini": 0.625,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.875,
+        "gpt5.4-mini": 0.625,
+        "qwen3.7-max": 0.625
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "running_endurance_iaaf__velocity": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.40978501296975844,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.3510720239398243,
+        "glm-5.2": 0.4198129231175314,
+        "gpt-4o-mini": 0.35279485404993904,
+        "gpt-5-mini": 0.35279488602435105,
+        "gpt-5.5": 0.6923670243344477,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "her_hor_pt_acid_kucernak__current_density": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.7769713360796966,
+        "deepseek-v4-pro": 0.7112453377258408,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.7769715648001647,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.7478950760858343,
+        "gpt5.4-mini": 0.6856405864808727,
+        "qwen3.7-max": 0.7606232718105338
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8181818181818182,
+        "deepseek-v4-pro": 0.9090909090909091,
+        "gemini-3.5-flash-fg": 0.8181818181818182,
+        "glm-5.2": 0.7272727272727273,
+        "gpt-4o-mini": 0.09090909090909091,
+        "gpt-5-mini": 0.8181818181818182,
+        "gpt-5.5": 0.9090909090909091,
+        "gpt5.4-mini": 0.5454545454545454,
+        "qwen3.7-max": 0.6363636363636364
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5
+      }
+    },
+    "sne_ia_distance_modulus_pantheonplus__mu": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49920473587765113,
+        "deepseek-v4-pro": 0.4471822665531271,
+        "gemini-3.5-flash-fg": 0.49920474095759115,
+        "glm-5.2": 0.49671544092744535,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.49680551798107897,
+        "gpt5.4-mini": 0.4304440097168992,
+        "qwen3.7-max": 0.49921287789309443
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 0.3333333333333333,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.3333333333333333,
+        "gpt-5-mini": null,
+        "gpt-5.5": 0.8333333333333334,
+        "gpt5.4-mini": 0.16666666666666666,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "red_giant_asteroseismology__nu_max": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.5026985925473834,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.3374320129205134,
+        "gpt5.4-mini": 0.4890532014306562,
+        "qwen3.7-max": 0.5250223082276491
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "liquid_dispersion_glycols__refractive_index": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.010932580916030332,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.2238904411767978,
+        "gpt5.4-mini": 0.18787366877703904,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "trade_gravity_cepii__log_tradeflow": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5142072910763651,
+        "deepseek-v4-pro": 0.5141468350735385,
+        "gemini-3.5-flash-fg": 0.5200171690168085,
+        "glm-5.2": 0.5206341767449241,
+        "gpt-4o-mini": 0.47497786547874865,
+        "gpt-5-mini": 0.5027759241613607,
+        "gpt-5.5": 0.5172633028512478,
+        "gpt5.4-mini": 0.513728640333572,
+        "qwen3.7-max": 0.5137295265444406
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.7142857142857143,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8571428571428571,
+        "qwen3.7-max": 0.8571428571428571
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "bns_postmerger_waveform_core__f2": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.515405927982043,
+        "deepseek-v4-pro": 0.4942182200582015,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.4924340846363454,
+        "gpt-4o-mini": 0.45092475245929065,
+        "gpt-5-mini": 0.49000805631012234,
+        "gpt-5.5": 0.4734448856184035,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "geomagnetic_storm_dst__dDst_dt": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5035061054859022,
+        "deepseek-v4-pro": 0.5118141567797412,
+        "gemini-3.5-flash-fg": 0.5141050568179553,
+        "glm-5.2": 0.5088545703075515,
+        "gpt-4o-mini": 0.49026582461839696,
+        "gpt-5-mini": 0.5011605935669272,
+        "gpt-5.5": 0.515750607646648,
+        "gpt5.4-mini": 0.07130236512598764
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.8571428571428571,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "liion_capacity_fade_nasa_pcoe__capacity_Ah": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6098186969122925,
+        "deepseek-v4-pro": 0.525250898644499,
+        "gemini-3.5-flash-fg": 0.6142983205299434,
+        "glm-5.2": 0.5252542141303097,
+        "gpt-4o-mini": 0.6098193322865719,
+        "gpt-5-mini": 0.5252534693133883,
+        "gpt-5.5": 0.6736201241186249,
+        "gpt5.4-mini": 0.5434331915131485,
+        "qwen3.7-max": 0.5436144632848301
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "spirometry_nhanes__FEV1_L": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5148696337673995,
+        "deepseek-v4-pro": 0.5216589729724883,
+        "gemini-3.5-flash-fg": 0.521354017406462,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.5148683240868421,
+        "gpt-5-mini": 0.518509729413084,
+        "gpt-5.5": 0.5206358512496483,
+        "gpt5.4-mini": 0.5182608960113122,
+        "qwen3.7-max": 0.520120032521121
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 0.8333333333333334,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "ocean_mesoscale_eddy_closure__Sx": {
+      "type": "typeI",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5168620297597408,
+        "deepseek-v4-pro": 0.5168620297597408,
+        "gemini-3.5-flash-fg": 0.5168620297226291,
+        "glm-5.2": 0.5347231599142193,
+        "gpt-4o-mini": 0.25516536345511504,
+        "gpt-5-mini": 0.2668801798003251,
+        "gpt-5.5": 0.5350519859569226,
+        "gpt5.4-mini": 0.2844674601198932,
+        "qwen3.7-max": 0.5251113239831652
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.625,
+        "gpt-4o-mini": 0.125,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "mauna_loa_co2_keeling_curve_noaa__co2_ppm": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.3195432426346758,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.3499126800300284,
+        "glm-5.2": 0.7645446225831398,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.32840318306295635,
+        "gpt-5.5": 0.7772778402102982,
+        "gpt5.4-mini": 0.32102656457822887,
+        "qwen3.7-max": 0.7565241054616776
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "exoplanet_mass_radius__R": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4659820284125905,
+        "deepseek-v4-pro": 0.4833012466290566,
+        "gemini-3.5-flash-fg": 0.5012216066365622,
+        "glm-5.2": 0.5004778367709573,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4477834939355735,
+        "gpt-5.5": 0.5003202902296311,
+        "gpt5.4-mini": 0.4591432531362357,
+        "qwen3.7-max": 0.5012352541652363
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "ghg_emission_drivers__EC": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.2540599754862676,
+        "deepseek-v4-pro": 0.3663909680791113,
+        "gemini-3.5-flash-fg": 0.3447027375577023,
+        "glm-5.2": 0.5330386339700949,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.22845771460431485,
+        "gpt-5.5": 0.5311340639897839,
+        "gpt5.4-mini": 0.3619018193380652,
+        "qwen3.7-max": 0.609967565167804
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.875,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.875,
+        "gpt-4o-mini": 0.875,
+        "gpt-5-mini": 0.875,
+        "gpt-5.5": 0.875,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.875
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "gravity_wgs84_somigliana__g0": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000000000061358,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.11584511830967748,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.5000000000061358,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.4997942954081681
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.7142857142857143,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "mars_crater_size_frequency__N_cum": {
+      "type": "typeI",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.0,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "red_giant_asteroseismology__delta_nu": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.5837617893616525,
+        "glm-5.2": 0.6012672402109025,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.045773640257231185,
+        "gpt-5.5": 0.5154338020154153,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8,
+        "glm-5.2": 0.8,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "spirometry_nhanes__FVC_L": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4917352246990747,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.4935937231678109,
+        "glm-5.2": 0.4964434738263078,
+        "gpt-4o-mini": 0.45125128536196146,
+        "gpt-5-mini": 0.48636241472274855,
+        "gpt-5.5": 0.4935941757815818,
+        "gpt5.4-mini": 0.49738976705862026,
+        "qwen3.7-max": 0.49656021084401125
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8333333333333334,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.8333333333333334,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "catchment_mean_runoff_camels__q_mean": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5011532571226556,
+        "deepseek-v4-pro": 0.5298349476937692,
+        "gemini-3.5-flash-fg": 0.6120943611557425,
+        "glm-5.2": 0.6149259079569872,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5011529057327814,
+        "gpt-5.5": 0.5298475703695149,
+        "gpt5.4-mini": 0.6461807855886633,
+        "qwen3.7-max": 0.5011527937771971
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.6666666666666666,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "metabolic_scaling_anage__log_bmr_W": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.44986139986121965,
+        "deepseek-v4-pro": 0.44986139986121965,
+        "gemini-3.5-flash-fg": 0.4498752320308961,
+        "glm-5.2": 0.44986139986121965,
+        "gpt-4o-mini": 0.4493794024240261,
+        "gpt-5-mini": 0.46432066658082227,
+        "gpt-5.5": 0.44987521710598977,
+        "gpt5.4-mini": 0.4498752320308961,
+        "qwen3.7-max": 0.44987552364627703
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "bns_merger_disk_ejecta__Mej": {
+      "type": "typeI",
+      "metric": "smape",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.07374870691716562,
+        "gpt-4o-mini": 0.019556049184567437,
+        "gpt-5-mini": 0.22585186421392123,
+        "gpt-5.5": 0.07052466002864677,
+        "gpt5.4-mini": 0.16560830046019048,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8571428571428571,
+        "deepseek-v4-pro": null,
+        "gemini-3.5-flash-fg": 0.5714285714285714,
+        "glm-5.2": 0.5714285714285714,
+        "gpt-4o-mini": 0.5714285714285714,
+        "gpt-5-mini": 0.5714285714285714,
+        "gpt-5.5": 0.8571428571428571,
+        "gpt5.4-mini": 0.8571428571428571,
+        "qwen3.7-max": 0.7142857142857143
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "island_species_richness_terceira__S_terceira": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49923760828529673,
+        "deepseek-v4-pro": 0.3122765882552726,
+        "gemini-3.5-flash-fg": 0.5304741657346027,
+        "glm-5.2": 0.4729955964648648,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.43990656040140885,
+        "gpt-5.5": 0.3793707889312784,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.39123908621815906
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.6,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 0.4,
+        "gpt5.4-mini": 0.6,
+        "qwen3.7-max": 0.8
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "pp_total_cross_section_donnachie_landshoff__sigma_tot": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.5554716600562966,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.545579148238832,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "protoplanetary_disk_mmflux__F_mm": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4966982214411464,
+        "deepseek-v4-pro": 0.46335875559239026,
+        "gemini-3.5-flash-fg": 0.44130374896085744,
+        "glm-5.2": 0.4826210555310778,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5162262828261264,
+        "gpt-5.5": 0.4786074989808472,
+        "gpt5.4-mini": 0.44002538104476474,
+        "qwen3.7-max": 0.39244229616421955
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "hea_hardness_lattice_distortion_couzinie__HV": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5795048130029399,
+        "deepseek-v4-pro": 0.5187379929685115,
+        "gemini-3.5-flash-fg": 0.5418534056267513,
+        "glm-5.2": 0.5591203492803927,
+        "gpt-4o-mini": 0.5803974917368016,
+        "gpt-5-mini": 0.5803974923004683,
+        "gpt-5.5": 0.5080795803032254,
+        "gpt5.4-mini": 0.5605813221023019,
+        "qwen3.7-max": 0.5602494578076318
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8,
+        "gemini-3.5-flash-fg": 0.8,
+        "glm-5.2": 0.8,
+        "gpt-4o-mini": 0.8,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 0.8,
+        "gpt5.4-mini": 0.8,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "bird_flight_speed_alerstam__Ue": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5299638233537601,
+        "deepseek-v4-pro": 0.5299561639349294,
+        "gemini-3.5-flash-fg": 0.5102777786746728,
+        "glm-5.2": 0.510616833226641,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5299561638483419,
+        "gpt-5.5": 0.5164371020854968,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5299609859176002
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "galaxy_stellar_mass_sdss__log_M_star": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6292457798292452,
+        "deepseek-v4-pro": 0.0,
+        "gemini-3.5-flash-fg": 0.6982883618915863,
+        "glm-5.2": 0.7324713738967787,
+        "gpt-4o-mini": 0.37240363554394196,
+        "gpt-5-mini": 0.5634003134546521,
+        "gpt-5.5": 0.7543275492816905,
+        "gpt5.4-mini": 0.6292457687222027,
+        "qwen3.7-max": 0.6292460708286984
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": null,
+        "gemini-3.5-flash-fg": 0.8,
+        "glm-5.2": 0.8,
+        "gpt-4o-mini": 0.6,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.8,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "pv_module_temperature_efficiency_pvpmc__P_max": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6365935955278559,
+        "deepseek-v4-pro": 0.6450953600413194,
+        "gemini-3.5-flash-fg": 0.6372765816622988,
+        "glm-5.2": 0.6377721480274571,
+        "gpt-4o-mini": 0.6332806854269455,
+        "gpt-5-mini": 0.634701854880914,
+        "gpt-5.5": 0.6386825145429774,
+        "gpt5.4-mini": 0.1783637866082659,
+        "qwen3.7-max": 0.6333611677576252
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.625,
+        "gemini-3.5-flash-fg": 0.375,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.875,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.375,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "traffic_flow_density_ngsim__q_flow": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.504271575936925,
+        "deepseek-v4-pro": 0.5440133411441561,
+        "gemini-3.5-flash-fg": 0.507454656722695,
+        "glm-5.2": 0.6053630015888793,
+        "gpt-4o-mini": 0.48609824561639714,
+        "gpt-5-mini": 0.5400918984535803,
+        "gpt-5.5": 0.6051002570584139,
+        "gpt5.4-mini": 0.5495521678007191,
+        "qwen3.7-max": 0.5504521805021099
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8888888888888888,
+        "deepseek-v4-pro": 0.3333333333333333,
+        "gemini-3.5-flash-fg": 0.8888888888888888,
+        "glm-5.2": 0.4444444444444444,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.7777777777777778,
+        "gpt-5.5": 0.4444444444444444,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.7777777777777778
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "volcanic_column_mer_ivespa__H_top": {
+      "type": "typeI",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4963323328589928,
+        "deepseek-v4-pro": 0.47439647016344644,
+        "gemini-3.5-flash-fg": 0.5443500181309103,
+        "glm-5.2": 0.4833328891314673,
+        "gpt-4o-mini": 0.36538107372294093,
+        "gpt-5-mini": 0.475014479480525,
+        "gpt-5.5": 0.5297886653989619,
+        "gpt5.4-mini": 0.5014288218141314,
+        "qwen3.7-max": 0.47416729454682705
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "lake_thermocline_depth_pilla__z_t": {
+      "type": "typeI",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5411846041111088,
+        "deepseek-v4-pro": 0.545038828767077,
+        "gemini-3.5-flash-fg": 0.5444866370162663,
+        "glm-5.2": 0.5434432821404538,
+        "gpt-4o-mini": 0.29512653651660703,
+        "gpt-5-mini": 0.5248163067068459,
+        "gpt-5.5": 0.5489155004146729,
+        "gpt5.4-mini": 0.5444701601091709,
+        "qwen3.7-max": 0.5440350295884347
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8,
+        "deepseek-v4-pro": 0.8,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.8,
+        "gpt-4o-mini": 0.6,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8,
+        "qwen3.7-max": 0.8
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "neo_size_frequency_distribution__N_cum_H": {
+      "type": "typeI",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4632154060914966,
+        "deepseek-v4-pro": 0.7338358472855889,
+        "gemini-3.5-flash-fg": 0.8608431065427083,
+        "glm-5.2": 0.7355267810233669,
+        "gpt-4o-mini": 0.2293555382255108,
+        "gpt-5-mini": 0.46321568725026385,
+        "gpt-5.5": 0.5094262496565597,
+        "gpt5.4-mini": 0.4714363900362214,
+        "qwen3.7-max": 0.7576847391938837
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "ecoli_growth_curve_chemically_defined__od600": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.2518836921655971,
+        "deepseek-v4-pro": 0.25062323427448063,
+        "gemini-3.5-flash-fg": 0.43567245000799915,
+        "glm-5.2": 0.13867479794367019,
+        "gpt-4o-mini": 0.0034874479148122406,
+        "gpt-5-mini": 0.251884967573192,
+        "gpt-5.5": 0.3373649108126236,
+        "gpt5.4-mini": 0.1388751611238625,
+        "qwen3.7-max": 0.2518842977828983
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.6,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.7,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.7,
+        "gpt5.4-mini": 0.4,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "disinfection_kinetics_chick_watson__log_reduction": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.46141388549833157,
+        "deepseek-v4-pro": 0.4999998850622078,
+        "gemini-3.5-flash-fg": 0.4715713360511568,
+        "glm-5.2": 0.4588146774219289,
+        "gpt-4o-mini": 0.24515025851414995,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.458814677906594,
+        "gpt5.4-mini": 0.45281674459030263,
+        "qwen3.7-max": 0.49410038824832486
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.3333333333333333,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.16666666666666666,
+        "gpt-5-mini": null,
+        "gpt-5.5": 0.6666666666666666,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "alkali_rydberg_levels_quantum_defect__binding_energy": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.09005512871330379,
+        "deepseek-v4-pro": 0.5000034462888987,
+        "gemini-3.5-flash-fg": 0.5001459364452077,
+        "glm-5.2": 0.07912180043919498,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.5001441389573087,
+        "gpt5.4-mini": 0.13977426941023013,
+        "qwen3.7-max": 0.06496836474214396
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.375,
+        "gpt-5-mini": 0.875,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.875,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "life_expectancy_oeppen_vaupel_hmd__e0": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4345166368779905,
+        "deepseek-v4-pro": 0.47078870687596325,
+        "gemini-3.5-flash-fg": 0.41568450565485343,
+        "glm-5.2": 0.4554702684244906,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.43618057667614757,
+        "gpt-5.5": 0.494690324465296,
+        "gpt5.4-mini": 0.4284859707341804,
+        "qwen3.7-max": 0.4836326009338097
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "solar_sunspot_silso__ssn": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5255698375575679,
+        "deepseek-v4-pro": 0.23486317861522288,
+        "gemini-3.5-flash-fg": 0.3842152220129236,
+        "glm-5.2": 0.5997769141236539,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5997775265210049,
+        "gpt-5.5": 0.5683474815260094,
+        "gpt5.4-mini": 0.08390921432445109,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8333333333333334,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.3333333333333333,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "weir_flow_tilting_pugh__discharge": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49999999999999617,
+        "deepseek-v4-pro": 0.5814483268330626,
+        "gemini-3.5-flash-fg": 0.5967367118792192,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5027767502517794,
+        "gpt-5.5": 0.5130597637605689,
+        "gpt5.4-mini": 0.25165874346453593,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.9,
+        "deepseek-v4-pro": 0.9,
+        "gemini-3.5-flash-fg": 0.9,
+        "glm-5.2": 0.9,
+        "gpt-4o-mini": 0.4,
+        "gpt-5-mini": 0.8,
+        "gpt-5.5": 0.9,
+        "gpt5.4-mini": 0.9,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "polymer_melt_viscosity_polyverse__log10_eta_poise": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.27727180434222987,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.5857810791920758,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": null,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": null,
+        "glm-5.2": null,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": null,
+        "gpt-5.5": 0.8888888888888888,
+        "gpt5.4-mini": null,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "mouse_skin_biaxial_constitutive__sigma11": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.34136377992305106,
+        "deepseek-v4-pro": 0.4190041730196981,
+        "gemini-3.5-flash-fg": 0.22188198161936304,
+        "glm-5.2": 0.45665058934242114,
+        "gpt-4o-mini": 0.3221045851556982,
+        "gpt-5-mini": 0.43882540680915244,
+        "gpt-5.5": 0.2450554515307767,
+        "gpt5.4-mini": 0.30407814872268,
+        "qwen3.7-max": 0.4835303122459928
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6666666666666666,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.3333333333333333,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.6666666666666666,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.6666666666666666,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "soil_water_retention_gshp__theta": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49773081062350705,
+        "deepseek-v4-pro": 0.5428108976608378,
+        "gemini-3.5-flash-fg": 0.43502613376801613,
+        "glm-5.2": 0.49705019343500206,
+        "gpt-4o-mini": 0.03633967983658813,
+        "gpt-5-mini": 0.49914477064102697,
+        "gpt-5.5": 0.4942447837478206,
+        "gpt5.4-mini": 0.4479848688959301,
+        "qwen3.7-max": 0.4991455411358851
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.9,
+        "deepseek-v4-pro": 0.9,
+        "gemini-3.5-flash-fg": 0.9,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.6,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.9,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "income_distribution_wid__pareto_alpha": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5216501272631031,
+        "deepseek-v4-pro": 0.5928436450599717,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.5123867998523302,
+        "gpt-4o-mini": 0.5081110008735292,
+        "gpt-5-mini": 0.526359965996915,
+        "gpt-5.5": 0.5266567851208364,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5263599658866269
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.2,
+        "deepseek-v4-pro": 0.6,
+        "gemini-3.5-flash-fg": null,
+        "glm-5.2": 0.2,
+        "gpt-4o-mini": 0.4,
+        "gpt-5-mini": 0.4,
+        "gpt-5.5": 0.6,
+        "gpt5.4-mini": null,
+        "qwen3.7-max": 0.4
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "soil_exoenzyme_kinetics_alves__activity_rate": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49999753798981517,
+        "deepseek-v4-pro": 0.3820326463000349,
+        "gemini-3.5-flash-fg": 0.47386887610969053,
+        "glm-5.2": 0.40011318386830363,
+        "gpt-4o-mini": 0.28977264313220813,
+        "gpt-5-mini": 0.4999982126060402,
+        "gpt-5.5": 0.41376310401331756,
+        "gpt5.4-mini": 0.3824825476158533,
+        "qwen3.7-max": 0.4012992089264795
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8571428571428571,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.42857142857142855,
+        "glm-5.2": 0.42857142857142855,
+        "gpt-4o-mini": 0.8571428571428571,
+        "gpt-5-mini": 0.8571428571428571,
+        "gpt-5.5": 0.42857142857142855,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": 0.42857142857142855
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "top_income_share_wid__top_share_log": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5130727285103333,
+        "deepseek-v4-pro": 0.533555233163012,
+        "gemini-3.5-flash-fg": 0.4733951838098676,
+        "glm-5.2": 0.513072728510332,
+        "gpt-4o-mini": 0.3636757073550048,
+        "gpt-5-mini": 0.4755531764797853,
+        "gpt-5.5": 0.0,
+        "gpt5.4-mini": 0.4755531764797853,
+        "qwen3.7-max": 0.46546163126921497
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.8333333333333334,
+        "gpt-5.5": null,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "blood_clot_constitutive__tau_ss": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5467773185566074,
+        "deepseek-v4-pro": 0.591262272160574,
+        "gemini-3.5-flash-fg": 0.49987329270499004,
+        "glm-5.2": 0.6688237056769877,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4932765628664535,
+        "gpt-5.5": 0.015134702708830605,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5912622721273998
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.42857142857142855,
+        "deepseek-v4-pro": 0.42857142857142855,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.2857142857142857,
+        "gpt-4o-mini": 0.42857142857142855,
+        "gpt-5-mini": 0.7142857142857143,
+        "gpt-5.5": 0.42857142857142855,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.42857142857142855
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5
+      }
+    },
+    "leaf_light_response_photosynthesis_schmiege__net_assimilation": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000003273028544,
+        "deepseek-v4-pro": 0.5000003762628481,
+        "gemini-3.5-flash-fg": 0.3939589129667033,
+        "glm-5.2": 0.44936116614724214,
+        "gpt-4o-mini": 0.22805280659851432,
+        "gpt-5-mini": 0.5000000938329606,
+        "gpt-5.5": 0.5000001754280111,
+        "gpt5.4-mini": 0.5000000549514049,
+        "qwen3.7-max": 0.5000002002148302
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.875,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "plant_competition_reciprocal_yield__mean_plant_mass": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5454606588964558,
+        "deepseek-v4-pro": 0.5503733730538328,
+        "gemini-3.5-flash-fg": 0.6469777589867974,
+        "glm-5.2": 0.5946869310117067,
+        "gpt-4o-mini": 0.5784546440829811,
+        "gpt-5-mini": 0.5454606588964558,
+        "gpt-5.5": 0.5977098955061017,
+        "gpt5.4-mini": 0.5476012850066864,
+        "qwen3.7-max": 0.5454606588964553
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.875,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.875,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "woody_plant_allometry_baad__a_lf": {
+      "type": "typeII",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.5101111768128491,
+        "gemini-3.5-flash-fg": 0.44300496821592333,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.27612717106151585,
+        "gpt-5.5": 0.4473642068088832,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5110931439924422
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": null,
+        "deepseek-v4-pro": 0.7142857142857143,
+        "gemini-3.5-flash-fg": 0.7142857142857143,
+        "glm-5.2": 0.8571428571428571,
+        "gpt-4o-mini": 0.5714285714285714,
+        "gpt-5-mini": 0.42857142857142855,
+        "gpt-5.5": 0.8571428571428571,
+        "gpt5.4-mini": null,
+        "qwen3.7-max": 0.7142857142857143
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "v1_orientation_tuning_stringer__neuron_response": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.08897769702742238,
+        "deepseek-v4-pro": 0.4103925815834355,
+        "gemini-3.5-flash-fg": 0.4939093336031519,
+        "glm-5.2": 0.302873355236032,
+        "gpt-4o-mini": 8.686554056264173e-07,
+        "gpt-5-mini": 0.08897769702742238,
+        "gpt-5.5": 0.3760037395477498,
+        "gpt5.4-mini": 0.4363048343296823,
+        "qwen3.7-max": 0.46292207750472075
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.625,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "mosquito_larvicide_resistance_culex__probit_mortality": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.0,
+        "deepseek-v4-pro": 0.4963277101063886,
+        "gemini-3.5-flash-fg": 0.5059953374643508,
+        "glm-5.2": 0.5027622960238397,
+        "gpt-4o-mini": 0.21499038358543868,
+        "gpt-5-mini": 0.4836830461734678,
+        "gpt-5.5": 0.4963290376042939,
+        "gpt5.4-mini": 0.4972041093938804,
+        "qwen3.7-max": 0.4963298796947882
+      },
+      "real_validity": {
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.42857142857142855,
+        "gpt-5-mini": 0.8571428571428571,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8571428571428571,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "streamchannel_at_station_hydraulic_geometry_ifmha__chan_width": {
+      "type": "typeII",
+      "metric": "log_mae",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000000000000012,
+        "deepseek-v4-pro": 0.5193099031876309,
+        "gemini-3.5-flash-fg": 0.5275728781975333,
+        "glm-5.2": 0.5000000000000012,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5000000000000016,
+        "gpt-5.5": 0.5210266076736285,
+        "gpt5.4-mini": 0.5002224977631359,
+        "qwen3.7-max": 0.5000000000000017
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5714285714285714,
+        "deepseek-v4-pro": 0.8571428571428571,
+        "gemini-3.5-flash-fg": 0.8571428571428571,
+        "glm-5.2": 0.42857142857142855,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.42857142857142855,
+        "gpt-5.5": 0.8571428571428571,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": 0.5714285714285714
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "co2_adsorption_zeolite_isodb_toth__n_ads": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5279992738806791,
+        "deepseek-v4-pro": 0.5268084706736806,
+        "gemini-3.5-flash-fg": 0.5138244557828289,
+        "glm-5.2": 0.3937292692649541,
+        "gpt-4o-mini": 0.11833058608216114,
+        "gpt-5-mini": 0.5201891761691451,
+        "gpt-5.5": 0.5341411943105392,
+        "gpt5.4-mini": 0.31818992181772393,
+        "qwen3.7-max": 0.5314703023423257
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8888888888888888,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8888888889,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8888888888888888,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.8888888888888888,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "silicate_melt_viscosity_gpvisc__log_viscosity": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5117869687159947,
+        "deepseek-v4-pro": 0.5052777978016011,
+        "gemini-3.5-flash-fg": 0.39366641869569147,
+        "glm-5.2": 0.3920479981181058,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4920478849533141,
+        "gpt-5.5": 0.46314623113664827,
+        "gpt5.4-mini": 0.3717812668153632,
+        "qwen3.7-max": 0.5121450976824895
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.3333333333333333,
+        "deepseek-v4-pro": 0.3333333333333333,
+        "gemini-3.5-flash-fg": 0.3333333333333333,
+        "glm-5.2": 0.3333333333333333,
+        "gpt-4o-mini": 0.16666666666666666,
+        "gpt-5-mini": 0.16666666666666666,
+        "gpt-5.5": 0.3333333333333333,
+        "gpt5.4-mini": 0.16666666666666666,
+        "qwen3.7-max": 0.3333333333333333
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "mof_co2_adsorption_langmuir_crafted__q_CO2": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.44201250937820746,
+        "deepseek-v4-pro": 0.44847181243116285,
+        "gemini-3.5-flash-fg": 0.14628605028003847,
+        "glm-5.2": 0.4418180338496594,
+        "gpt-4o-mini": 0.052512995835739894,
+        "gpt-5-mini": 0.43837347131118704,
+        "gpt-5.5": 0.401259823537579,
+        "gpt5.4-mini": 0.4407635425004142,
+        "qwen3.7-max": 0.4269263011525843
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.875,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "predator_functional_response_forage__prey_eaten": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.492657801865444,
+        "deepseek-v4-pro": 0.49108052311616346,
+        "gemini-3.5-flash-fg": 0.4817821902780232,
+        "glm-5.2": 0.4624614498966288,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4999987003214352,
+        "gpt-5.5": 0.506971783123404,
+        "gpt5.4-mini": 0.40285548745170124,
+        "qwen3.7-max": 0.49999998686720587
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.875,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.875,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.875
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "solar_spectrum_sorce_sim__planck_radiance": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6709842726228682,
+        "deepseek-v4-pro": 0.36686026851339454,
+        "gemini-3.5-flash-fg": 0.3668350037442442,
+        "glm-5.2": 0.7084015694902058,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.7547959878633154,
+        "gpt-5.5": 0.7293166174733395,
+        "gpt5.4-mini": 0.6709844011005796,
+        "qwen3.7-max": 0.6709843389646518
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.2857142857142857,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "fluid_surface_tension_nist_webbook_eotvos__sigma": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.7979647097775168,
+        "deepseek-v4-pro": 0.7694570958336034,
+        "gemini-3.5-flash-fg": 0.7970856890161997,
+        "glm-5.2": 0.7866990159256256,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.6501499618083202,
+        "gpt-5.5": 0.7961531107382421,
+        "gpt5.4-mini": 0.5000000000000001,
+        "qwen3.7-max": 0.5716671778777607
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.625,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.875,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "biodiversity_distance_decay__Sim_sor": {
+      "type": "typeII",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.48831473303844525,
+        "deepseek-v4-pro": 0.4883152513084075,
+        "gemini-3.5-flash-fg": 0.5188355902128609,
+        "glm-5.2": 0.5247141186164113,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4890458263587057,
+        "gpt-5.5": 0.4890454432938703,
+        "gpt5.4-mini": 0.4913716602481159,
+        "qwen3.7-max": 0.537592822783479
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.4,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "open_channel_flow_manning_usgs__mean_velocity": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.503256268078368,
+        "deepseek-v4-pro": 0.503256268078368,
+        "gemini-3.5-flash-fg": 0.5073380432598832,
+        "glm-5.2": 0.503256268078368,
+        "gpt-4o-mini": 0.06570083206802985,
+        "gpt-5-mini": 0.47344138567730526,
+        "gpt-5.5": 0.5063722121325677,
+        "gpt5.4-mini": 0.5036390673271409,
+        "qwen3.7-max": 0.5038801405168937
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.7777777777777778,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.7777777777777778,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "chiller_gordon_ng_universal__one_over_COP_minus_1": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4718221123883024,
+        "deepseek-v4-pro": 0.5749352574008607,
+        "gemini-3.5-flash-fg": 0.8660340009375287,
+        "glm-5.2": 0.7977089841179711,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.04215101439305303,
+        "gpt-5.5": 0.8052215837491995,
+        "gpt5.4-mini": 0.35956831688665586,
+        "qwen3.7-max": 0.8299997983750534
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6666666666666666,
+        "deepseek-v4-pro": 0.7777777777777778,
+        "gemini-3.5-flash-fg": 0.6666666667,
+        "glm-5.2": 0.5555555555555556,
+        "gpt-4o-mini": 0.4444444444444444,
+        "gpt-5-mini": 0.4444444444444444,
+        "gpt-5.5": 0.5555555555555556,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "stomatal_conductance_sapfluxnet__gc": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5014820328725781,
+        "deepseek-v4-pro": 0.5108076148800638,
+        "gemini-3.5-flash-fg": 0.5041179151831574,
+        "glm-5.2": 0.5037625151382888,
+        "gpt-4o-mini": 0.28764426093475065,
+        "gpt-5-mini": 0.4565149674184248,
+        "gpt-5.5": 0.5022442341144788,
+        "gpt5.4-mini": 0.4923488210637779,
+        "qwen3.7-max": 0.5031178697705482
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.8333333333333334,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.8333333333333334,
+        "gpt-5-mini": 0.8333333333333334,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.3333333333333333,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "cosmic_ray_eas_auger__dE_dX": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.08877167763466527,
+        "deepseek-v4-pro": 0.5000053423641836,
+        "gemini-3.5-flash-fg": 0.49979805959151274,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.14773287007731375,
+        "gpt-5-mini": 0.45959301253464774,
+        "gpt-5.5": 0.4999881452884474,
+        "gpt5.4-mini": 0.4980898014894673,
+        "qwen3.7-max": 0.4999494494088259
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.875,
+        "deepseek-v4-pro": 0.875,
+        "gemini-3.5-flash-fg": 0.875,
+        "glm-5.2": null,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.875,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.875
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "mortality_gompertz_makeham_hmd_postwar__log_m_adult": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5650992263398875,
+        "deepseek-v4-pro": 0.5525958578687845,
+        "gemini-3.5-flash-fg": 0.6580480659650976,
+        "glm-5.2": 0.5399874426111829,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5000000000000452,
+        "gpt-5.5": 0.6412068531623722,
+        "gpt5.4-mini": 0.5000000000000452,
+        "qwen3.7-max": 0.5000000000000904
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6,
+        "deepseek-v4-pro": 0.6,
+        "gemini-3.5-flash-fg": 0.6,
+        "glm-5.2": 0.6,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.6,
+        "gpt-5.5": 0.6,
+        "gpt5.4-mini": 0.6,
+        "qwen3.7-max": 0.6
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "alpha_decay_geiger_nuttall_nubase__log_half_life": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4999999999999975,
+        "deepseek-v4-pro": 0.5000000000000006,
+        "gemini-3.5-flash-fg": 0.5473394154157945,
+        "glm-5.2": 0.5494907535477214,
+        "gpt-4o-mini": 0.2771645992800444,
+        "gpt-5-mini": 0.49999999999999795,
+        "gpt-5.5": 0.49999999999999795,
+        "gpt5.4-mini": 0.5000000000000026,
+        "qwen3.7-max": 0.5000000000000006
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8333333333333334,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.8333333333333334,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "tree_height_diameter_chave__height_m": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49581610233286116,
+        "deepseek-v4-pro": 0.4892645263169671,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0,
+        "gpt-5.5": 0.5008618630869437,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": null,
+        "glm-5.2": null,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": null,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": null,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "baseflow_recession_nwis__Q_t": {
+      "type": "typeII",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.2257729397329741,
+        "deepseek-v4-pro": 0.45971554204201776,
+        "gemini-3.5-flash-fg": 0.5125558899749779,
+        "glm-5.2": 0.1162789667449222,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.0677189298051574,
+        "gpt-5.5": 0.48172445536216935,
+        "gpt5.4-mini": 0.13265567797111133,
+        "qwen3.7-max": 0.4999982403928618
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8888888888888888,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.8888888888888888,
+        "glm-5.2": 0.8888888888888888,
+        "gpt-4o-mini": 0.5555555555555556,
+        "gpt-5-mini": 0.8888888888888888,
+        "gpt-5.5": 0.7777777777777778,
+        "gpt5.4-mini": 0.7777777777777778,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.75
+      }
+    },
+    "coral_reef_fish_growth_wicquart__length_mm": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4999994022955589,
+        "deepseek-v4-pro": 0.6184533092405599,
+        "gemini-3.5-flash-fg": 0.4999995300896886,
+        "glm-5.2": 0.61405945428695,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4999996839079978,
+        "gpt-5.5": 0.6160401523111259,
+        "gpt5.4-mini": 0.49999944893523907,
+        "qwen3.7-max": 0.4999994619187303
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.5714285714285714,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.7142857142857143,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "latent_heat_flux_kgdsr__LE": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5539474285018117,
+        "deepseek-v4-pro": 0.5546998749695601,
+        "gemini-3.5-flash-fg": 0.5582366308333837,
+        "glm-5.2": 0.5642909625188227,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5416679292415975,
+        "gpt-5.5": 0.553465587573085,
+        "gpt5.4-mini": 0.0,
+        "qwen3.7-max": 0.5640191522532462
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.375,
+        "deepseek-v4-pro": 0.625,
+        "gemini-3.5-flash-fg": 0.875,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.125,
+        "gpt-5-mini": 0.625,
+        "gpt-5.5": 0.875,
+        "gpt5.4-mini": null,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "mortality_heligman_pollard_hmd__log_m_full": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.6737470106744957,
+        "deepseek-v4-pro": 0.4710120624565673,
+        "gemini-3.5-flash-fg": 0.7035809084896757,
+        "glm-5.2": 0.7156081818765241,
+        "gpt-4o-mini": 0.45994183339235617,
+        "gpt-5-mini": 0.5459075331604853,
+        "gpt-5.5": 0.7120925233990784,
+        "gpt5.4-mini": 0.7127304180171862,
+        "qwen3.7-max": 0.7252948975515782
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8571428571428571,
+        "deepseek-v4-pro": 0.5714285714285714,
+        "gemini-3.5-flash-fg": 0.8571428571428571,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.5714285714285714,
+        "gpt-5-mini": 0.7142857142857143,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "sex_mortality_ratio_hmd__log_sex_ratio": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.49999999999999956,
+        "deepseek-v4-pro": 0.5300782682328908,
+        "gemini-3.5-flash-fg": 0.5087662146456514,
+        "glm-5.2": 0.5596490930394834,
+        "gpt-4o-mini": 0.4999999999999995,
+        "gpt-5-mini": 0.49999999999999906,
+        "gpt-5.5": 0.4825385287464779,
+        "gpt5.4-mini": 0.5604625263374567,
+        "qwen3.7-max": 0.5431749622510714
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "optical_dispersion_sellmeier__refractive_index": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.4596811362353053,
+        "deepseek-v4-pro": 0.4596907384955909,
+        "gemini-3.5-flash-fg": 0.45042598582836235,
+        "glm-5.2": 0.4595787319687418,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.47053741674697624,
+        "gpt-5.5": 0.212756295074371,
+        "gpt5.4-mini": 0.15023301073440778,
+        "qwen3.7-max": 0.18014132282379125
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.625,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 0.75,
+        "gpt-5.5": 0.625,
+        "gpt5.4-mini": 0.75,
+        "qwen3.7-max": 0.625
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 1.0
+      }
+    },
+    "cobb_douglas_growth_pwt__log_Y": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000000000000001,
+        "deepseek-v4-pro": 0.5000000000000001,
+        "gemini-3.5-flash-fg": 0.5199107578540084,
+        "glm-5.2": 0.4254942097635133,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4309724092503622,
+        "gpt-5.5": 0.3740997654816128,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5000000000000001
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5555555555555556,
+        "deepseek-v4-pro": 0.5555555555555556,
+        "gemini-3.5-flash-fg": 0.6666666667,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.5555555555555556,
+        "gpt-5.5": 0.8888888888888888,
+        "gpt5.4-mini": 0.5555555555555556,
+        "qwen3.7-max": 0.5555555555555556
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "afm_nanoindentation_spherical_zef18__force_indentation": {
+      "type": "typeII",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5386852499088064,
+        "glm-5.2": 0.6548624586175098,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5017674298084369,
+        "gpt5.4-mini": 0.47250725197449306,
+        "qwen3.7-max": 0.5
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.625,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.625,
+        "qwen3.7-max": 0.875
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "mouse_skin_biaxial_constitutive__sigma22": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.40247440627209735,
+        "deepseek-v4-pro": 0.19384849920402578,
+        "gemini-3.5-flash-fg": 0.33958224803831333,
+        "glm-5.2": 0.5661855365800376,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.43442564602590467,
+        "gpt-5.5": 0.189043509316524,
+        "gpt5.4-mini": 0.18230164179079422,
+        "qwen3.7-max": 0.194977382263917
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.6666666666666666,
+        "qwen3.7-max": 0.6666666666666666
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "urban_scaling_msa_bea__log_GMP": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000000000000001,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.49855637260942925,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.4999999999999998,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": null,
+        "gpt-4o-mini": 0.75,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "tumor_growth_mouse__tumor_volume": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.519824557500893,
+        "deepseek-v4-pro": 0.3648185155229007,
+        "gemini-3.5-flash-fg": 0.4714146329698885,
+        "glm-5.2": 0.46812410237465724,
+        "gpt-4o-mini": 0.3505654668941976,
+        "gpt-5-mini": 0.41842372104404313,
+        "gpt-5.5": 0.47347956643573763,
+        "gpt5.4-mini": 0.4931763827367794,
+        "qwen3.7-max": 0.47582002857921185
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.36363636363636365,
+        "deepseek-v4-pro": 0.5454545454545454,
+        "gemini-3.5-flash-fg": 0.36363636363636365,
+        "glm-5.2": 0.45454545454545453,
+        "gpt-4o-mini": 0.45454545454545453,
+        "gpt-5-mini": 0.5454545454545454,
+        "gpt-5.5": 0.36363636363636365,
+        "gpt5.4-mini": 0.36363636363636365,
+        "qwen3.7-max": 0.7272727272727273
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "measles_tsir_uk__cases_weekly": {
+      "type": "typeII",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5036519463270064,
+        "deepseek-v4-pro": 0.4955406062186007,
+        "gemini-3.5-flash-fg": 0.4955406105549585,
+        "glm-5.2": 0.5141300363191108,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4955983864653299,
+        "gpt-5.5": 0.5067573535205757,
+        "gpt5.4-mini": 0.5067696317156563,
+        "qwen3.7-max": 0.5024208679251082
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.6666666666666666,
+        "gemini-3.5-flash-fg": 0.6666666666666666,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": null,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "electron_impact_ionization_alecs__cross_section": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5217725304646724,
+        "deepseek-v4-pro": 0.197104610024173,
+        "gemini-3.5-flash-fg": 0.317426505471486,
+        "glm-5.2": 0.1224183779844446,
+        "gpt-4o-mini": 0.022241650976344576,
+        "gpt-5-mini": 0.48136048224015976,
+        "gpt-5.5": 0.42309051265466596,
+        "gpt5.4-mini": 0.3177281476265024,
+        "qwen3.7-max": 0.28543170068819523
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.6363636363636364,
+        "deepseek-v4-pro": 0.5454545454545454,
+        "gemini-3.5-flash-fg": 0.5454545454545454,
+        "glm-5.2": 0.45454545454545453,
+        "gpt-4o-mini": 0.18181818181818182,
+        "gpt-5-mini": 0.5454545454545454,
+        "gpt-5.5": 0.45454545454545453,
+        "gpt5.4-mini": 0.5454545454545454,
+        "qwen3.7-max": 0.45454545454545453
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "intertemporal_discount__p_ll": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.40307285733983217,
+        "deepseek-v4-pro": 0.4665464128722016,
+        "gemini-3.5-flash-fg": 0.4835616500166838,
+        "glm-5.2": 0.4837261810485434,
+        "gpt-4o-mini": 0.11187874897454538,
+        "gpt-5-mini": 0.4121487913441643,
+        "gpt-5.5": 0.4748509023243365,
+        "gpt5.4-mini": 0.4763425599417605,
+        "qwen3.7-max": 0.4809802785909712
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 1.0,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 0.875,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "ecoli_antibiotic_temperature_growth__OD24h": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.38677715885804864,
+        "deepseek-v4-pro": 0.22408456963597476,
+        "gemini-3.5-flash-fg": 0.3938523436925097,
+        "glm-5.2": 0.4137518540484815,
+        "gpt-4o-mini": 0.3127141362473343,
+        "gpt-5-mini": 0.4584346185799158,
+        "gpt-5.5": 0.32212612573011146,
+        "gpt5.4-mini": 0.3726149667175053,
+        "qwen3.7-max": 0.0
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.5714285714285714,
+        "deepseek-v4-pro": 0.8571428571428571,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.14285714285714285,
+        "gpt-5-mini": 0.7142857142857143,
+        "gpt-5.5": 0.8571428571428571,
+        "gpt5.4-mini": 0.7142857142857143,
+        "qwen3.7-max": null
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.25,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "mortality_gompertz_makeham_hmd__log_m_adult": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5000000000000026,
+        "deepseek-v4-pro": 0.5110329399620824,
+        "gemini-3.5-flash-fg": 0.5414196027739472,
+        "glm-5.2": 0.5219589102524074,
+        "gpt-4o-mini": 0.5000000000000029,
+        "gpt-5-mini": 0.5000000000000029,
+        "gpt-5.5": 0.5529592658740775,
+        "gpt5.4-mini": 0.5000000000000026,
+        "qwen3.7-max": 0.5263942883276816
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 1.0,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 1.0,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.5,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "spectrophotometry_beer_lambert_chromate__absorbance": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.2985080130500258,
+        "deepseek-v4-pro": 0.0024955526728548684,
+        "gemini-3.5-flash-fg": 0.0,
+        "glm-5.2": 0.6257703617825104,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.29550391679253735,
+        "gpt-5.5": 0.6257703617825104,
+        "gpt5.4-mini": 0.3009684768284808,
+        "qwen3.7-max": 0.6257703617825111
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 1.0,
+        "deepseek-v4-pro": 0.8,
+        "gemini-3.5-flash-fg": null,
+        "glm-5.2": 1.0,
+        "gpt-4o-mini": 0.8,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 1.0,
+        "gpt5.4-mini": 1.0,
+        "qwen3.7-max": 1.0
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.75,
+        "glm-5.2": 0.75,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.5,
+        "gpt-5.5": 0.75,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.5
+      }
+    },
+    "thermal_performance_curve__pf_utpc": {
+      "type": "typeII",
+      "metric": "r2",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.5602823276578186,
+        "deepseek-v4-pro": 0.44771763643209583,
+        "gemini-3.5-flash-fg": 0.503167432172029,
+        "gpt-4o-mini": 0.3057943563528216,
+        "gpt-5-mini": 0.40019217770127585,
+        "gpt-5.5": 0.5479253443055724,
+        "gpt5.4-mini": 0.4024124136085779,
+        "qwen3.7-max": 0.5576980411670193
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.8333333333333334,
+        "deepseek-v4-pro": 0.5,
+        "gemini-3.5-flash-fg": 0.8333333333333334,
+        "gpt-4o-mini": 0.16666666666666666,
+        "gpt-5-mini": 0.6666666666666666,
+        "gpt-5.5": 0.6666666666666666,
+        "gpt5.4-mini": 0.8333333333333334,
+        "qwen3.7-max": 0.8333333333333334
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.25,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    },
+    "li_metal_battery_capacity_stanford__cap_dischg_mAh": {
+      "type": "typeII",
+      "metric": "rmse",
+      "real_numeric": {
+        "claude-opus-4-8-fg": 0.47522941711803784,
+        "deepseek-v4-pro": 0.42736008150431437,
+        "gemini-3.5-flash-fg": 0.5175531930698354,
+        "glm-5.2": 0.0,
+        "gpt-4o-mini": 0.0,
+        "gpt-5-mini": 0.4001482582788374,
+        "gpt-5.5": 0.7869558025638792,
+        "gpt5.4-mini": 0.4711130995267829,
+        "qwen3.7-max": 0.5249663523124845
+      },
+      "real_validity": {
+        "claude-opus-4-8-fg": 0.75,
+        "deepseek-v4-pro": 0.75,
+        "gemini-3.5-flash-fg": 0.5,
+        "glm-5.2": null,
+        "gpt-4o-mini": 0.25,
+        "gpt-5-mini": 1.0,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.5,
+        "qwen3.7-max": 0.75
+      },
+      "parallel_structure": {
+        "claude-opus-4-8-fg": 0.5,
+        "deepseek-v4-pro": 0.25,
+        "gemini-3.5-flash-fg": 0.25,
+        "glm-5.2": 0.5,
+        "gpt-4o-mini": 0.5,
+        "gpt-5-mini": 0.25,
+        "gpt-5.5": 0.25,
+        "gpt5.4-mini": 0.25,
+        "qwen3.7-max": 0.25
+      }
+    }
+  }
+}

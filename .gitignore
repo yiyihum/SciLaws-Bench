@@ -1,0 +1,26 @@
+# Benchmark data — released via Hugging Face, not tracked here
+tasks/
+build/
+
+# Harness / run outputs
+submissions/
+numeric_out/
+validity_stage/
+validity_out/
+parallel_stage/
+parallel_out/
+batch_runs/
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local preview server
+.server.log
+.server.pid
+
+# OS
+.DS_Store

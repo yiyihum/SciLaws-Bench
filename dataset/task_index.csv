@@ -1,0 +1,119 @@
+task_id,group_structure,discipline,domain,target,unit,n_inputs,license,has_simulator,rows_train,rows_test
+baseball_pythagorean_winpct_lahman__win_pct,single,Social Sciences,social_science / sports_analytics,win_pct,,3,CC-BY-SA-3.0,True,2012,938
+binary_pulsar_post_keplerian_atnf__PBDOT,single,Astronomy,astronomy / pulsar_timing,PBDOT,s/s,2,"GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF); pulsar timing measurements are numeric facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compatible",True,71,10
+bird_flight_speed_alerstam__Ue,single,Ecology & Hydrology,biology / avian_ecology,Ue_ms,m/s,2,CC-BY-2.5,True,69,62
+bns_merger_disk_ejecta__Mdisk,single,Astronomy,astronomy / gravitational-wave astrophysics,Mdisk,M_sun,6,CC-BY-4.0,True,52,76
+bns_merger_disk_ejecta__Mej,single,Astronomy,astronomy / gravitational-wave astrophysics,Mej,M_sun,8,CC-BY-4.0,True,50,54
+bns_merger_disk_ejecta__vej,single,Astronomy,astronomy / gravitational-wave astrophysics,vej,c,6,CC-BY-4.0,True,207,35
+bns_postmerger_waveform_core__f2,single,Astronomy,astronomy / gravitational-wave-astrophysics,f2,kHz,7,CC-BY-4.0,True,102,41
+budyko_partitioning_mach__et_over_p,single,Ecology & Hydrology,earth_science / hydrology,et_over_p,,9,CC-BY-4.0,True,840,156
+catchment_mean_runoff_camels__q_mean,single,Ecology & Hydrology,earth_science / hydrology,q_mean,mm/day,13,CC-BY-4.0,True,469,201
+cepheid_period_luminosity__M_W,single,Astronomy,astronomy / stellar_astrophysics,M_W,mag,2,CC-BY-4.0,True,24,7
+cloud_cover_parameterization__cloud_cover,single,Earth & Physics,earth_science / atmospheric_science,cloud_cover,,8,CC-BY-4.0,True,32088,8022
+commuting_gravity_lodes__flow_Tij,single,Social Sciences,social_science / mobility,log10_Tij,log10(workers),4,CC0-1.0,True,30163,5284
+dna_melting_temperature_khandelwal__Tm,single,Biology,biology / biochemistry,Tm,°C,4,CC-BY-4.0,True,344,100
+drosophila_isolation_by_distance_dest__M_stat,single,Biology,biology / population_genetics,M_stat,,2,CC-BY-4.0,True,828,550
+eclipsing_binary_mass_luminosity_debcat__log_L_Lsun,single,Astronomy,astronomy / stellar_astrophysics,log_L_Lsun,dex,2,CC-BY-4.0,True,238,355
+exfor_neutron_capture_resonance_gold__sigma_E,single,Earth & Physics,physics / nuclear_reactions,log10_sigma_b,log10(barn),1,CC-BY-4.0,True,1732,433
+exoplanet_mass_radius__R,single,Astronomy,astronomy / exoplanets,R,R_earth,1,CC0-1.0,True,2041,1021
+galaxy_mass_metallicity_sdss__oh,single,Astronomy,astronomy / extragalactic,oh,dex,2,Public Domain,True,155923,38981
+galaxy_stellar_mass_sdss__log_M_star,single,Astronomy,astronomy / galaxies,log_M_star,dex,7,Public Domain,True,160000,40000
+geomagnetic_storm_dst__dDst_dt,single,Earth & Physics,physics / space_physics,dDst_dt,nT/hr,8,CC-BY-NC-4.0,True,230087,3672
+ghg_emission_drivers__CDE,single,Earth & Physics,environmental_science / climate_economics,CDE,kg CO2,6,CC-BY-4.0,True,3555,838
+ghg_emission_drivers__EC,single,Earth & Physics,earth_science / energy,EC,TJ,6,CC-BY-4.0,True,3372,1124
+ghg_emission_drivers__ME,single,Earth & Physics,environmental_science / climate_economics,ME,kg CH4,6,CC-BY-4.0,True,3555,838
+ghg_emission_drivers__NOE,single,Earth & Physics,environmental_science / climate_economics,NOE,kg N2O,6,CC-BY-4.0,True,3555,838
+gravity_wgs84_somigliana__g0,single,Earth & Physics,earth_science / geodesy,g0,m/s^2,1,Public Domain,True,10635,4337
+ground_motion_ita18__log10_pga,single,Earth & Physics,geophysics / seismology,log10_pga,log10(cm/s^2),11,CC-BY-4.0,True,3449,1204
+gutenberg_richter_b_value_usgs__gr_freq_mag,single,Earth & Physics,earth_science / seismology,log10_N,,1,CC0-1.0,True,19,17
+hacks_law_river_length_hydrosheds__main_length_km,single,Ecology & Hydrology,earth_science / hydrology,main_length_km,km,5,HydroSHEDS-v1-Derivative,True,28340,7085
+hea_hardness_lattice_distortion_couzinie__HV,single,Materials & Engineering,materials_science / physical_metallurgy,HV,kgf/mm²,3,CC-BY-4.0,True,56,14
+her_hor_pt_acid_kucernak__current_density,single,Materials & Engineering,chemistry / electrochemistry,current_density,A cm-2,4,CC0-1.0,True,676,334
+island_species_richness_terceira__S_terceira,single,Ecology & Hydrology,biology / community_ecology,S_terceira,,5,CC-BY-4.0,True,34,18
+lake_thermocline_depth_pilla__z_t,single,Ecology & Hydrology,earth_science / limnology,z_t_m,m,2,CC0-1.0,True,978,245
+life_expectancy_preston__e0_vs_gdppc,single,Social Sciences,social_science / demography,e0_vs_gdppc,years,1,"CC0-1.0 (per-country life expectancy and income figures are uncopyrightable scientific facts; Feist v. Rural Telephone Service Co., 499 U.S. 340, 1991; original data from UN Demographic Yearbook / UN Statistical Yearbook / Kuznets 1956 as compiled in Preston 1975 Appendix A)",True,38,19
+liion_capacity_fade_nasa_pcoe__capacity_Ah,single,Materials & Engineering,materials_and_energy / electrochemistry,capacity_Ah,Ah,1,NASA-Public,True,382,254
+liquid_dispersion_glycols__refractive_index,single,Earth & Physics,physics / optics,refractive_index,,2,CC-BY-4.0,True,230,170
+lpbf_meltpool_rosenthal_inconel__depth,single,Materials & Engineering,materials_science / additive_manufacturing,meltpool_depth_um,um,3,Public Domain,True,48,20
+magnet_3c90_core_loss__log_P_vol,single,Materials & Engineering,materials_and_energy / power_magnetics,log_P_vol,log10(kW/m^3),4,MIT,True,3444,769
+mars_crater_size_frequency__N_cum,single,Astronomy,astronomy / planetary_science,N_cum,km^-2,3,LicenseRef-NASA-PublicDomain,True,56,18
+materials_project_elastic_birch_murnaghan__K_VRH,single,Materials & Engineering,materials_science / solid-state_mechanics,K_VRH_GPa,GPa,4,CC-BY-4.0,True,827,177
+mauna_loa_co2_keeling_curve_noaa__co2_ppm,single,Earth & Physics,earth_science / atmosphere,co2_ppm,ppm,6,Public-Domain,True,742,76
+metabolic_scaling_anage__log_bmr_W,single,Biology,biology / physiology,log_bmr_W,log10(W),1,CC-BY-3.0,True,238,158
+mincer_earnings_acs_pums__log_wage,single,Social Sciences,social_science / labor_economics,log_wage,ln(USD),2,Public-Domain-US-Gov,True,53287,26713
+neo_size_frequency_distribution__N_cum_H,single,Astronomy,astronomy / planetary_science,N_cum_H,,1,LicenseRef-NASA-PublicDomain,True,57,14
+nuclear_binding_energy_ame2020__BE_per_A,single,Earth & Physics,astronomy / nuclear_astrophysics,BE_per_A,MeV,5,CC0-1.0,True,2078,470
+ocean_mesoscale_eddy_closure__Sx,single,Earth & Physics,earth_science / ocean_dynamics,Sx,m s^-2,8,MIT,True,54272,14336
+parker_spiral_imf__B_phi,single,Earth & Physics,physics / heliospheric_physics,B_phi_nT,nT,3,Public Domain,True,2554,731
+pfas_soil_sorption__log_kd,single,Ecology & Hydrology,earth_science / environmental_chemistry,log_kd,log10(L/kg),14,CC-BY-4.0,True,685,540
+pp_total_cross_section_donnachie_landshoff__sigma_tot,single,Earth & Physics,physics / high_energy_physics,sigma_tot,mb,1,CC-BY-4.0,True,105,23
+proton_em_form_factor__GE_over_GD,single,Earth & Physics,physics / nuclear_particle_physics,GE_over_GD,,1,CC-BY-4.0,True,37,10
+protoplanetary_disk_mmflux__F_mm,single,Astronomy,astronomy / star_and_planet_formation,log10_F_1p3_Jy,dex(Jy),5,VizieR-custom-free,True,168,38
+pv_module_temperature_efficiency_pvpmc__P_max,single,Materials & Engineering,materials_science / photovoltaics,P_max_W,W,4,CC-BY-4.0,True,9665,6445
+red_giant_asteroseismology__delta_nu,single,Astronomy,astronomy / asteroseismology,delta_nu,uHz,4,VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant,True,12875,3219
+red_giant_asteroseismology__nu_max,single,Astronomy,astronomy / asteroseismology,nu_max,μHz,4,VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant,True,12875,3219
+rock_core_permeability_norweg__log_k,single,Ecology & Hydrology,earth_science / petrophysics,log_k,log10(mD),1,CC-BY-4.0,True,51908,22246
+running_endurance_iaaf__velocity,single,Social Sciences,social_science / sports_science,velocity,m/s,2,CC-BY-SA-4.0,True,28,14
+smbh_mass_sigma_relation__log_M_BH,single,Astronomy,astronomy / extragalactic astrophysics,log_M_BH,log10(M_sun),4,CC-BY-4.0 (Jin & Davis 2023 preprint; factual measurement values additionally non-copyrightable per Feist v. Rural Telephone 1991),True,99,25
+sne_ia_distance_modulus_pantheonplus__mu,single,Astronomy,astronomy / observational_cosmology,mu,mag,1,CC-BY-4.0,True,1392,308
+solar_flat_plate_collector_graz_efficiency__eta_thermal,single,Materials & Engineering,materials_and_energy / solar_thermal_engineering,eta_thermal,,4,CC-BY-4.0,True,252,63
+spirometry_nhanes__FEV1_L,single,Biology,biology / pulmonology,FEV1_L,L,2,CC-BY-4.0,True,2900,725
+spirometry_nhanes__FVC_L,single,Biology,biology / pulmonology,FVC_L,L,2,CC-BY-4.0,True,1038,260
+trade_gravity_cepii__log_tradeflow,single,Social Sciences,social_science / international_economics,log_tradeflow,log(thousands current USD),7,etalab-2.0,True,470769,109477
+traffic_flow_density_ngsim__q_flow,single,Social Sciences,social_science / transportation,q_veh_h_lane,veh/h/lane,5,CC0-1.0,True,2286,572
+tree_biomass_allometry_chave__agb,single,Ecology & Hydrology,biology / forest_ecology,agb_kg,kg,3,CC-BY-4.0,True,3003,1001
+ttauri_accretion__L_acc,single,Astronomy,astronomy / stellar_astrophysics,logL_acc,log10(L_sun),4,CC-BY-4.0,True,90,79
+volcanic_column_mer_ivespa__H_top,single,Earth & Physics,earth_science / volcanology,H_top_km_avl,km,1,CC-BY-4.0,True,98,32
+wind_turbine_power_curve_engie__power_kW,single,Materials & Engineering,materials_and_energy / wind_energy,power_kW,kW,1,ODbL,True,168955,171525
+afm_nanoindentation_spherical_zef18__force_indentation,multi,Biology,biology / biophysics,force_N,N,2,CC0-1.0,True,836775,213268
+alkali_rydberg_levels_quantum_defect__binding_energy,multi,Earth & Physics,physics / atomic spectroscopy,binding_energy_cm1,cm^-1,2,CC0-1.0,True,199,229
+alpha_decay_geiger_nuttall_nubase__log_half_life,multi,Earth & Physics,physics / nuclear physics,log10_half_life_s,,1,CC-BY-3.0,True,143,73
+baseflow_recession_nwis__Q_t,multi,Ecology & Hydrology,earth_science / hydrology,Q_t,ft3/s,2,CC0-1.0,True,88395,28504
+biodiversity_distance_decay__Sim_sor,multi,Ecology & Hydrology,biology / community ecology,Sim_sor,,1,CC-BY-4.0,True,1816,448
+blood_clot_constitutive__tau_ss,multi,Biology,biology / biomechanics,tau_ss,kPa,3,CC0-1.0,True,82478,23573
+chiller_gordon_ng_universal__one_over_COP_minus_1,multi,Materials & Engineering,engineering,one_over_COP_minus_1,dimensionless,3,CC0-1.0,True,1026,486
+co2_adsorption_zeolite_isodb_toth__n_ads,multi,Materials & Engineering,materials_science / adsorption,n_ads,mmol/g,1,NIST-PD,True,799,179
+cobb_douglas_growth_pwt__log_Y,multi,Social Sciences,social_science / macroeconomics,log_Y,,3,CC-BY-4.0,True,7145,1642
+coral_reef_fish_growth_wicquart__length_mm,multi,Ecology & Hydrology,biology / fish growth,Li_sp_m,,1,CC-BY-4.0,True,4286,1624
+cosmic_ray_eas_auger__dE_dX,multi,Earth & Physics,physics / astroparticle_physics,dE_dX,PeV/(g/cm^2),1,CC-BY-SA-4.0,True,241682,79641
+disinfection_kinetics_chick_watson__log_reduction,multi,Materials & Engineering,engineering / water_treatment,log_reduction,,1,CC-BY-4.0,True,3750,254
+ecoli_antibiotic_temperature_growth__OD24h,multi,Biology,biology,OD24h,OD600 (dimensionless),1,CC0-1.0,True,1763,448
+ecoli_growth_curve_chemically_defined__od600,multi,Biology,biology / predictive microbiology,od600,OD (dimensionless),1,CC-BY-4.0,True,108535,13445
+electron_impact_ionization_alecs__cross_section,multi,Earth & Physics,physics / atomic_molecular_physics,cross_section_1e16cm2,1e-16 cm^2,1,CC-BY-4.0,True,176,354
+fluid_surface_tension_nist_webbook_eotvos__sigma,multi,Materials & Engineering,materials_and_energy / physical_chemistry,sigma,N/m,4,NIST-PD,True,7407,2396
+income_distribution_wid__pareto_alpha,multi,Social Sciences,social_science / income_inequality,log_top_share,,4,CC-BY-NC-4.0,True,38775,8800
+intertemporal_discount__p_ll,multi,Social Sciences,social_science / decision,p_ll,,6,CC-BY-NC-SA-4.0,True,680,340
+latent_heat_flux_kgdsr__LE,multi,Ecology & Hydrology,earth_science / hydrology,LE,W m^-2,13,CC-BY-4.0,True,1334530,647698
+leaf_light_response_photosynthesis_schmiege__net_assimilation,multi,Ecology & Hydrology,biology / plant ecophysiology,A_n,umol CO2 m-2 s-1,1,CC0-1.0,True,1108,303
+li_metal_battery_capacity_stanford__cap_dischg_mAh,multi,Materials & Engineering,materials_science / electrochemistry,cap_dischg_mAh,mAh,8,CC-BY-NC-4.0,True,7470,3535
+life_expectancy_oeppen_vaupel_hmd__e0,multi,Social Sciences,social_science / demography,e0,years,1,CC-BY-4.0,True,2665,1306
+measles_tsir_uk__cases_weekly,multi,Biology,biology / epidemiology,dlog_cases,log-ratio (dimensionless),5,GPL-2.0-or-later,True,7111,3829
+mof_co2_adsorption_langmuir_crafted__q_CO2,multi,Materials & Engineering,materials_science / adsorption,q_CO2_mmol_per_g,mmol/g,1,CDLA-Sharing-1.0 (isotherm CSVs) + CC-BY-4.0 (CoRE-MOF-2014 CIFs),True,2340,780
+mortality_gompertz_makeham_hmd__log_m_adult,multi,Social Sciences,social_science / demography,log_m_adult,,2,CC-BY-4.0,True,177703,87186
+mortality_gompertz_makeham_hmd_postwar__log_m_adult,multi,Social Sciences,social_science / demography,log_m_adult,,2,CC-BY-4.0,True,70267,46860
+mortality_heligman_pollard_hmd__log_m_full,multi,Social Sciences,social_science / demography,log_m_full,,2,CC-BY-4.0,True,132858,65272
+mosquito_larvicide_resistance_culex__probit_mortality,multi,Biology,biology / insecticide_resistance,corrected_mortality,,2,CC-BY-4.0,True,1846,571
+mouse_skin_biaxial_constitutive__sigma11,multi,Biology,biology / biomechanics,sigma11,MPa,2,CC0-1.0,True,11340,3972
+mouse_skin_biaxial_constitutive__sigma22,multi,Biology,biology / biomechanics,sigma22,MPa,2,CC0-1.0,True,11340,3972
+open_channel_flow_manning_usgs__mean_velocity,multi,Materials & Engineering,engineering / open-channel hydraulics,V_mps,m/s,2,MIT,True,855088,217682
+optical_dispersion_sellmeier__refractive_index,multi,Earth & Physics,physics / optics,n,dimensionless,1,CC0-1.0,True,201,53
+plant_competition_reciprocal_yield__mean_plant_mass,multi,Ecology & Hydrology,biology / plant_ecology,mean_mass_g,g/plant,1,CC0-1.0,True,522,203
+polymer_melt_viscosity_polyverse__log10_eta_poise,multi,Materials & Engineering,materials_science / polymer_physics,log10_eta_poise,log10(poise),4,CC-BY-4.0,True,276,365
+predator_functional_response_forage__prey_eaten,multi,Ecology & Hydrology,biology / ecology,prey_eaten,,1,CC0-1.0,True,6329,2253
+sex_mortality_ratio_hmd__log_sex_ratio,multi,Social Sciences,social_science / demography,log_sex_ratio,,2,CC-BY-4.0,True,177220,87170
+silicate_melt_viscosity_gpvisc__log_viscosity,multi,Materials & Engineering,materials_science / geophysics,log_viscosity,log10 Pa·s,13,etalab-2.0,True,10209,2405
+soil_exoenzyme_kinetics_alves__activity_rate,multi,Biology,biology / soil_ecology,activity_rate,nmol g^-1 h^-1,1,CC-BY-4.0,True,6411,2135
+soil_water_retention_gshp__theta,multi,Ecology & Hydrology,earth_science / soil physics,theta,m^3/m^3,1,CC-BY-4.0,True,21752,4568
+solar_spectrum_sorce_sim__planck_radiance,multi,Astronomy,astronomy / solar physics,spectral_radiance,W m⁻² nm⁻¹ sr⁻¹,1,CC0-1.0,True,13314,7342
+solar_sunspot_silso__ssn,multi,Astronomy,astronomy / solar physics,ssn,,3,CC-BY-NC-4.0,True,2852,475
+spectrophotometry_beer_lambert_chromate__absorbance,multi,Earth & Physics,physics / analytical spectroscopy,absorbance,,2,CC-BY-4.0,True,4411,1100
+stomatal_conductance_sapfluxnet__gc,multi,Ecology & Hydrology,biology / plant ecophysiology,Gc_proxy,cm3 cm-2 h-1 kPa-1,1,CC-BY-4.0,True,8766,2445
+streamchannel_at_station_hydraulic_geometry_ifmha__chan_width,multi,Ecology & Hydrology,earth_science / fluvial_geomorphology,chan_width,ft,1,MIT,True,1573,1488
+thermal_performance_curve__pf_utpc,multi,Ecology & Hydrology,biology / thermal_physiology,performance,,1,GPL-3.0,True,7010,1861
+top_income_share_wid__top_share_log,multi,Social Sciences,social_science / income_inequality,top_share_log,,5,CC-BY-NC-4.0,True,35640,11715
+tree_height_diameter_chave__height_m,multi,Ecology & Hydrology,biology / forest_ecology,height_m,m,1,CC-BY-4.0,True,3297,707
+tumor_growth_mouse__tumor_volume,multi,Biology,biology / oncology,tumor_volume_mm3,mm^3,1,CC-BY-4.0,True,571,183
+urban_scaling_msa_bea__log_GMP,multi,Social Sciences,social_science / urban_economics,log_GMP,"ln(million USD, chained 2017)",1,Public-Domain-US-Gov,True,6732,2244
+v1_orientation_tuning_stringer__neuron_response,multi,Biology,biology / neuroscience,neuron_response,au,1,CC-BY-NC-4.0,True,257670,3600
+weir_flow_tilting_pugh__discharge,multi,Materials & Engineering,engineering / hydraulics,Q_m3s,m³ s⁻¹,3,CC0-1.0,True,303,137
+woody_plant_allometry_baad__a_lf,multi,Ecology & Hydrology,biology / forest_ecology,a_lf,m2,2,CC0-1.0,True,586,183
