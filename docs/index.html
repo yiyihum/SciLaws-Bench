@@ -161,6 +161,44 @@ tbody tr:first-child:hover td{background:#c7ddfd}
 .marginal .l{font-size:12.5px;color:var(--fg-3);margin-top:2px;line-height:1.45}
 .n.t{color:var(--real)} .n.p{color:var(--par)} .n.o{color:var(--warn)}
 
+/* ---- examples ---- */
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 18px}
+@media(max-width:700px){.quad{grid-template-columns:repeat(2,1fr)}}
+.quad button{font-family:inherit;text-align:left;background:var(--card);border:1px solid var(--line);
+  border-radius:8px;padding:10px 12px;cursor:pointer;color:var(--fg-2);transition:.14s}
+.quad button:hover{border-color:var(--fg-3)}
+.quad button.on{border-color:var(--brand);background:var(--brand-2);color:var(--fg)}
+.quad .q1{display:flex;gap:6px;margin-bottom:5px}
+.quad .q1{flex-wrap:wrap}
+.quad .q1 span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 6px;border-radius:3px;white-space:nowrap}
+.quad .s-real{background:var(--real-2);color:var(--real)} .quad .s-par{background:var(--par-2);color:var(--par)}
+.quad .g-single,.quad .g-multi{background:var(--bg-2);color:var(--fg-3)}
+.quad .q2{font-size:14px;font-weight:600;line-height:1.3}
+.taskcard{border:1px solid var(--line);border-radius:6px;background:var(--card);padding:20px 22px;margin-bottom:14px}
+.taskcard .tid{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--brand);margin-bottom:4px;word-break:break-all}
+.taskcard .meta{font-size:12.5px;color:var(--fg-3);margin-bottom:12px}
+.taskcard .ctx{font-family:Newsreader,serif;font-size:17px;color:var(--fg);line-height:1.5;margin:0 0 14px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:14px;color:var(--fg-2)}
+.kv dt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);padding-top:2px}
+.kv dd{margin:0}
+.kv code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--bg-2);border:1px solid var(--line);border-radius:3px;padding:0 5px;color:var(--fg)}
+.kv .out{font-weight:600;color:var(--fg)}
+.kv .les{font-style:italic}
+@media(max-width:600px){.kv{grid-template-columns:1fr}}
+.trace{border:1px solid var(--line);border-radius:6px;background:var(--bg-2);overflow:hidden}
+.trace .th{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+  padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px;color:var(--fg-2)}
+.trace .th b{color:var(--fg)}
+.trace .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--fg-3)}
+.trace .legend i{font-style:normal;padding:0 6px;border-radius:3px}
+.trace pre{margin:0;padding:16px 18px;background:transparent;border:none;border-radius:0;
+  font-size:12px;line-height:1.55;color:var(--fg-3);white-space:pre;overflow-x:auto;max-height:640px;overflow-y:auto}
+.trace pre b{color:var(--fg);font-weight:700}
+.trace pre .el{color:var(--fg-2);font-style:italic}
+.trace pre .hl{color:#b91c1c;font-weight:600}
+.trace pre .n{color:var(--fg)}
+
 pre{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;
   overflow-x:auto;font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.7;
   color:var(--fg-2);margin:20px 0 0}
@@ -180,9 +218,10 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <li><a href="#abstract"><span class="nm">01</span> Abstract</a></li>
     <li><a href="#corpus"><span class="nm">02</span> The corpus</a></li>
     <li><a href="#settings"><span class="nm">03</span> Two settings</a></li>
-    <li><a href="#results"><span class="nm">04</span> Results</a></li>
-    <li><a href="#findings"><span class="nm">05</span> Findings</a></li>
-    <li><a href="#cite"><span class="nm">06</span> Citation</a></li>
+    <li><a href="#examples"><span class="nm">04</span> Examples</a></li>
+    <li><a href="#results"><span class="nm">05</span> Results</a></li>
+    <li><a href="#findings"><span class="nm">06</span> Findings</a></li>
+    <li><a href="#cite"><span class="nm">07</span> Citation</a></li>
   </ul>
   <div class="railbtns">
     <a class="rb solid" href="#" data-link="arxiv">arXiv <span>↗</span></a>
@@ -258,6 +297,13 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     </div>
   </section>
 
+  <section id="examples">
+    <h2>Examples</h2>
+    <p class="dek">One task and one real agent trajectory per quadrant of the design — Real / Parallel × single- / multi-group. The task cards are taken from each task's <code>metadata.yaml</code>; the traces are verbatim logs from the nine-model panel, reproduced from the paper's appendix with every cut marked.</p>
+    <div class="quad" id="case-tabs"></div>
+    <div id="case-view"></div>
+  </section>
+
   <section id="results">
     <h2>Results</h2>
     <p class="dek">Nine frontier models, one fixed harness: a ReAct-style agent with a Python sandbox, up to 30 turns, and a fixed experimentation budget in the Parallel setting. Only the base model varies.</p>
@@ -327,6 +373,7 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
 </div>
 
 <script src="assets/data.js"></script>
+<script src="assets/cases.js"></script>
 <script>
 (function(){
   const D=window.SCILAWS,S=D.stats;
@@ -352,6 +399,38 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
   });
   const t=document.getElementById('lb');
   t.insertAdjacentHTML('beforeend',h+'</tbody>');
+
+
+  /* examples */
+  const C=window.SCILAWS_CASES||[];
+  const LAB={proton_em_form_factor:'Proton form factor',co2_adsorption_toth:'CO₂ adsorption (Tóth)',keeling_curve:'Keeling curve',optical_dispersion_sellmeier:'Sellmeier dispersion'};
+  const tabs=document.getElementById('case-tabs'), view=document.getElementById('case-view');
+  if(tabs&&C.length){
+    tabs.innerHTML=C.map(function(c,i){var k=c.card;return '<button data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+
+      '<div class="q1"><span class="'+(k.setting==='Real'?'s-real':'s-par')+'">'+k.setting+'</span><span class="g-'+k.group+'">'+k.group+'-group</span></div>'+
+      '<div class="q2">'+LAB[c.key]+'</div></button>'}).join('');
+    function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+    function show(i){
+      var c=C[i],k=c.card,t=k.target;
+      view.innerHTML='<div class="taskcard"><div class="tid">'+k.task_id+'</div>'+
+        '<div class="meta">'+k.discipline+' · '+esc(k.domain)+' · license '+esc(k.license)+'</div>'+
+        '<p class="ctx">'+esc(k.context)+'</p><dl class="kv">'+
+        '<dt>Target</dt><dd><code>'+t[0]+'</code> '+esc(t[1])+(t[2]&&t[2]!=='—'?' ['+esc(t[2])+']':'')+' — '+esc(t[3])+'</dd>'+
+        '<dt>Inputs</dt><dd>'+k.inputs.map(function(x){return '<code>'+x[0]+'</code> '+esc(x[1])+' ['+esc(x[2])+'] — '+esc(x[3])}).join('<br>')+'</dd>'+
+        '<dt>Data</dt><dd>'+esc(k.data)+'</dd>'+
+        '<dt>Published</dt><dd>'+k.baselines.map(function(b){return '<code>'+esc(b.split(' ')[0])+'</code>'+esc(b.slice(b.indexOf(' ')>0?b.indexOf(' '):b.length))}).join('<br>')+'</dd>'+
+        '<dt>Caps</dt><dd>'+esc(k.caps)+'</dd>'+
+        '<dt>Scored by</dt><dd>'+esc(k.scored)+'</dd>'+
+        '<dt>Outcome</dt><dd class="out">'+esc(k.outcome)+'</dd>'+
+        '<dt>Takeaway</dt><dd class="les">'+esc(k.lesson)+'</dd></dl></div>'+
+        '<div class="trace"><div class="th"><div><b>Trajectory</b> · '+esc(c.model)+' · '+esc(c.note)+'</div>'+
+        '<div class="legend"><i style="color:var(--fg-3)">gray = verbatim model I/O</i><i style="color:var(--fg);font-weight:700">bold = our labels</i><i style="color:var(--fg-2);font-style:italic">italic = our elisions</i><i style="color:#b91c1c;font-weight:600">red = design differences</i></div></div>'+
+        '<pre>'+c.trace_html+'</pre></div>';
+    }
+    show(0);
+    tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      tabs.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');show(+b.dataset.i)});
+  }
 
   // scroll spy
   const links=[].slice.call(document.querySelectorAll('.toc a'));
