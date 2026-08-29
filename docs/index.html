@@ -93,6 +93,7 @@ figure img{width:100%;border:1px solid var(--line);border-radius:4px;background:
 figcaption{font-size:13.5px;color:var(--fg-3);margin-top:10px;line-height:1.6;
   padding-left:14px;border-left:2px solid var(--line)}
 figcaption b{color:var(--fg-2)}
+.hero-fig img{border:none;border-radius:0;background:transparent}
 
 /* pull numbers */
 .figures{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);
@@ -202,7 +203,7 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
       <span class="aff">1 UC San Diego · 2 UC Irvine · 3 Cushing Academy · 4 UC Santa Barbara &nbsp;&nbsp;|&nbsp;&nbsp; *equal contribution &nbsp;†corresponding authors</span>
     </div>
 
-    <figure style="margin-top:0">
+    <figure style="margin-top:0" class="hero-fig">
       <img src="assets/figures/main-f1.png" alt="Overview of SciLaws-Bench.">
       <figcaption><b>The construction, in one picture.</b> Every curated problem is instantiated twice — as a fixed-record <b>Real</b> task scored on predictive fit and scientific validity, and as a queryable <b>Parallel</b> world scored on how much of a hidden law the model recovers.</figcaption>
     </figure>
