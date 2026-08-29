@@ -1,7 +1,7 @@
 ---
 license: other
 license_name: mixed-per-task
-license_link: https://github.com/TODO/SciLaws-Bench/blob/main/dataset/LICENSES.md
+license_link: https://github.com/yiyihum/SciLaws-Bench/blob/main/dataset/LICENSES.md
 pretty_name: SciLaws-Bench
 task_categories:
   - tabular-regression
@@ -16,10 +16,8 @@ tags:
 size_categories:
   - 1M<n<10M
 configs:
-  - config_name: default
-    data_files:
-      - split: train
-        path: tasks/*/*/data/train.csv
+  - config_name: task_index
+    data_files: task_index.csv
 ---
 
 # SciLaws-Bench
@@ -31,9 +29,9 @@ and ~8.2M real measurements across six disciplines. Every problem comes from act
 data-driven literature where the published law still leaves room for improvement — not from
 textbook equations.
 
-- Code and harness: https://github.com/TODO/SciLaws-Bench
-- Project page: https://TODO
-- Paper: https://TODO
+- Code and harness: https://github.com/yiyihum/SciLaws-Bench
+- Project page: https://yiyihum.github.io/SciLaws-Bench/
+- Paper: https://yiyihum.github.io/SciLaws-Bench/assets/scilaws_bench_paper.pdf
 
 ## Two settings per problem
 
@@ -62,7 +60,7 @@ complete hidden structure.
 66 tasks are Type I (single-group: one global law), 52 are Type II (multi-group: one shared
 functional form, a few per-group parameters). All 118 ship a calibrated simulator.
 
-`task_index.csv` in this repository lists every task with its discipline, target variable,
+`task_index.csv` (shown in the dataset viewer) lists every task with its discipline, target variable,
 input count, row counts and license.
 
 ## Layout
@@ -104,7 +102,7 @@ scores the shared functional form on those same groups. `predict()` never receiv
 ## Usage
 
 ```bash
-hf download <ORG>/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
+hf download RealSR/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
 ```
 
 Load one task directly:

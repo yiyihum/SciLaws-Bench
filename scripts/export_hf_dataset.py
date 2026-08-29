@@ -22,7 +22,7 @@ Staging only copies files. Pushing is a separate, explicit step (--push).
 
     python scripts/export_hf_dataset.py --view full --out build/hf_full
     python scripts/export_hf_dataset.py --view full --out build/hf_full \
-        --push --repo-id <ORG>/SciLaws-Bench
+        --push --repo-id RealSR/SciLaws-Bench
 """
 from __future__ import annotations
 
@@ -82,7 +82,7 @@ def main() -> int:
                     help="what to include (default: full)")
     ap.add_argument("--push", action="store_true",
                     help="upload the staged directory to the Hub (requires --repo-id)")
-    ap.add_argument("--repo-id", default=None, help="e.g. myorg/SciLaws-Bench")
+    ap.add_argument("--repo-id", default=None, help="e.g. RealSR/SciLaws-Bench")
     ap.add_argument("--private", action="store_true", help="create the Hub repo as private")
     args = ap.parse_args()
 
@@ -96,7 +96,7 @@ def main() -> int:
 
     if not args.push:
         print("\nnot pushed. review the staging directory, then re-run with:\n"
-              "  --push --repo-id <ORG>/SciLaws-Bench")
+              "  --push --repo-id RealSR/SciLaws-Bench")
         return 0
 
     if not args.repo_id:

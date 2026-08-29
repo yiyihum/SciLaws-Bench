@@ -6,7 +6,7 @@
 
 118 law-discovery problems curated from 381 scientific papers · 291 candidate laws · ~8.2M real data points · 6 disciplines
 
-[Project page](https://TODO) · [Paper](https://TODO) · [Dataset on Hugging Face](https://TODO)
+[Project page](https://yiyihum.github.io/SciLaws-Bench/) · [Paper (PDF)](docs/assets/scilaws_bench_paper.pdf) · [Dataset on Hugging Face](https://huggingface.co/datasets/RealSR/SciLaws-Bench)
 
 </div>
 
@@ -53,12 +53,12 @@ SCILAWS-BENCH/
 ## Setup
 
 ```bash
-git clone https://github.com/<ORG>/SciLaws-Bench.git
+git clone https://github.com/yiyihum/SciLaws-Bench.git
 cd SciLaws-Bench
 pip install numpy pandas scipy pyyaml joblib scikit-learn
 
 # 118 tasks, ~1.1 GB
-hf download <ORG>/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
+hf download RealSR/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
 ```
 
 Each task directory is self-describing:
@@ -178,8 +178,8 @@ Single/multi-group breakdowns are on the project page and in the paper.
 
 ## Licensing
 
-Code in `harness/`, `baseline_agent/` and `scripts/` is released under the repository
-`LICENSE`.
+Code in `harness/`, `baseline_agent/` and `scripts/` is released under the MIT License
+(`LICENSE`).
 
 Task **data** carries the license of its upstream source — 53 tasks CC-BY-4.0, 22 CC0-1.0,
 and a long tail of public-domain, MIT, GPL, ODbL and agency-specific terms. Datasets that
