@@ -44,6 +44,11 @@ def stage(tasks_root: Path, out: Path, view: str) -> dict:
     (out / "tasks").mkdir(parents=True)
 
     counts = {"typeI": 0, "typeII": 0, "files": 0, "bytes": 0}
+    # top-level task metadata (domains.json: the six-discipline grouping)
+    for item in sorted(p for p in tasks_root.iterdir() if p.is_file()):
+        shutil.copy2(item, out / "tasks" / item.name)
+        counts["files"] += 1
+        counts["bytes"] += item.stat().st_size
     for kind in ("typeI", "typeII"):
         src_kind = tasks_root / kind
         if not src_kind.is_dir():
