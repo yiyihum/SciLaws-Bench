@@ -1,0 +1,124 @@
+TITLE: dna_melting | GPT-5.5 | faithfully excerpted
+|B|TASK|B|       |N|dna_melting_temperature_khandelwal :  DNA duplex melting temperature  T_m  as a function of  E, N, [Na+], C_DNA|N|
+|B|DATA|B|       |HL|344 rows preloaded as train_df / X_train / y_train|HL| |N|; E in [5.41, 9.76], [Na+] in [0.07, 1.02] M ; the test set holds C_DNA fixed at 2e-6 M|N|
+|B|SUBMIT|B|     |HL|USED_INPUTS, LAW_CONSTANTS={}, ..., def predict(X) with constants baked in as literals; no fit(), no group_id|HL|
+|B|CAPS|B|       |N|<= 5 global constants ; max_local_params=0 ; this task must NOT define fit()|N|
+|B|SCORED BY|B|  |HL|S_N -- RMSE on the held-out test set, vs. the Khandelwal 2010 reference (5 constants, RMSE 4.16)|HL| |N|; S_V -- 5-item rubric|N|
+
+|B|TURN 1 -- AGENT   <python>|B|   |EL|-- inspect the data. The model emitted four <python> blocks in this turn; the block whose output came back is shown|EL|
+import numpy as np, pandas as pd
+print("cols", input_cols, target_col, train_df.shape)
+print(train_df.describe().to_string())
+print("corr")
+print(train_df.corr(numeric_only=True)[target_col].sort_values(ascending=False).to_string())
+print(train_df.head(20).to_string(index=False))
+for c in input_cols:
+    vals=np.sort(train_df[c].unique())
+    print(c, "nunique", len(vals), "first", vals[:12], "last", vals[-12:])
+
+|B|TURN 1 -- HARNESS   <python_output>|B|
+cols ['E', 'N', 'salt_M', 'dna_conc_M'] Tm (344, 5)
+               Tm           E           N      salt_M  dna_conc_M
+count  344.000000  344.000000  344.000000  344.000000  344.000000
+mean    68.109593    7.761554   24.337209    0.385378    0.000004
+|EL|[std / quartile rows omitted]|EL|
+min     39.100000    5.409091   16.000000    0.070000    0.000001
+max     88.600000    9.760000   30.000000    1.020000    0.000100
+corr
+Tm            1.000000
+E             0.803547
+salt_M        0.479276
+N             0.470129
+dna_conc_M    0.017719
+|EL|[... head(20) and the per-column unique values omitted: 86 distinct E, N in {16..30}, 8 salt levels ...]|EL|
+
+|B|TURN 2 -- AGENT   <python>|B|   |EL|-- ten linear feature sets under the 5-constant cap, plus a thermodynamic (enthalpy / entropy) nonlinear form|EL|
+import numpy as np, pandas as pd
+from scipy.optimize import least_squares
+E=train_df['E'].values.astype(float); N=train_df['N'].values.astype(float); salt=train_df['salt_M'].values.astype(float); C=train_df['dna_conc_M'].values.astype(float); y=y_train.astype(float)
+lns=np.log(salt); log10s=np.log10(salt); lnc=np.log(C); invN=1/N
+def fit_linear(feats, names):
+    X=np.column_stack([np.ones_like(y)]+feats)
+    coef=np.linalg.lstsq(X,y,rcond=None)[0]
+    pred=X@coef
+    rmse=np.sqrt(np.mean((pred-y)**2))
+    print("LIN", names, "rmse", rmse, "coef", coef)
+    return coef,pred,rmse
+features = [
+    ([E, log10s, invN], ['E','log10s','1/N']),
+    ([E, log10s, N], ['E','log10s','N']),
+    ([E, log10s, 1/N, lnc/N], ['E','log10s','1/N','lnC/N']),
+|EL|[... 7 more feature sets ...]|EL|
+]
+for feats,names in features:
+    fit_linear(feats,names)
+|EL|[... 31 lines: a nonlinear enthalpy/entropy form T = (a N E + b)/(c N + d + ln(C/x)) fitted by least_squares, residuals grouped by N ...]|EL|
+
+|B|TURN 2 -- HARNESS   <python_output>|B|
+LIN ['E', 'log10s', '1/N'] rmse 1.8509012819174706 coef [  37.11838692    7.12771586   11.26924896 -409.39863284]
+LIN ['E', 'log10s', 'N'] rmse 1.902435137949972 coef [ 1.51940366  7.19560896 11.28131319  0.72730977]
+LIN ['E', 'log10s', '1/N', 'lnC/N'] rmse 1.713291273738148 coef [ 37.84745579   7.21071573  11.32545546 -91.52104782  27.02657926]
+|EL|[... 7 more linear rows, between 1.69 and 3.62 ...]|EL|
+NL enthalpy_entropy_E_salt rmse 3.5636172410304354 p [1.04864536e+09 3.98081305e+09 2.24549217e+06 1.73073509e+07
+ 1.15361454e+01]
+|EL|[... 33 lines: residuals grouped by N -- the thermodynamic form is biased +5 C at N=16 and -3.5 C at N=30; the linear lnC/N form is not ...]|EL|
+
+|EL|[... TURNS 3-4: residual diagnostics by N / salt / C for the 5-constant base model, then a sweep of ~40 feature sets under|EL|
+|EL| 20x random K-fold plus leave-one-group-out CV. Turn 4 is rejected by the sandbox: ...]|EL|
+Python execution failed: TypeError: factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list.
+
+|B|TURN 5 -- HARNESS   <python_output>|B|   |EL|-- the repaired sweep: 35 salt-term x concentration-term combinations ranked by train / CV / LOGO RMSE (top rows)|EL|
+row train 1.5836 cv 1.5949 sd 0.2120 logo 1.4222 E_l10_sqrts_lnC_Nm1 coef [ 51.40571612   7.24256968  21.19723019 -15.29267498  31.26036061]
+row train 1.5874 cv 1.5991 sd 0.2095 logo 1.4207 E_l10_inv1s_lnCN coef [24.32808261  7.25963287 21.06595874 25.11114858 34.19231536]
+row train 1.5880 cv 1.5998 sd 0.2094 logo 1.4219 E_l10_l10sq_lnCN coef [36.8667511   7.25966634  5.33406965 -5.41807165 34.20195495]
+|EL|[... 32 more rows; every set without a concentration term sits near 3.55 ...]|EL|
+BEST E_l10_sqrts_lnC_Nm1 train 1.583562041303732 cv 1.5949453636417672 logo 1.4222221024500294
+
+|B|TURN 6 -- AGENT|B|   |EL|-- the model emitted a <python> block AND a <final_formula> in the same turn; the harness ran the python and ignored the submission|EL|
+|EL|[the ignored <final_formula> was the sqrt-salt model: 51.41 + 7.24 E + 21.20 log10(salt) - 15.29 sqrt(salt) + 31.26 ln(C)/(N-1)]|EL|
+
+|B|TURN 7 -- AGENT   <python>|B|   |EL|-- 100-model sweep: 5 salt terms x 4 concentration references x 5 length denominators, ranked by train, CV and LOGO|EL|
+models={}
+for denom_name,den in [('N',N),('Nm1',N-1),('Nm2',N-2),('sqrtN',np.sqrt(N)),('none',np.ones_like(N))]:
+    for cname,lc in [('C',np.log(C)),('C4',np.log(C/4.0)),('C2',np.log(C/2.0)),('C1e6',np.log(C*1e6))]:
+        conc=lc/den
+        models[f'sqrt_{cname}_{denom_name}']=[E,l10,np.sqrt(salt),conc]
+        models[f'l10sq_{cname}_{denom_name}']=[E,l10,l10**2,conc]
+        models[f'inv1s_{cname}_{denom_name}']=[E,l10,1/(1+salt),conc]
+        models[f'cbrt_{cname}_{denom_name}']=[E,l10,np.cbrt(salt),conc]
+        models[f'salt_{cname}_{denom_name}']=[E,l10,salt,conc]
+|EL|[... 30 lines: 10x 8-fold CV + leave-one-(E,N)-group-out, sort, print the top 20 by train and by CV ...]|EL|
+
+|B|TURN 7 -- HARNESS   <python_output>|B|
+TOP train
+1.568693 cv 1.580331 logo 1.408633 inv1s_C4_Nm2 coef [22.83594517  7.22571641 21.12049072 25.3159285  25.71973384]
+1.569354 cv 1.581179 logo 1.409827 l10sq_C4_Nm2 coef [35.47636931  7.22574413  5.26161886 -5.4610735  25.72670857]
+|EL|[... 5 rows ...]|EL|
+1.573256 cv 1.585189 logo 1.415124 l10sq_C4_Nm1 coef [36.23048159  7.23489289  5.28145552 -5.44952578 28.25576353]
+|EL|[... 12 more rows, all within 0.01 of the top; the TOP cv list has the same ordering ...]|EL|
+
+|B|TURN 8 -- AGENT   <final_formula>|B|   |EL|-- submits the quadratic-log-salt form with ln(C/4)/(N-1): 8th by train RMSE, not the top row|EL|
+"""Nearest-neighbor strength model with length-scaled concentration entropy and a quadratic log-sodium correction."""
+import numpy as np
+
+USED_INPUTS = ["E", "N", "salt_M", "dna_conc_M"]
+LAW_CONSTANTS = {}
+OTHER_CONSTANTS = {}
+LOCAL_FITTABLE = {}
+
+def predict(X):
+    E = X[:, 0]
+    N = X[:, 1]
+    salt_M = X[:, 2]
+    dna_conc_M = X[:, 3]
+    log_salt = np.log10(salt_M)
+    return (
+        36.23048159
+        + 7.23489289 * E
+        + 5.28145552 * log_salt
+        - 5.44952578 * log_salt * log_salt
+        + 28.25576353 * np.log(dna_conc_M / 4.0) / (N - 1.0)
+    )
+
+|B|SCORE|B|  |N|S_N = 0.788 ; S_V = 1.0 (5/5 rubric items).  Test RMSE 1.76 C vs. 4.16 C for the Khandelwal 2010 reference -- the published law is beaten by more than half.|N|
+      |N|A discovery-moat task: no model cold-recalls a formula for it, so the form had to come from the data.|N|

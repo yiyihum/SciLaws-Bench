@@ -1,0 +1,130 @@
+TITLE: hacks_law | GPT-5.5 | faithfully excerpted
+|B|TASK|B|       |N|hacks_law_river_length :  main-stem river length  L  as a function of  upstream area  A   (+ A_c, L_s, endorheic, Strahler order)|N|
+|B|DATA|B|       |HL|28340 rows preloaded|HL| |N|; train A in [100, 1088] km^2, test A in [1088, 5.9e6] km^2 -- the test set extrapolates almost four orders of magnitude|N|
+|B|SUBMIT|B|     |HL|def predict(X) with constants baked in as literals; no fit(), no group_id|HL|
+|B|CAPS|B|       |N|<= 2 global constants ; max_local_params=0 ; this task must NOT define fit()|N|
+|B|SCORED BY|B|  |HL|S_N -- log_mae (mean |log10 error|) on the held-out test set, vs. the strongest published reference|HL| |N|; S_V -- 5-item rubric|N|
+
+|B|TURN 1 -- AGENT   <python>|B|   |EL|-- log-log Hack fit, then five extra feature sets. Three <python> blocks were emitted; the block whose output came back is shown|EL|
+import numpy as np, pandas as pd
+A=train_df['upland_area_skm'].to_numpy(); Ac=train_df['catch_area_skm'].to_numpy(); ls=train_df['segment_length_km'].to_numpy()
+e=train_df['endorheic'].to_numpy(); o=train_df['strahler_order'].to_numpy().astype(float); L=y_train
+logL=np.log10(L); logA=np.log10(A)
+print("available?", train_df.shape)
+print(train_df.describe().to_string())
+|EL|[... 7 lines: decile bins of A with the median L per bin ...]|EL|
+def eval_logpred(lp): return np.mean(np.abs(lp-logL))
+def fit_eval(name, cols):
+    X=np.column_stack(cols)
+    co=np.linalg.lstsq(X,logL,rcond=None)[0]
+    lp=X@co
+    print(name, "coef", co, "logMAE", eval_logpred(lp))
+fit_eval("Hack", [np.ones_like(A), logA])
+fit_eval("Hack+order", [np.ones_like(A), logA, o])
+fit_eval("Hack+logorder", [np.ones_like(A), logA, np.log10(o)])
+fit_eval("Hack+end", [np.ones_like(A), logA, e])
+fit_eval("Hack+order+end", [np.ones_like(A), logA, o, e])
+fit_eval("all", [np.ones_like(A), logA, np.log10(Ac), np.log10(ls), o, e])
+|EL|[... 13 lines: an L1 (log-MAE) Nelder-Mead fit of the two Hack constants, and fit-low / predict-high checks at A < 200, 400, 700 ...]|EL|
+
+|B|TURN 1 -- HARNESS   <python_output>|B|
+available? (28340, 6)
+       main_length_km  upland_area_skm  catch_area_skm  segment_length_km     endorheic  strahler_order
+mean        40.160847       320.893853       16.454004           4.909590      0.390261        2.727664
+min         11.600000       100.000000        0.060000           0.100000      0.000000        1.000000
+max        471.900000      1087.700000      251.930000         340.080000      1.000000        5.000000
+|EL|[... count / std / quartile rows and the 10 decile bins omitted ...]|EL|
+Hack coef [0.25526902 0.54123534] logMAE 0.08002775239679298
+Hack+order coef [ 0.21116575  0.61442473 -0.04843817] logMAE 0.07724943678868361
+Hack+logorder coef [ 0.20453878  0.61559754 -0.30422254] logMAE 0.07697295299574786
+Hack+end coef [ 0.26389758  0.54655391 -0.05492398] logMAE 0.07709091253533491
+Hack+order+end coef [ 0.2115701   0.63749327 -0.05945021 -0.06639639] logMAE 0.07285318500188294
+all coef [ 0.17520771  0.62277727 -0.07153442  0.1775633  -0.04393533 -0.04731198] logMAE 0.06781410945583766
+MAE fit Hack [0.23805283 0.54589375] 0.07987226104221541
+fit A< 200 coef [0.25229483 0.54273405] mae tr 0.07939852989920027 te 0.08056100856112183
+fit A< 400 coef [0.24793335 0.54457332] mae tr 0.07970340054677708 te 0.08101179567137382
+fit A< 700 coef [0.25433568 0.54165517] mae tr 0.079988521360263 te 0.08041510378864188
+|EL|-- the extra inputs help only marginally, and the cap allows two constants anyway|EL|
+
+|B|TURN 2 -- AGENT   <python>|B|   |EL|-- sweep the Hack exponent h with an L1-optimal prefactor, and try L = L_s + c A^h|EL|
+for h in [0.5,0.54,0.56,0.57,0.58,0.6,0.62]:
+    logc=np.median(logL-h*logA) # L1 optimal intercept
+    yhat=10**logc * A**h
+    print("fixed_h",h,"c",10**logc,"mae",mae_log_yhat(yhat), "L@1e3",10**logc*1e3**h,"L@1e6",10**logc*1e6**h)
+def fit_two(form, init):
+    def obj(p):
+        y=form(p)
+        return mae_log_yhat(y)
+    res=minimize(obj, init, method='Nelder-Mead', options={'maxiter':10000})
+    print("fit", init, "p", res.x, "mae", res.fun, "L@1e3", form(res.x, np.array([1000.])) if False else "")
+fit_two(lambda p: p[0]*A**p[1], [1.8,0.54])
+fit_two(lambda p: ls + p[0]*A**p[1], [1.6,0.55])
+fit_two(lambda p: np.maximum(ls, p[0]*A**p[1]), [1.8,0.54])
+|EL|[... 20 lines: residuals of the published Hack / Dodds-Rothman constants stratified by Strahler order; median-bin slope ...]|EL|
+
+|B|TURN 2 -- HARNESS   <python_output>|B|
+fixed_h 0.5 c 2.228617273509361 mae 0.08056406293050965 L@1e3 70.47506617084014 L@1e6 2228.617273509361
+fixed_h 0.54 c 1.7868087970992563 mae 0.07988233362474642 L@1e3 74.48658816261388 L@1e6 3105.1178084157636
+fixed_h 0.6 c 1.2832885239114507 mae 0.08084917969722691 L@1e3 80.97003192490757 L@1e6 5108.863632581615
+|EL|[... h = 0.56 / 0.57 / 0.58 / 0.62 rows omitted ...]|EL|
+fit [1.8, 0.54] p [1.72991916 0.54590395] mae 0.07987226082761768 L@1e3 
+fit [1.6, 0.55] p [0.97091971 0.62409618] mae 0.07212739639696514 L@1e3     |EL|# adding the terminal segment cuts train log-MAE by 10%|EL|
+fit [1.8, 0.54] p [1.6904095  0.54955348] mae 0.07821174131657258 L@1e3 
+|EL|[... 33 lines: the published Hack constants (c = 1.27, h = 0.6) score 0.0809 here; order-1 basins are the worst stratum for every variant ...]|EL|
+
+|EL|[... TURNS 3-4: two attempts at a larger candidate sweep are rejected by the sandbox before running: ...]|EL|
+Python execution failed: ValidationError: Syntax error: invalid syntax (<unknown>, line 12)
+Python execution failed: ValidationError: Syntax error: invalid syntax (<unknown>, line 16)
+|EL|(the offending construct was np.array([oo.]) -- a float literal with a trailing dot)|EL|
+
+|B|TURN 5 -- AGENT   <python>|B|   |EL|-- the sweep, repaired: eight two-constant forms, each also evaluated at test-range areas up to 5.9e6 km^2|EL|
+fit("c A^h", lambda p,a,o,s,e,ac: p[0]*a**p[1], [1.7,.546])
+fit("seg+c A^h", lambda p,a,o,s,e,ac: s+p[0]*a**p[1], [.97,.624])
+fit("c sqrtA * o^q", lambda p,a,o,s,e,ac: p[0]*np.sqrt(a)*o**p[1], [1.5,.3])
+fit("seg+c sqrtA * o^q", lambda p,a,o,s,e,ac: s+p[0]*np.sqrt(a)*o**p[1], [1.0,.3])
+fit("c A^.55 * o^q", lambda p,a,o,s,e,ac: p[0]*a**0.55*o**p[1], [1.5,0])
+fit("seg+c A^.55 * o^q", lambda p,a,o,s,e,ac: s+p[0]*a**0.55*o**p[1], [1.0,0])
+fit("c A^.6 / o^q", lambda p,a,o,s,e,ac: p[0]*a**0.6/o**p[1], [1.5,.2])
+fit("seg+c A^.6 / o^q", lambda p,a,o,s,e,ac: s+p[0]*a**0.6/o**p[1], [1.0,.3])
+|EL|[... 26 lines: one-constant forms with fixed exponents, a 3-parameter diagnostic, per-order medians ...]|EL|
+
+|B|TURN 5 -- HARNESS   <python_output>|B|   |EL|(predictions at 1e4 and 1e5 km^2 omitted from each block)|EL|
+c A^h p [1.72991849 0.54590379] mae 0.07987226083102175
+  1000.0 4 75.11678802858533
+  1000000.0 9 3261.7327861001445
+  5913000.0 10 8605.601380421225
+seg+c A^h p [0.97092813 0.62409293] mae 0.07212739617612944
+  1000.0 4 75.35455489605322
+  1000000.0 9 5394.935255828781
+  5913000.0 10 16349.489881382278             |EL|# best train MAE, but h = 0.62 predicts a 16,000 km river at the largest test basin|EL|
+|EL|[... 6 more forms; the Strahler-order variants land between 0.0722 and 0.0798 ...]|EL|
+
+|B|TURN 6 -- AGENT   <python>|B|   |EL|-- fix the exponent, fit only the prefactor, with and without the segment term; watch the prediction at 1e6 km^2|EL|
+|EL|[... 12 lines: setup and opt_c_for_base() -- the L1-optimal prefactor for a fixed base ...]|EL|
+for h in [0.5,0.51,0.52,0.53,0.54,0.5459,0.55,0.56,0.58,0.6]:
+    c,m=opt_c_for_base(A**h)
+    cs,ms=opt_c_for_base(A**h, seg)
+    print("h",h,"plain c",c,"mae",m,"pred1e6",c*1e6**h,"pred5.9M",c*5.913e6**h,"seg+c",cs,"mae",ms,"pred1e6",cs*1e6**h)
+|EL|[... 16 lines: a transition form c A^h / (1 + A/A0)^(h-0.5) for A0 in 1e3..1e5, and the published constant pairs ...]|EL|
+
+|B|TURN 6 -- HARNESS   <python_output>|B|
+h 0.5 plain c 2.228617273509361 mae 0.08056406293050965 pred1e6 2228.617273509361 pred5.9M 5419.2530638364315 seg+c 1.9407659724184665 mae 0.07655861775091545 pred1e6 1940.7659724184664
+h 0.55 plain c 1.6917286882431677 mae 0.07987846331666777 pred1e6 3375.442498803331 pred5.9M 8970.673445134833 seg+c 1.4679526869123165 mae 0.07371517238626582 pred1e6 2928.9506763534573
+h 0.6 plain c 1.2832885239114507 mae 0.08084917969722691 pred1e6 5108.863632581615 pred5.9M 14839.150445444893 seg+c 1.1102651624375433 mae 0.072301078795752 pred1e6 4420.045223821292
+|EL|[... 7 more h rows; 5 transition-form rows; 7 published-constant rows ...]|EL|
+
+|B|TURN 7 -- AGENT   <final_formula>|B|   |EL|-- submit L = L_s + c A^0.55: exponent fixed between Hack's 0.6 and Dodds-Rothman's 0.5, prefactor fitted|EL|
+"""Hack-style main-stem length: terminal segment plus an area scaling with exponent near 0.55."""
+import numpy as np
+
+USED_INPUTS = ["upland_area_skm", "segment_length_km"]
+LAW_CONSTANTS = {}
+OTHER_CONSTANTS = {}
+LOCAL_FITTABLE = {}
+
+def predict(X):
+    A = X[:, 0]
+    Ls = X[:, 1]
+    return Ls + 1.4679526869123165 * np.power(A, 0.55)
+
+|B|SCORE|B|  |N|S_N = 0.580 ; S_V = 1.0 (5/5).  Test log-MAE 0.083 vs. 0.099 for Hack 1957 and 0.105 for Dodds-Rothman 2000, on basins up to 5,000x larger than any in training.|N|

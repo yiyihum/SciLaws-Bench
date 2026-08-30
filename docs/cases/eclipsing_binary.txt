@@ -1,0 +1,160 @@
+TITLE: eclipsing_binary | DeepSeek-V4 Pro | faithfully excerpted
+|B|TASK|B|       |N|eclipsing_binary_mass_luminosity :  log10(L/L_sun)  as a function of  log10(M/M_sun)   (main-sequence mass-luminosity relation)|N|
+|B|DATA|B|       |HL|no rows preloaded -- the agent must call <experiment> to collect observations|HL| |N|; log10 M in [-0.976, 1.436] ; <= 10 calls, <= 23 points x 3 samples each|N|
+|B|SUBMIT|B|     |HL|def predict(X), constants baked in as literals, no fit(), no group_id|HL| |N|; <= 12 global constants|N|
+|B|SCORED BY|B|  |HL|S_S -- does the submitted form match the hidden simulator's structure (up to algebraic equivalence)|HL|
+
+|B|TURN 1 -- AGENT   <experiment>|B|   |HL|<- Parallel only: the agent designs its own measurements|HL|
+{"log_M_Msun": [-0.9763, -0.8667, -0.7571, -0.6475, -0.5379, -0.4283, -0.3187, -0.2091, -0.0995, 0.0101, 0.1197, 0.2293, 0.3389, 0.4485, 0.5581, 0.6677, 0.7773, 0.8869, 0.9965, 1.1061, 1.2157, 1.3253, 1.436], "n_samples": 3, "seed": 0}
+|EL|# 23 evenly spaced masses over the whole range x 3 replicates = the full 69-row budget of one call|EL|
+
+|B|TURN 1 -- HARNESS   <experiment_output>|B|
+{"experiment_id": 1, "n_returned": 69, "n_appended_to_train": 69, "preview_rows": [
+  {"log_L_Lsun": -3.0077844708594315, "log_M_Msun": -0.9763}, {"log_L_Lsun": -2.9884997932839434, "log_M_Msun": -0.9763},
+  {"log_L_Lsun": -2.5232736798597326, "log_M_Msun": -0.9763}, {"log_L_Lsun": -2.867294828249469, "log_M_Msun": -0.8667}, ...],
+ |EL|[row-id bookkeeping and caps omitted]|EL| "n_clipped": 1}
+
+|B|TURN 2 -- AGENT   <python>|B|   |EL|-- look at everything|EL|
+import numpy as np
+import pandas as pd
+
+print("train_df shape:", train_df.shape)
+print("\nFull data:")
+print(train_df.to_string())
+print("\nBasic stats:")
+print(train_df.describe())
+print("\nCorrelation:")
+print(train_df.corr())
+
+# Group by log_M and compute mean and std of log_L
+grouped = train_df.groupby('log_M_Msun')['log_L_Lsun'].agg(['mean', 'std', 'count'])
+print("\nGrouped by log_M_Msun:")
+print(grouped.to_string())
+
+|B|TURN 3 -- AGENT   <python>|B|   |EL|-- finite-difference slopes and curvature of the group means; linear and quadratic fits|EL|
+grouped = train_df.groupby('log_M_Msun')['log_L_Lsun'].mean()
+x = grouped.index.values
+y = grouped.values
+dx = np.diff(x)
+dy = np.diff(y)
+slopes = dy / dx
+print("\nSlopes between consecutive points:")
+for i in range(len(slopes)):
+    print(f"  x={x[i]:.4f} to x={x[i+1]:.4f}: slope = {slopes[i]:.4f}")
+d2y = np.diff(y, 2)
+|EL|[... 24 lines: second differences, linear and quadratic polyfit with residuals ...]|EL|
+
+|B|TURN 3 -- HARNESS   <python_output>|B|
+Slopes between consecutive points:
+  x=-0.9763 to x=-0.8667: slope = 0.4666
+  x=-0.8667 to x=-0.7571: slope = 3.5813
+  x=-0.7571 to x=-0.6475: slope = 2.6257
+  x=-0.6475 to x=-0.5379: slope = -1.4712
+|EL|[... 18 more slopes, swinging between -3.5 and 9.4: three replicates per point are too noisy for local slopes ...]|EL|
+
+|B|TURN 4 -- AGENT   <experiment>|B|   |EL|-- a second full-budget grid, offset from the first|EL|
+{"log_M_Msun": [-0.9763, -0.8, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.436], "n_samples": 3, "seed": 1}
+|EL|[... TURNS 5-12: two <python> passes (sort all 138 rows; fit a two-segment broken power law with a free break) and five more|EL|
+|EL| <experiment> rounds, the later ones densifying the low-mass side where the slope changes fastest ...]|EL|
+
+|B|TURN 13 -- AGENT   <python>|B|   |EL|-- head-to-head on the group means: polynomials vs. the textbook broken power laws|EL|
+|EL|[imports and df setup omitted]|EL|
+# Compute group means
+grouped = df.groupby('log_M_Msun')['log_L_Lsun'].agg(['mean', 'std', 'min', 'max', 'count'])
+x_mean = grouped.index.values
+y_mean = grouped['mean'].values
+y_min = grouped['min'].values
+y_max = grouped['max'].values
+n_per_group = grouped['count'].values
+
+# Model 1: simple linear
+coef_lin = np.polyfit(x_mean, y_mean, 1)
+print("Linear: y = {:.4f} + {:.4f}*x".format(coef_lin[1], coef_lin[0]))
+print("  RMSE = {:.4f}".format(np.sqrt(np.mean((np.polyval(coef_lin, x_mean) - y_mean)**2))))
+
+# Model 2: quadratic
+coef_quad = np.polyfit(x_mean, y_mean, 2)
+print("\nQuadratic: y = {:.4f}*x^2 + {:.4f}*x + {:.4f}".format(coef_quad[0], coef_quad[1], coef_quad[2]))
+print("  RMSE = {:.4f}".format(np.sqrt(np.mean((np.polyval(coef_quad, x_mean) - y_mean)**2))))
+
+# Model 3: cubic
+coef_cub = np.polyfit(x_mean, y_mean, 3)
+print("\nCubic: y = {:.4f}*x^3 + {:.4f}*x^2 + {:.4f}*x + {:.4f}".format(coef_cub[0], coef_cub[1], coef_cub[2], coef_cub[3]))
+print("  RMSE = {:.4f}".format(np.sqrt(np.mean((np.polyval(coef_cub, x_mean) - y_mean)**2))))
+
+# Model 4: broken power law with 2 segments
+def broken2(x, a, b1, b2, x0):
+    y = np.where(x < x0, a + b1*(x - x0), a + b2*(x - x0))
+    return y
+|EL|[... 76 lines: a 3-segment form with free breaks, a 3-segment form with the textbook breaks fixed at M = 0.43 and 2 M_sun|EL|
+|EL| (log M = -0.3665, 0.3010), RMSE of each, within-group noise, residual moments of the cubic ...]|EL|
+
+|B|TURN 13 -- HARNESS   <python_output>|B|
+Linear: y = 0.1441 + 3.7906*x
+  RMSE = 0.3720
+
+Quadratic: y = -0.1776*x^2 + 3.8865*x + 0.2121
+  RMSE = 0.3648
+
+Cubic: y = -1.2036*x^3 + 0.7165*x^2 + 4.6644*x + 0.0101
+  RMSE = 0.1696
+
+Broken power law (2 segments):
+  break at x0 = -0.5687
+  y at break = -2.1689
+  slope left = 1.6519
+  slope right = 3.9190
+  RMSE = 0.3385
+
+Broken power law (3 segments):
+  break1 at x1 = -0.3911
+  break2 at x2 = 0.7196
+  y at x1 = -1.7737
+  slope1 = 1.9388
+  slope2 = 4.6815
+  slope3 = 2.1385
+  RMSE = 0.1864
+
+Broken power law (fixed breaks at log_M=-0.3665, 0.3010):
+  y at x1 = -1.7460
+  slope1 = 1.8867
+  slope2 = 5.2011
+  slope3 = 3.1307
+  RMSE = 0.2438                              |EL|# the 4-constant cubic beats the 6-constant broken law|EL|
+|EL|[... within-group noise and cubic residual moments omitted ...]|EL|
+
+|EL|[... TURNS 14-17: four more <experiment> rounds -- 669 rows in total over 137 distinct masses. TURN 18 asks for an 11th: ...]|EL|
+|B|TURN 18 -- HARNESS   <experiment_output>|B|
+{"error": "experiment call cap reached: already ran 10 successful experiments; maximum is 10.", ...}
+
+|B|TURN 19 -- AGENT   <python>|B|   |EL|-- final comparison on all 137 group means: cubic vs. quartic vs. free-break 3-segment; a tanh-smoothed 3-slope form is started and abandoned|EL|
+# 1. Cubic polynomial
+c3 = np.polyfit(x_mean, y_mean, 3)
+y_c3 = np.polyval(c3, x_mean)
+rmse3 = np.sqrt(np.mean((y_c3 - y_mean)**2))
+print(f"\nCubic: {c3[0]:.6f}*x^3 + {c3[1]:.6f}*x^2 + {c3[2]:.6f}*x + {c3[3]:.6f}")
+print(f"RMSE = {rmse3:.6f}")
+
+# 2. Quartic polynomial
+c4 = np.polyfit(x_mean, y_mean, 4)
+|EL|[... 67 lines ...]|EL|
+# This is too complex. Let me try something simpler.
+|EL|[... 28 lines: numerical derivatives of the mean curve and binned scatter ...]|EL|
+|B|TURN 19 -- HARNESS   <python_output>|B|   |EL|[312 lines: the 137 group means, then the fits; the cubic below is the one the model submits next]|EL|
+
+|B|TURN 20 -- AGENT   <final_formula>|B|
+"""Cubic polynomial fit to the mass-luminosity relation for main-sequence stars."""
+import numpy as np
+
+USED_INPUTS = ["log_M_Msun"]
+LAW_CONSTANTS = {}
+OTHER_CONSTANTS = {}
+LOCAL_FITTABLE = {}
+
+def predict(X):
+    x = X[:, 0]
+    return -1.1212 * x**3 + 0.6240 * x**2 + 4.6040 * x + 0.0349
+
+|B|SCORE|B|  |N|S_S = 1.0  (missed = none): the hidden law is  C0 + C1 g + C2 g^2 + C3 g^3  in g = log10(M/M_sun) -- one smooth cubic in place of the|N|
+      |N|textbook broken power law (Eker 2018: six straight segments, 12 constants). Judge: "recovers the positive linear and quadratic curvature|N|
+      |N|terms and the negative cubic high-mass-flattening term." Claude Opus 4.8 and Gemini 3.5 Flash also reach 1.0 on this world.|N|

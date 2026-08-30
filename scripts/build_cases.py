@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Convert the paper's four reference trajectories (appendix_case_studies.tex,
-trajbox/trajlisting blocks) into docs/assets/cases.js for the homepage.
+"""Build docs/assets/cases.js for the homepage from two sources:
+
+  1. the paper's four reference trajectories (appendix_case_studies.tex,
+     trajbox/trajlisting blocks), and
+  2. docs/cases/*.txt -- four more, excerpted from the nine-model panel logs in
+     SciLaws-Bench/baseline_agent/results/models/<model>/<track>/traces/
+     using the same markup. First line: `TITLE: <key> | <model> | <note>`.
 
 The traces are verbatim agent logs; the only transformation here is markup:
   |B|x|B|   -> <b>            our turn markers / header labels
@@ -93,13 +98,82 @@ CARDS = {
    scored="S_S: structural match to the hidden law, up to algebraic equivalence",
    outcome="S_S = 1.0 (GPT-5.5)",
    lesson="Recovers the hidden n² = A + B/(λ² − C) + D·λ² family exactly. On the Real version the same model submits a Cauchy series and scores S_N = 0.21 — structure recovery and reference-beating are different outcomes."),
+ # ---- cases excerpted from the panel logs (docs/cases/*.txt) ----
+ "dna_melting": dict(
+   task_id="dna_melting_temperature_khandelwal__Tm", setting="Real", group="single",
+   discipline="Biology", domain="biology / biochemistry", license="CC-BY-4.0",
+   context="The melting temperature of a double-stranded DNA oligonucleotide is the temperature at which half of the duplexes dissociate into single strands, a key parameter in molecular biology.",
+   target=("Tm", "T_m", "°C", "Experimentally measured DNA duplex melting temperature — the temperature at which 50% of double-stranded DNA has dissociated into single strands, determined by UV-absorbance hyperchromic effect."),
+   inputs=[("E", "E", "dimensionless", "DNA strength parameter per base — sum of overlapping dinucleotide step strength values divided by sequence length."),
+           ("N", "N", "bp", "Oligonucleotide sequence length in base pairs."),
+           ("salt_M", "[Na+]", "M", "Sodium ion concentration of the solution."),
+           ("dna_conc_M", "C_DNA", "M", "Total nucleotide strand concentration.")],
+   data="344 train rows, 100 test rows. Train C_DNA spans 10⁻⁶–10⁻⁴ M; the test set holds it at 2×10⁻⁶ M. E and [Na+] test ranges sit inside the train ranges.",
+   baselines=["khandelwal_2010 (reference; Eq. 1, 5 constants; test RMSE 4.16 °C)"],
+   caps="≤ 5 global constants · no per-group parameters · must not define fit()",
+   scored="S_N: RMSE on the held-out test set, normalized against Khandelwal 2010 · S_V: 5-item frozen rubric",
+   outcome="S_N = 0.788 · S_V = 1.0 (5/5) — GPT-5.5",
+   lesson="A discovery-moat task: no model cold-recalls a formula for it. The agent builds a nearest-neighbour strength term, a quadratic log-salt correction and a length-scaled concentration term from the data, and cuts the published RMSE from 4.16 °C to 1.76 °C."),
+ "hacks_law": dict(
+   task_id="hacks_law_river_length_hydrosheds__main_length_km", setting="Real", group="single",
+   discipline="Ecology & Hydrology", domain="earth_science / hydrology", license="HydroSHEDS-v1-Derivative",
+   context="In geomorphology and hydrology, each river drainage basin has a main-stem channel running from its headwater divide to its outlet, characterized using a global hydrographic database.",
+   target=("main_length_km", "L", "km", "Main-stem river length, measured along the longest channel from the drainage divide to the basin outlet."),
+   inputs=[("upland_area_skm", "A", "km²", "Total upstream drainage area at the outlet."),
+           ("catch_area_skm", "A_c", "km²", "Local catchment area of the outlet segment alone."),
+           ("segment_length_km", "L_s", "km", "Length of the terminal outlet segment alone."),
+           ("endorheic", "e", "—", "1 if the basin terminates at an inland sink, 0 if it reaches the ocean."),
+           ("strahler_order", "ω", "—", "Strahler stream order of the outlet segment.")],
+   data="28,340 train rows, 7,085 test rows. Train basins have A ∈ [100, 1,088] km²; test basins run from 1,088 to 5.9×10⁶ km² — an extrapolation of almost four orders of magnitude.",
+   baselines=["hack_1957 (Eq. 3; L = c·A^h with h = 0.6; test log-MAE 0.099)", "dodds_rothman_2000 (Eq. 36; h = 0.5; test log-MAE 0.105)"],
+   caps="≤ 2 global constants · no per-group parameters · must not define fit()",
+   scored="S_N: log-MAE on the held-out test set, normalized against the stronger reference · S_V: 5-item frozen rubric",
+   outcome="S_N = 0.580 · S_V = 1.0 (5/5) — GPT-5.5",
+   lesson="With only two constants allowed, the agent keeps Hack's power law but adds the terminal segment length as a free additive term and fixes the exponent at 0.55. Test log-MAE 0.083 against 0.099 (Hack) and 0.105 (Dodds–Rothman), on basins far larger than any it trained on. Every model but GPT-5.4-mini passes the full validity rubric here."),
+ "eclipsing_binary": dict(
+   task_id="eclipsing_binary_mass_luminosity_debcat__log_L_Lsun", setting="Parallel", group="single",
+   discipline="Astronomy", domain="astronomy / stellar_astrophysics", license="CC-BY-4.0",
+   context="Eclipsing binaries are pairs of stars whose mutual eclipses allow precise measurement of stellar properties, used in stellar astrophysics to characterise main-sequence stars.",
+   target=("log_L_Lsun", "log₁₀(L/L☉)", "dex", "Base-10 logarithm of bolometric stellar luminosity in solar luminosities."),
+   inputs=[("log_M_Msun", "log₁₀(M/M☉)", "dex", "Base-10 logarithm of stellar mass in solar masses. (The Real version adds a metallicity [M/H] column as a distractor; the reference laws use mass only.)")],
+   data="No rows preloaded. log₁₀(M/M☉) ∈ [−0.976, 1.436]; ≤ 10 experiment calls, ≤ 23 points × 3 samples each (≤ 690 rows). The Real version trains on 238 pre-2018 stars and tests on 355 post-2018 stars.",
+   baselines=["eker_2018_six_piece (six-piece broken power law, 12 constants)", "henry_1993_two_piece", "kuiper_1938_pure_power"],
+   caps="≤ 12 global constants · no fit() · no group_id",
+   scored="S_S: structural match to the hidden law (0 / 0.25 / 0.5 / 0.75 / 1.0)",
+   outcome="S_S = 1.0 — DeepSeek-V4 Pro (also Claude Opus 4.8, Gemini 3.5 Flash)",
+   lesson="The published laws are chains of straight segments in log–log space; the hidden law is one smooth cubic. The agent fits the textbook broken power laws first, sees the cubic beat them (RMSE 0.170 vs 0.186 on group means), and submits the cubic — the paper's flagship structure-recovery case."),
+ "running_endurance": dict(
+   task_id="running_endurance_iaaf__velocity", setting="Parallel", group="single",
+   discipline="Social Sciences", domain="social_science / sports_science", license="CC-BY-SA-4.0",
+   context="This task uses athletics world records for human running events across a range of race distances, relating to exercise physiology.",
+   target=("velocity", "v̄", "m/s", "Average race velocity over the full event distance, computed as race distance divided by the world-record finishing time."),
+   inputs=[("distance_m", "d", "m", "Official race distance for the event, sprint to ultra-marathon."), ("sex_M", "s_M", "—", "1 for men, 0 for women.")],
+   data="No rows preloaded. d ∈ [60, 100,000] m; ≤ 10 experiment calls, ≤ 10 points × 3 samples each (≤ 300 rows). The Real version has 28 train records at 60 m–16 km and 14 test records at 20–100 km.",
+   baselines=["riegel_1981 (v = K·d^(1−b), per-sex constants)", "emig_2020"],
+   caps="≤ 4 global constants · no fit() · no group_id",
+   scored="S_S: structural match to the hidden law",
+   outcome="S_S = 0.25 — GPT-5.5, and every other model",
+   lesson="The hidden law adds a second, steeper power-law term (the anaerobic component) to Riegel's single power law. The agent tests Riegel's form, finds an inverse-log form fits better, and submits that; a sum of two power laws is never on its candidate list. All nine models land at 0.25."),
 }
 
-cases = []
+found = {}
 for title, body in boxes:
     task, model, note = detex_title(title)
-    card = CARDS[task]
-    cases.append({"key": task, "model": model, "note": note, "card": card, "trace_html": convert(body)})
+    found[task] = {"key": task, "model": model, "note": note, "card": CARDS[task], "trace_html": convert(body)}
+
+CASES_DIR = Path(__file__).resolve().parent.parent / "docs" / "cases"
+for f in sorted(CASES_DIR.glob("*.txt")):
+    head, body = f.read_text().split("\n", 1)
+    assert head.startswith("TITLE:"), f
+    key, model, note = [x.strip() for x in head[len("TITLE:"):].split("|")]
+    found[key] = {"key": key, "model": model, "note": note, "card": CARDS[key], "trace_html": convert(body)}
+
+# display order: row 1 = Real, row 2 = Parallel; one discipline each where possible
+ORDER = ["dna_melting", "proton_em_form_factor", "hacks_law", "co2_adsorption_toth",
+         "eclipsing_binary", "keeling_curve", "running_endurance", "optical_dispersion_sellmeier"]
+missing = [k for k in ORDER if k not in found]
+assert not missing, f"cases not found: {missing}"
+cases = [found[k] for k in ORDER]
 
 OUT.write_text("// Generated by scripts/build_cases.py from the paper's Appendix (case studies).\n"
                "// Traces are verbatim agent logs; see the appendix for the colour legend.\n"

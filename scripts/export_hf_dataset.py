@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """Stage the 118 SciLaws-Bench tasks for release as a Hugging Face dataset.
 
-Two views are supported:
+Three views are supported:
+
+  eval        what the harness actually reads, nothing else -- metadata.yaml,
+              data/, eval/{reference_metrics,validity_rubrics}.json and
+              simulator/{state.joblib,sample.csv,formula.py}. Drops
+              eval/metadata_full.yaml (referenced by no harness or agent code)
+              and __pycache__. This is the release view.
 
   full        everything -- metadata.yaml, data/, eval/ (reference anchors and the
               frozen validity rubrics) and simulator/ (state.joblib, sample.csv,
@@ -20,8 +26,8 @@ the oracle remotely instead of shipping it.
 
 Staging only copies files. Pushing is a separate, explicit step (--push).
 
-    python scripts/export_hf_dataset.py --view full --out build/hf_full
-    python scripts/export_hf_dataset.py --view full --out build/hf_full \
+    python scripts/export_hf_dataset.py --view eval --out build/hf_eval
+    python scripts/export_hf_dataset.py --view eval --out build/hf_eval \
         --push --repo-id RealSR/SciLaws-Bench
 """
 from __future__ import annotations
@@ -36,6 +42,14 @@ REPO = Path(__file__).resolve().parent.parent
 
 # Top-level entries under a task directory withheld from the real-only view.
 REAL_ONLY_EXCLUDE = ("eval", "simulator")
+
+# Exact per-task files the harness reads (harness/*.py, baseline_agent/*.py).
+EVAL_KEEP = {
+    "metadata.yaml",
+    "data/train.csv", "data/test.csv", "data/test_fit.csv", "data/test_test.csv",
+    "eval/reference_metrics.json", "eval/validity_rubrics.json",
+    "simulator/state.joblib", "simulator/sample.csv", "simulator/formula.py",
+}
 
 
 def stage(tasks_root: Path, out: Path, view: str) -> dict:
@@ -62,6 +76,8 @@ def stage(tasks_root: Path, out: Path, view: str) -> dict:
                 rel = item.relative_to(task)
                 if view == "real-only" and rel.parts[0] in REAL_ONLY_EXCLUDE:
                     continue
+                if view == "eval" and str(rel) not in EVAL_KEEP:
+                    continue
                 target = dst / rel
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(item, target)
@@ -83,8 +99,8 @@ def main() -> int:
                     help="directory containing typeI/ and typeII/ (default: <repo>/tasks)")
     ap.add_argument("--out", type=Path, default=REPO / "build" / "hf",
                     help="staging directory to write")
-    ap.add_argument("--view", choices=("full", "real-only"), default="full",
-                    help="what to include (default: full)")
+    ap.add_argument("--view", choices=("eval", "full", "real-only"), default="eval",
+                    help="what to include (default: eval)")
     ap.add_argument("--push", action="store_true",
                     help="upload the staged directory to the Hub (requires --repo-id)")
     ap.add_argument("--repo-id", default=None, help="e.g. RealSR/SciLaws-Bench")
@@ -95,7 +111,7 @@ def main() -> int:
     gb = counts["bytes"] / 1e9
     print(f"staged {counts['typeI']} typeI + {counts['typeII']} typeII tasks "
           f"({counts['files']} files, {gb:.2f} GB) -> {args.out}  [view={args.view}]")
-    if args.view == "full":
+    if args.view in ("eval", "full"):
         print("note: this view publishes eval/ rubrics, reference anchors and every "
               "Parallel hidden law.")
 
