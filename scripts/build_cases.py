@@ -74,7 +74,7 @@ CARDS = {
    discipline="Earth & Physics", domain="earth_science / atmosphere", license="Public-Domain",
    context="This is the atmospheric carbon dioxide record from Mauna Loa Observatory in Hawaii, a foundational dataset in atmospheric science and climatology.",
    target=("co2_ppm", "c", "ppm", "Monthly mean mole fraction of CO2 in dry air at Mauna Loa Observatory on the WMO X2019 calibration scale."),
-   inputs=[("year_decimal", "t", "yr", "Decimal year of the monthly observation (midpoint of the calendar month, NOAA convention).")],
+   inputs=[("year_decimal", "t", "yr", "Decimal year of the monthly observation (midpoint of the calendar month, NOAA convention). The task exposes five more columns — year, month, ndays, sdev, unc — that are calendar/QC fields, not physical predictors; the agent used only t.")],
    data="No rows preloaded. The agent designs its own measurements with <experiment> inside t ∈ [1958, 2026]; the simulator returns residual-calibrated noisy observations.",
    baselines=["noaa_curve_fit_k4 (reference, 12 constants)", "noaa_curve_fit_1989", "bacastow_1985_quadratic", "keeling_1960_linear"],
    caps="≤ 12 global constants · no fit() · no group_id",
@@ -83,7 +83,7 @@ CARDS = {
    lesson="The model fits the hidden exponential-accumulation family in its own analysis, then submits a quadratic. On the Real version of the same task it beats the 12-constant NOAA reference (S_N = 0.78)."),
  "optical_dispersion_sellmeier": dict(
    task_id="optical_dispersion_sellmeier__refractive_index", setting="Parallel", group="multi",
-   discipline="Earth & Physics", domain="physics / crystal optics", license="CC0-1.0",
+   discipline="Earth & Physics", domain="physics / optics", license="CC0-1.0",
    context="The refractive index of a transparent crystal is the factor by which it slows light, and its variation with wavelength is the optical dispersion studied in crystal optics and condensed-matter physics.",
    target=("refractive_index", "n", "dimensionless", "Real part of the refractive index at the specified vacuum wavelength, measured by the minimum-deviation goniometer method on single-crystal prisms at room temperature."),
    inputs=[("wavelength_um", "λ", "µm", "Vacuum wavelength of light at which the refractive index was measured; near-UV through mid-infrared.")],
