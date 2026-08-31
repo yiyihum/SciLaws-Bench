@@ -15,9 +15,7 @@ tags:
   - llm-agents
 size_categories:
   - 1M<n<10M
-configs:
-  - config_name: task_index
-    data_files: task_index.csv
+viewer: false
 ---
 
 # SciLaws-Bench
@@ -60,7 +58,7 @@ complete hidden structure.
 66 tasks are Type I (single-group: one global law), 52 are Type II (multi-group: one shared
 functional form, a few per-group parameters). All 118 ship a calibrated simulator.
 
-`task_index.csv` (shown in the dataset viewer) lists every task with its discipline, target variable,
+`task_index.csv` in this repository lists every task with its discipline, target variable,
 input count, row counts and license.
 
 ## Layout
