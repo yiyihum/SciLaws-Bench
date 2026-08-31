@@ -44,21 +44,62 @@ SCILAWS-BENCH/
 │   ├── task_index.csv    # 118 tasks: discipline, target, row counts, license
 │   └── LICENSES.md       # per-task upstream data licenses
 ├── scripts/              # dataset export, local site preview
-└── tasks/                # ← downloaded from Hugging Face; not tracked here
+└── tasks/                # ← downloaded from HF (RealSR/SciLaws-Bench); not tracked here
 ```
 
 `harness/` and `baseline_agent/` resolve paths relative to each other and to a sibling
 `tasks/`, so keep this layout and download the data into `tasks/` at the repository root.
 
-## Setup
+## Quick start
+
+Every command below is tested as written.
 
 ```bash
+# 1. Code (this repo)
 git clone https://github.com/yiyihum/SciLaws-Bench.git
 cd SciLaws-Bench
-pip install numpy pandas scipy pyyaml joblib scikit-learn
+pip install numpy pandas scipy pyyaml joblib scikit-learn huggingface_hub
 
-# 118 tasks, ~1.1 GB
+# 2. Data — 118 tasks, ~1.1 GB, from https://huggingface.co/datasets/RealSR/SciLaws-Bench
 hf download RealSR/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
+
+# 3. Score a submission on one task (writes JSON to stdout)
+python harness/evaluate_numeric.py score \
+    tasks/typeI/hea_hardness_lattice_distortion_couzinie__HV \
+    my_submission.py
+```
+
+A minimal `my_submission.py` (the full contract is one section down):
+
+```python
+import numpy as np
+USED_INPUTS = ["VEC", "dHmix"]
+LAW_CONSTANTS = {}
+OTHER_CONSTANTS = {}
+LOCAL_FITTABLE = {}
+def predict(X):
+    return 120.0 + 80.0 * (X[:, 0] - 5.0)
+```
+
+The scorer replies with, among other fields:
+
+```json
+{"status": "ok", "result": {"numeric_score": 0.508, "metric": "rmse",
+ "best_reference_id": "temesi_2023_hardness_bonding"}}
+```
+
+`numeric_score` is reference-relative: the strongest published formula anchors 0.5, a
+perfect predictor 1.0 (the 0.508 above is GPT-5.5's actual panel submission for this
+task; the naive linear model scores 0.0).
+
+To open a task's **Parallel world** and query it directly:
+
+```python
+import sys; sys.path.insert(0, "harness")
+import sim_runtime
+sim = sim_runtime.load("tasks/typeI/hea_hardness_lattice_distortion_couzinie__HV/simulator")
+r = sim.fetch_where(query="VEC > 4.5 and VEC < 6", limit=5, seed=1)
+print(r["n_returned"], r["HV"], r["budget"])   # noisy observations + remaining query budget
 ```
 
 Each task directory is self-describing:
@@ -156,6 +197,9 @@ interaction turns (`--max-turns`). Simulator runs are scored by
 `harness/evaluate_parallel.py`, not by `--score`.
 
 ## Results
+
+Full leaderboard with single/multi-group splits, task explorer and example
+trajectories: **https://yiyihum.github.io/SciLaws-Bench/**
 
 Nine frontier models under one fixed harness — a ReAct-style agent with a Python sandbox,
 up to 30 turns, and a fixed experimentation budget in the Parallel setting. Only the base
