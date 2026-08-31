@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage RealSR parallel-structure jobs and optionally dispatch Codex judges.
+"""Stage SciLaws-Bench parallel-structure jobs and optionally dispatch Codex judges.
 
 Parallel-mode scoring is GT-structure recovery only. The judge receives the
 hidden simulator `formula.py` and a solver `submission.py`, then assigns one of
@@ -779,7 +779,7 @@ def aggregate_parallel_outputs(manifest: dict[str, Any]) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Stage RealSR parallel structure jobs and optionally dispatch Codex judges.",
+        description="Stage SciLaws-Bench parallel structure jobs and optionally dispatch Codex judges.",
         epilog=DISPATCH_HELP,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )

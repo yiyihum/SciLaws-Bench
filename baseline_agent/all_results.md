@@ -1,4 +1,4 @@
-# RealSR Benchmark Overall Results
+# SciLaws-Bench Overall Results
 
 Updated: 2026-07-02.
 

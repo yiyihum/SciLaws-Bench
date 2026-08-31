@@ -1,12 +1,12 @@
-"""RealSR v3 scoring harness — two parallel scores (see README → How scores are defined).
+"""SciLaws-Bench scoring harness — two parallel scores (see README → How scores are defined).
 
   numeric_score  — deterministic, reference-relative. Computed by `evaluate_numeric.py`
                    (`score_one`), exposed here as `evaluate_on_test()`. Type II
                    is 3-seed averaged. Needs only the task's
                    data + reference_metrics.json — no API key, no network.
-  validity_score — produced SEPARATELY by a Claude-Code (cc) subagent that
-                   executes the formula on the data and scores the task's
-                   `validity_rubrics` (see VALIDITY_JUDGE.md). Not computed here.
+  validity_score — produced SEPARATELY by a code-enabled judge that executes the
+                   formula on the data and scores the task's `validity_rubrics`
+                   (see VALIDITY_JUDGE.md). Not computed here.
 """
 from __future__ import annotations
 

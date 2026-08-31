@@ -3,9 +3,12 @@
 
   1. the paper's four reference trajectories (appendix_case_studies.tex,
      trajbox/trajlisting blocks), and
-  2. docs/cases/*.txt -- four more, excerpted from the nine-model panel logs in
-     SciLaws-Bench/baseline_agent/results/models/<model>/<track>/traces/
+  2. docs/cases/*.txt -- four more, excerpted from the nine-model panel logs
+     (baseline_agent/results/models/<model>/<track>/traces/ in the run archive)
      using the same markup. First line: `TITLE: <key> | <model> | <note>`.
+
+Usage: python scripts/build_cases.py <path to appendix_case_studies.tex>
+The paper source is not part of this repository; pass its path explicitly.
 
 The traces are verbatim agent logs; the only transformation here is markup:
   |B|x|B|   -> <b>            our turn markers / header labels
@@ -17,8 +20,9 @@ Everything else is HTML-escaped as-is.
 import html, json, re, sys
 from pathlib import Path
 
-TEX = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
-    "path/to/appendix_case_studies.tex")
+if len(sys.argv) < 2:
+    sys.exit("usage: build_cases.py <path to the paper's appendix_case_studies.tex>")
+TEX = Path(sys.argv[1])
 OUT = Path(__file__).resolve().parent.parent / "docs" / "assets" / "cases.js"
 
 src = TEX.read_text()
@@ -48,7 +52,7 @@ def convert(body):
     return "".join(out).rstrip("\n")
 
 # hand-written task cards: every string below is copied from the task's
-# metadata.yaml / eval/reference_metrics.json in SciLaws-Bench
+# metadata.yaml / eval/reference_metrics.json in the task tree
 CARDS = {
  "proton_em_form_factor": dict(
    task_id="proton_em_form_factor__GE_over_GD", setting="Real", group="single",

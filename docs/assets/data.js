@@ -1,4 +1,4 @@
-// SciLaws-Bench homepage data (auto-generated from SciLaws-Bench + paper Table 1)
+// SciLaws-Bench homepage data (auto-generated from the task tree + paper Table 1)
 window.SCILAWS = {
  "stats": {
   "problems": 118,

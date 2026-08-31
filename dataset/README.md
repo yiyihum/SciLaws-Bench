@@ -72,7 +72,8 @@ tasks/typeI/<task>/
 ├── eval/
 │   ├── reference_metrics.json   # published-baseline anchors used to normalize S_N
 │   ├── validity_rubrics.json    # frozen source-grounded validity rubric
-│   └── metadata_full.yaml
+│   └── metadata_full.yaml       # grader-facing task record: adds `references`, i.e.
+│                                #   which published law each baseline id comes from
 └── simulator/
     ├── state.joblib         # simulator state, loaded by harness/sim_runtime.py
     ├── sample.csv           # fixed free sample
@@ -118,11 +119,9 @@ Scoring is done by the harness in the code repository, not by a metric in this d
 
 ## Licensing
 
-Each task carries the license of its upstream dataset — 53 CC-BY-4.0, 22 CC0-1.0, and a
-long tail of public-domain, MIT, GPL, ODbL and agency-specific terms. Datasets that
-disallow redistribution (NDA, paywalled, research-use-only) were excluded during curation.
-Per-task terms are in `LICENSES.md` and in each task's `metadata.yaml`. Cite the upstream
-source when you use a task's data.
+Each task carries the license of its upstream dataset, listed per task in `LICENSES.md`
+and in the task's own `metadata.yaml`. Terms vary, several are share-alike or
+non-commercial, so check the task you use, and cite its upstream source.
 
 ## Citation
 

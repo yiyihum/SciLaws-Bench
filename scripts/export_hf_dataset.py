@@ -3,11 +3,14 @@
 
 Three views are supported:
 
-  eval        what the harness actually reads, nothing else -- metadata.yaml,
-              data/, eval/{reference_metrics,validity_rubrics}.json and
-              simulator/{state.joblib,sample.csv,formula.py}. Drops
-              eval/metadata_full.yaml (referenced by no harness or agent code)
-              and __pycache__. This is the release view.
+  eval        what the harness reads -- metadata.yaml, data/,
+              eval/{reference_metrics,validity_rubrics}.json and
+              simulator/{state.joblib,sample.csv,formula.py} -- plus a sanitised
+              eval/metadata_full.yaml, which carries the `references` block
+              (which published law each baseline id comes from). Sanitising
+              keeps the YAML values and drops curation comments and paths to
+              files outside the release. Drops __pycache__. This is the
+              release view.
 
   full        everything -- metadata.yaml, data/, eval/ (reference anchors and the
               frozen validity rubrics) and simulator/ (state.joblib, sample.csv,
@@ -38,6 +41,8 @@ import shutil
 import sys
 from pathlib import Path
 
+import yaml
+
 REPO = Path(__file__).resolve().parent.parent
 
 # Top-level entries under a task directory withheld from the real-only view.
@@ -50,6 +55,32 @@ EVAL_KEEP = {
     "eval/reference_metrics.json", "eval/validity_rubrics.json",
     "simulator/state.joblib", "simulator/sample.csv", "simulator/formula.py",
 }
+
+# Written from the curation tree rather than copied: the source file carries
+# curation comments and per-reference paths into trees that are not released.
+SANITISED = "eval/metadata_full.yaml"
+# Per-reference keys that point at the curation tree, not at anything shipped.
+DROP_REFERENCE_KEYS = ("formula_file", "reference_pdf")
+
+
+def sanitise_metadata_full(src: Path) -> str:
+    """Re-emit metadata_full.yaml from its parsed values only.
+
+    Round-tripping through the YAML loader drops every comment, so curation
+    notes never reach the release; the dangling per-reference paths are removed
+    explicitly. The reference `id` is kept and still matches the keys in
+    eval/reference_metrics.json.
+    """
+    doc = yaml.safe_load(src.read_text(encoding="utf-8"))
+    for ref in doc.get("references") or []:
+        if isinstance(ref, dict):
+            for key in DROP_REFERENCE_KEYS:
+                ref.pop(key, None)
+    header = ("# Grader-facing task record: the solver-facing fields of metadata.yaml\n"
+              "# plus `references` (the published laws this task is anchored on),\n"
+              "# `validity_rubrics` and `best_baseline`. Withhold from a system under\n"
+              "# evaluation, like the rest of eval/.\n")
+    return header + yaml.safe_dump(doc, sort_keys=False, allow_unicode=True, width=100)
 
 
 def stage(tasks_root: Path, out: Path, view: str) -> dict:
@@ -76,13 +107,16 @@ def stage(tasks_root: Path, out: Path, view: str) -> dict:
                 rel = item.relative_to(task)
                 if view == "real-only" and rel.parts[0] in REAL_ONLY_EXCLUDE:
                     continue
-                if view == "eval" and str(rel) not in EVAL_KEEP:
+                if view == "eval" and str(rel) not in EVAL_KEEP and str(rel) != SANITISED:
                     continue
                 target = dst / rel
                 target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(item, target)
+                if view == "eval" and str(rel) == SANITISED:
+                    target.write_text(sanitise_metadata_full(item), encoding="utf-8")
+                else:
+                    shutil.copy2(item, target)
                 counts["files"] += 1
-                counts["bytes"] += item.stat().st_size
+                counts["bytes"] += target.stat().st_size
             counts[kind] += 1
 
     shutil.copy2(REPO / "dataset" / "README.md", out / "README.md")
@@ -114,6 +148,9 @@ def main() -> int:
     if args.view in ("eval", "full"):
         print("note: this view publishes eval/ rubrics, reference anchors and every "
               "Parallel hidden law.")
+    if args.view == "full":
+        print("warning: the full view copies eval/metadata_full.yaml verbatim, including "
+              "its curation comments. Use --view eval for anything public.")
 
     if not args.push:
         print("\nnot pushed. review the staging directory, then re-run with:\n"

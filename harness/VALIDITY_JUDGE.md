@@ -1,17 +1,17 @@
-# Validity judge — Claude-Code subagent skill
+# Validity judge — staging, dispatch and aggregation
 
-`validity_score` for a RealSR v3 submission. A Claude-Code (cc) subagent
+`validity_score` for a SciLaws-Bench submission. A code-enabled judge
 **executes** the submitted formula on the task data and scores the task's frozen
 task `validity_rubrics` plus one staged global anti-hacking rubric, returning
 `M/N`.
 
-This is the official v3 validity method — no OpenAI judge, no `eval_consistency`.
+This is the official validity method; it replaces `eval_consistency`.
 The deterministic `numeric_score` is the separate channel (`evaluate_numeric.py`); this
 scores physical / functional validity.
 
 The judge never touches the live task tree. First run the fixed staging script
 (`harness/evaluate_validity.py`). It creates self-contained task dirs and writes one
-subagent prompt per chunk. Then assign those prompts to Claude-Code subagents.
+subagent prompt per chunk. Then run those prompts with a code-enabled judge.
 
 ```
 {{STAGE_DIR}}/<task>/

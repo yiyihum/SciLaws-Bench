@@ -1,4 +1,4 @@
-"""Baseline LLM-as-agent solver for RealSR v3.
+"""Baseline LLM-as-agent solver for SciLaws-Bench.
 
 Runs the multi-turn equation-discovery agent on ONE public task and writes a
 submission module (the agent's `<final_formula>`). In fixed-data mode, it can

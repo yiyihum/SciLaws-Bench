@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch runner for the baseline RealSR agent.
+"""Batch runner for the baseline SciLaws-Bench agent.
 
 Runs `run_baseline.py` across many tasks/models/modes, writes incremental
 summaries, and optionally dispatches the parallel structure judge after

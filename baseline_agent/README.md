@@ -1,6 +1,6 @@
 # Baseline agent — LLM-as-agent symbolic-regression solver
 
-A reference solver for RealSR v3: a multi-turn LLM agent that inspects each
+A reference solver for SciLaws-Bench: a multi-turn LLM agent that inspects each
 task's training data in a Python sandbox, fits constants, and submits a formula
 module. It reads ONLY the public task (`tasks/<type>/<task>/`) — context, inputs,
 target, scoring metric, and `data/train.csv` — never the private `scoring/` tree.

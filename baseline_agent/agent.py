@@ -1,4 +1,4 @@
-"""Baseline LLM-as-agent loop for RealSR v3.
+"""Baseline LLM-as-agent loop for SciLaws-Bench.
 
 This is just ONE agent's orchestration: drive a chat model turn-by-turn. The
 FIXED, reusable parts live in the harness and are imported here, so any other

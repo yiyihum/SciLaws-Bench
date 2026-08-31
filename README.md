@@ -108,7 +108,9 @@ Each task directory is self-describing:
 tasks/typeI/<task>/                    # single-group
 ├── metadata.yaml                      # solver-facing: context, target, inputs, units, ranges
 ├── data/{train,test}.csv              # column 0 = target, columns 1..N = inputs
-├── eval/                              # grader-facing: reference metrics, validity rubrics
+├── eval/                              # grader-facing: reference metrics, validity rubrics,
+│                                      #   metadata_full.yaml (which published law each
+│                                      #   baseline id comes from)
 └── simulator/                         # the Parallel world: state.joblib, sample.csv, formula.py
 
 tasks/typeII/<task>/                   # multi-group — data/ is {train,test_fit,test_test}.csv
@@ -222,14 +224,11 @@ Single/multi-group breakdowns are on the project page and in the paper.
 
 ## Licensing
 
-Code in `harness/`, `baseline_agent/` and `scripts/` is released under the MIT License
-(`LICENSE`).
-
-Task **data** carries the license of its upstream source — 53 tasks CC-BY-4.0, 22 CC0-1.0,
-and a long tail of public-domain, MIT, GPL, ODbL and agency-specific terms. Datasets that
-disallow redistribution were excluded during curation. The full per-task inventory is in
-[`dataset/LICENSES.md`](dataset/LICENSES.md), and each task's license is also recorded in
-its own `metadata.yaml`.
+The MIT License in `LICENSE` covers the code in `harness/`, `baseline_agent/` and
+`scripts/`. Task **data** is not ours to relicense: each task carries the license of its
+upstream source, listed per task in [`dataset/LICENSES.md`](dataset/LICENSES.md) and in the
+task's own `metadata.yaml`. Terms vary, several are share-alike or non-commercial, so check
+the task you use.
 
 ## Citation
 

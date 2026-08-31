@@ -1,4 +1,4 @@
-"""Fixed tool-call interface for RealSR v3 agents.
+"""Fixed tool-call interface for SciLaws-Bench agents.
 
 This is the FROZEN protocol any solver shares (the baseline agent and any
 plugged-in evolving / search agent alike). It owns three things:

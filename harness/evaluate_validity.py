@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage RealSR validity jobs and optionally dispatch Codex judge subagents.
+"""Stage SciLaws-Bench validity jobs and optionally dispatch Codex judge subagents.
 
 This script implements the VALIDITY_JUDGE.md workflow:
 1. Copy each task's data, metadata, validity rubrics, and submission into a
@@ -615,7 +615,7 @@ def aggregate_validity_outputs(manifest: dict[str, Any]) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Stage RealSR validity jobs and optionally dispatch Codex judge subagents.",
+        description="Stage SciLaws-Bench validity jobs and optionally dispatch Codex judge subagents.",
         epilog=DISPATCH_HELP,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )

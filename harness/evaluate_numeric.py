@@ -42,7 +42,7 @@ from eval_formula import (  # noqa: E402
     METRICS, load_clusters, load_flat, run_formula, run_formula_flat,
 )
 # validity_score is intentionally not part of this numeric scorer. It is
-# produced separately by the Claude-Code judge described in VALIDITY_JUDGE.md.
+# produced separately by the code-enabled judge described in VALIDITY_JUDGE.md.
 
 # A cluster is non-discriminative (excluded) if the best reference baseline is
 # itself (near-)perfect on it — the score ratio sub/ref then blows up.
@@ -622,7 +622,7 @@ def mode_score(task_dir: Path, submission: Path | None) -> int:
 # ==========================================================================
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="RealSR numeric scoring harness")
+    ap = argparse.ArgumentParser(description="SciLaws-Bench numeric scoring harness")
     sub = ap.add_subparsers(dest="mode", required=True)
 
     p_ref = sub.add_parser("reference", help="build reference anchors for a task")

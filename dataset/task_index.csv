@@ -1,6 +1,6 @@
 task_id,group_structure,discipline,domain,target,unit,n_inputs,license,has_simulator,rows_train,rows_test
 baseball_pythagorean_winpct_lahman__win_pct,single,Social Sciences,social_science / sports_analytics,win_pct,,3,CC-BY-SA-3.0,True,2012,938
-binary_pulsar_post_keplerian_atnf__PBDOT,single,Astronomy,astronomy / pulsar_timing,PBDOT,s/s,2,"GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF); pulsar timing measurements are numeric facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compatible",True,71,10
+binary_pulsar_post_keplerian_atnf__PBDOT,single,Astronomy,astronomy / pulsar_timing,PBDOT,s/s,2,"GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF)",True,71,10
 bird_flight_speed_alerstam__Ue,single,Ecology & Hydrology,biology / avian_ecology,Ue_ms,m/s,2,CC-BY-2.5,True,69,62
 bns_merger_disk_ejecta__Mdisk,single,Astronomy,astronomy / gravitational-wave astrophysics,Mdisk,M_sun,6,CC-BY-4.0,True,52,76
 bns_merger_disk_ejecta__Mej,single,Astronomy,astronomy / gravitational-wave astrophysics,Mej,M_sun,8,CC-BY-4.0,True,50,54
@@ -31,7 +31,7 @@ hea_hardness_lattice_distortion_couzinie__HV,single,Materials & Engineering,mate
 her_hor_pt_acid_kucernak__current_density,single,Materials & Engineering,chemistry / electrochemistry,current_density,A cm-2,4,CC0-1.0,True,676,334
 island_species_richness_terceira__S_terceira,single,Ecology & Hydrology,biology / community_ecology,S_terceira,,5,CC-BY-4.0,True,34,18
 lake_thermocline_depth_pilla__z_t,single,Ecology & Hydrology,earth_science / limnology,z_t_m,m,2,CC0-1.0,True,978,245
-life_expectancy_preston__e0_vs_gdppc,single,Social Sciences,social_science / demography,e0_vs_gdppc,years,1,"CC0-1.0 (per-country life expectancy and income figures are uncopyrightable scientific facts; Feist v. Rural Telephone Service Co., 499 U.S. 340, 1991; original data from UN Demographic Yearbook / UN Statistical Yearbook / Kuznets 1956 as compiled in Preston 1975 Appendix A)",True,38,19
+life_expectancy_preston__e0_vs_gdppc,single,Social Sciences,social_science / demography,e0_vs_gdppc,years,1,CC0-1.0,True,38,19
 liion_capacity_fade_nasa_pcoe__capacity_Ah,single,Materials & Engineering,materials_and_energy / electrochemistry,capacity_Ah,Ah,1,NASA-Public,True,382,254
 liquid_dispersion_glycols__refractive_index,single,Earth & Physics,physics / optics,refractive_index,,2,CC-BY-4.0,True,230,170
 lpbf_meltpool_rosenthal_inconel__depth,single,Materials & Engineering,materials_science / additive_manufacturing,meltpool_depth_um,um,3,Public Domain,True,48,20
@@ -50,11 +50,11 @@ pp_total_cross_section_donnachie_landshoff__sigma_tot,single,Earth & Physics,phy
 proton_em_form_factor__GE_over_GD,single,Earth & Physics,physics / nuclear_particle_physics,GE_over_GD,,1,CC-BY-4.0,True,37,10
 protoplanetary_disk_mmflux__F_mm,single,Astronomy,astronomy / star_and_planet_formation,log10_F_1p3_Jy,dex(Jy),5,VizieR-custom-free,True,168,38
 pv_module_temperature_efficiency_pvpmc__P_max,single,Materials & Engineering,materials_science / photovoltaics,P_max_W,W,4,CC-BY-4.0,True,9665,6445
-red_giant_asteroseismology__delta_nu,single,Astronomy,astronomy / asteroseismology,delta_nu,uHz,4,VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant,True,12875,3219
-red_giant_asteroseismology__nu_max,single,Astronomy,astronomy / asteroseismology,nu_max,μHz,4,VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant,True,12875,3219
+red_giant_asteroseismology__delta_nu,single,Astronomy,astronomy / asteroseismology,delta_nu,uHz,4,VizieR-CDS academic (free for scientific use with citation),True,12875,3219
+red_giant_asteroseismology__nu_max,single,Astronomy,astronomy / asteroseismology,nu_max,μHz,4,VizieR-CDS academic (free for scientific use with citation),True,12875,3219
 rock_core_permeability_norweg__log_k,single,Ecology & Hydrology,earth_science / petrophysics,log_k,log10(mD),1,CC-BY-4.0,True,51908,22246
 running_endurance_iaaf__velocity,single,Social Sciences,social_science / sports_science,velocity,m/s,2,CC-BY-SA-4.0,True,28,14
-smbh_mass_sigma_relation__log_M_BH,single,Astronomy,astronomy / extragalactic astrophysics,log_M_BH,log10(M_sun),4,CC-BY-4.0 (Jin & Davis 2023 preprint; factual measurement values additionally non-copyrightable per Feist v. Rural Telephone 1991),True,99,25
+smbh_mass_sigma_relation__log_M_BH,single,Astronomy,astronomy / extragalactic astrophysics,log_M_BH,log10(M_sun),4,CC-BY-4.0,True,99,25
 sne_ia_distance_modulus_pantheonplus__mu,single,Astronomy,astronomy / observational_cosmology,mu,mag,1,CC-BY-4.0,True,1392,308
 solar_flat_plate_collector_graz_efficiency__eta_thermal,single,Materials & Engineering,materials_and_energy / solar_thermal_engineering,eta_thermal,,4,CC-BY-4.0,True,252,63
 spirometry_nhanes__FEV1_L,single,Biology,biology / pulmonology,FEV1_L,L,2,CC-BY-4.0,True,2900,725

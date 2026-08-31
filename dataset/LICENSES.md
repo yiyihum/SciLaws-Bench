@@ -1,43 +1,12 @@
 # Per-task data licenses
 
-Every task in SciLaws-Bench carries the license of its upstream dataset. Datasets that disallow redistribution (NDA, paywalled, or research-use-only) were excluded during curation, so every entry below is redistributable.
-
-## Summary
-
-| License | Tasks |
-|---|---:|
-| `CC-BY-4.0` | 53 |
-| `CC0-1.0` | 22 |
-| `CC-BY-NC-4.0` | 6 |
-| `Public Domain` | 5 |
-| `MIT` | 4 |
-| `LicenseRef-NASA-PublicDomain` | 2 |
-| `CC-BY-3.0` | 2 |
-| `Public-Domain-US-Gov` | 2 |
-| `VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant` | 2 |
-| `CC-BY-SA-4.0` | 2 |
-| `etalab-2.0` | 2 |
-| `NIST-PD` | 2 |
-| `CC-BY-SA-3.0` | 1 |
-| `GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF); pulsar timing measurements are numeric facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compatible` | 1 |
-| `CC-BY-2.5` | 1 |
-| `HydroSHEDS-v1-Derivative` | 1 |
-| `CC0-1.0 (per-country life expectancy and income figures are uncopyrightable scientific facts; Feist v. Rural Telephone Service Co., 499 U.S. 340, 1991; original data from UN Demographic Yearbook / UN Statistical Yearbook / Kuznets 1956 as compiled in Preston 1975 Appendix A)` | 1 |
-| `NASA-Public` | 1 |
-| `Public-Domain` | 1 |
-| `VizieR-custom-free` | 1 |
-| `CC-BY-4.0 (Jin & Davis 2023 preprint; factual measurement values additionally non-copyrightable per Feist v. Rural Telephone 1991)` | 1 |
-| `ODbL` | 1 |
-| `CC-BY-NC-SA-4.0` | 1 |
-| `GPL-2.0-or-later` | 1 |
-| `CDLA-Sharing-1.0 (isotherm CSVs) + CC-BY-4.0 (CoRE-MOF-2014 CIFs)` | 1 |
-| `GPL-3.0` | 1 |
-
-## Per task
+Each task's data carries the license of its upstream source, recorded below and in
+the task's own `metadata.yaml`. Datasets that disallow redistribution were excluded
+during curation. Cite the upstream source when you use a task's data.
 
 | Task | Group structure | Discipline | License |
 |---|---|---|---|
-| `binary_pulsar_post_keplerian_atnf__PBDOT` | single | Astronomy | GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF); pulsar timing measurements are numeric facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compatible |
+| `binary_pulsar_post_keplerian_atnf__PBDOT` | single | Astronomy | GPL-3.0-or-later (ATNF psrcat v2.8.0 distribution, CSIRO/ATNF) |
 | `bns_merger_disk_ejecta__Mdisk` | single | Astronomy | CC-BY-4.0 |
 | `bns_merger_disk_ejecta__Mej` | single | Astronomy | CC-BY-4.0 |
 | `bns_merger_disk_ejecta__vej` | single | Astronomy | CC-BY-4.0 |
@@ -50,9 +19,9 @@ Every task in SciLaws-Bench carries the license of its upstream dataset. Dataset
 | `mars_crater_size_frequency__N_cum` | single | Astronomy | LicenseRef-NASA-PublicDomain |
 | `neo_size_frequency_distribution__N_cum_H` | single | Astronomy | LicenseRef-NASA-PublicDomain |
 | `protoplanetary_disk_mmflux__F_mm` | single | Astronomy | VizieR-custom-free |
-| `red_giant_asteroseismology__delta_nu` | single | Astronomy | VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant |
-| `red_giant_asteroseismology__nu_max` | single | Astronomy | VizieR-CDS academic (free for scientific use with citation); numeric tabular facts per Feist 1991; AUDIT_CHECKLIST v0.4 D5 compliant |
-| `smbh_mass_sigma_relation__log_M_BH` | single | Astronomy | CC-BY-4.0 (Jin & Davis 2023 preprint; factual measurement values additionally non-copyrightable per Feist v. Rural Telephone 1991) |
+| `red_giant_asteroseismology__delta_nu` | single | Astronomy | VizieR-CDS academic (free for scientific use with citation) |
+| `red_giant_asteroseismology__nu_max` | single | Astronomy | VizieR-CDS academic (free for scientific use with citation) |
+| `smbh_mass_sigma_relation__log_M_BH` | single | Astronomy | CC-BY-4.0 |
 | `sne_ia_distance_modulus_pantheonplus__mu` | single | Astronomy | CC-BY-4.0 |
 | `solar_spectrum_sorce_sim__planck_radiance` | multi | Astronomy | CC0-1.0 |
 | `solar_sunspot_silso__ssn` | multi | Astronomy | CC-BY-NC-4.0 |
@@ -144,7 +113,7 @@ Every task in SciLaws-Bench carries the license of its upstream dataset. Dataset
 | `income_distribution_wid__pareto_alpha` | multi | Social Sciences | CC-BY-NC-4.0 |
 | `intertemporal_discount__p_ll` | multi | Social Sciences | CC-BY-NC-SA-4.0 |
 | `life_expectancy_oeppen_vaupel_hmd__e0` | multi | Social Sciences | CC-BY-4.0 |
-| `life_expectancy_preston__e0_vs_gdppc` | single | Social Sciences | CC0-1.0 (per-country life expectancy and income figures are uncopyrightable scientific facts; Feist v. Rural Telephone Service Co., 499 U.S. 340, 1991; original data from UN Demographic Yearbook / UN Statistical Yearbook / Kuznets 1956 as compiled in Preston 1975 Appendix A) |
+| `life_expectancy_preston__e0_vs_gdppc` | single | Social Sciences | CC0-1.0 |
 | `mincer_earnings_acs_pums__log_wage` | single | Social Sciences | Public-Domain-US-Gov |
 | `mortality_gompertz_makeham_hmd__log_m_adult` | multi | Social Sciences | CC-BY-4.0 |
 | `mortality_gompertz_makeham_hmd_postwar__log_m_adult` | multi | Social Sciences | CC-BY-4.0 |
