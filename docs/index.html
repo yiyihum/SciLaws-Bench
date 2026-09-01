@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SciLaws-Bench — Can LLMs Discover Scientific Laws in Real and Parallel Worlds?</title>
 <meta name="description" content="A paper-grounded benchmark of 118 scientific law-discovery problems, evaluated on fixed real records and inside residual-calibrated parallel worlds.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -51,13 +53,14 @@ a:hover{color:#1d4ed8}
 .toc .nm{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--fg-3);padding-top:1px}
 .railbtns{display:flex;flex-direction:column;gap:8px}
 @media(max-width:980px){.railbtns{flex-direction:row;flex-wrap:wrap}.toc{display:none}}
-.rb{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;
+.rb{display:flex;align-items:center;gap:9px;padding:9px 13px;
   border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);
   font-size:14px;font-weight:600;text-decoration:none;transition:.15s}
 .rb:hover{border-color:var(--brand);color:var(--brand)}
 .rb.solid{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .rb.solid:hover{background:#1f2937;color:#fff}
-.rb span{font-family:"IBM Plex Mono",monospace;font-size:11px;opacity:.6}
+.rb span{font-family:"IBM Plex Mono",monospace;font-size:11px;opacity:.6;margin-left:auto}
+.rb .ic{width:15px;height:15px;fill:currentColor;flex:none;opacity:.92}
 
 /* ---- main column ---- */
 main{padding:52px 56px 80px;max-width:860px}
@@ -131,6 +134,48 @@ figcaption b{color:var(--fg-2)}
 .domrow .bar i{display:block;height:100%;background:var(--brand);opacity:.75}
 .domrow .ct{font-family:"IBM Plex Mono",monospace;text-align:right;color:var(--fg-3);font-size:14px}
 @media(max-width:620px){.domrow{grid-template-columns:1fr 46px}.domrow .bar{display:none}}
+
+/* task explorer */
+.tx{margin:30px 0 0}
+.tx-hd{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.tx h3{font-family:Newsreader,serif;font-size:22px;font-weight:600;letter-spacing:-.015em;margin:0}
+.tx-ct{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--fg-3);white-space:nowrap}
+.tx-ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0}
+.tx-ctl input{flex:1 1 210px;min-width:0;font-family:inherit;font-size:14px;color:var(--fg);
+  background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:7px 11px;transition:.14s}
+.tx-ctl input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-2)}
+.tx-ctl input::placeholder{color:var(--fg-3)}
+.tx-chips{display:flex;flex-wrap:wrap;gap:6px}
+.tx-chips button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
+  background:var(--bg);border:1px solid var(--line);color:var(--fg-2);border-radius:20px;
+  padding:5px 11px;cursor:pointer;transition:.14s;display:inline-flex;align-items:center;gap:6px}
+.tx-chips button:hover{border-color:var(--fg-3);color:var(--fg)}
+.tx-chips button.on{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.tx-chips button i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85;flex:none}
+.tx-chips button.on i{background:var(--bg)}
+.tx-scroll{margin-top:14px;max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:5px}
+.tx-tbl{min-width:700px;font-size:14px}
+.tx-tbl th{position:sticky;top:0;z-index:1;background:var(--bg);padding:10px 12px;
+  border-bottom:1px solid var(--line);text-align:left}
+.tx-tbl th.r{text-align:right}
+.tx-tbl td{font-family:Inter,sans-serif;font-size:14px;text-align:left;padding:9px 12px;
+  border-bottom:1px solid var(--line-2);color:var(--fg-2);vertical-align:top}
+.tx-tbl td.r{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:13px}
+.tx-tbl tbody tr:first-child td{background:none}
+.tx-tbl tbody tr:hover td{background:var(--card)}
+.tx-tbl td:first-child{white-space:normal;font-weight:600;color:var(--fg);max-width:30ch}
+.tx-tbl .sub{display:block;font-weight:400;font-size:12.5px;color:var(--fg-3);margin-top:2px}
+.tx-tbl .tg{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--fg-2)}
+.tx-tbl .tg em{font-style:normal;color:var(--fg-3)}
+.tx-dom{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:13px}
+.tx-dom i{width:7px;height:7px;border-radius:50%;flex:none}
+.tx-g{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  padding:2px 7px;border-radius:3px;background:var(--bg-2);color:var(--fg-3)}
+.tx-g.m{background:var(--brand-2);color:var(--brand)}
+.tx-tbl a{color:inherit;text-decoration:none}
+.tx-tbl a:hover{color:var(--brand);text-decoration:underline}
+.tx-none{padding:26px 14px;color:var(--fg-3);font-size:14px}
+@media(max-width:620px){.tx-scroll{max-height:340px}}
 
 /* table */
 .tablewrap{overflow-x:auto;margin:24px 0 0}
@@ -209,6 +254,13 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
 </style>
 </head>
 <body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <!-- brand marks: simple-icons v15.5.0 (CC0-1.0); document glyph: @primer/octicons v19.11.0 (MIT) -->
+  <symbol id="i-arxiv" viewBox="0 0 24 24"><path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/></symbol>
+  <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm2-.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4Zm10 0v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-hf" viewBox="0 0 24 24"><path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624"/></symbol>
+</svg>
 <div class="shell">
 
 <aside class="rail"><div class="inner">
@@ -225,10 +277,10 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <li><a href="#cite"><span class="nm">07</span> Citation</a></li>
   </ul>
   <div class="railbtns">
-    <a class="rb solid" href="#" data-link="arxiv">arXiv <span>↗</span></a>
-    <a class="rb" href="assets/scilaws_bench_paper.pdf">Paper PDF <span>↗</span></a>
-    <a class="rb" href="https://github.com/yiyihum/SciLaws-Bench" data-link="code">Code <span>↗</span></a>
-    <a class="rb" href="https://huggingface.co/datasets/RealSR/SciLaws-Bench" data-link="data">Dataset <span>↗</span></a>
+    <a class="rb solid" href="#" data-link="arxiv"><svg class="ic" aria-hidden="true"><use href="#i-arxiv"/></svg>arXiv <span>↗</span></a>
+    <a class="rb" href="assets/scilaws_bench_paper.pdf"><svg class="ic" aria-hidden="true"><use href="#i-pdf"/></svg>Paper PDF <span>↗</span></a>
+    <a class="rb" href="https://github.com/yiyihum/SciLaws-Bench" data-link="code"><svg class="ic" aria-hidden="true"><use href="#i-github"/></svg>Code <span>↗</span></a>
+    <a class="rb" href="https://huggingface.co/datasets/RealSR/SciLaws-Bench" data-link="data"><svg class="ic" aria-hidden="true"><use href="#i-hf"/></svg>Dataset <span>↗</span></a>
   </div>
 </div></aside>
 
@@ -267,6 +319,19 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
       <img src="assets/figures/20260826_0054_pipeline.webp" alt="The SciLaws-Bench construction pipeline.">
       <figcaption><b>Curation pipeline.</b> LLM-assisted search and screening, human verification, standardization into executable task packages, then hidden-law synthesis and residual calibration for the Parallel worlds.</figcaption>
     </figure>
+
+    <div class="tx">
+      <div class="tx-hd">
+        <h3>Browse the corpus</h3>
+        <div class="tx-ct" id="txct"></div>
+      </div>
+      <div class="tx-ctl">
+        <input id="txq" type="search" placeholder="filter by problem, target or subfield" autocomplete="off" spellcheck="false">
+        <div class="tx-chips" id="txgrp"></div>
+      </div>
+      <div class="tx-ctl"><div class="tx-chips" id="txdom"></div></div>
+      <div class="tx-scroll"><table class="tx-tbl" id="txtbl"></table></div>
+    </div>
   </section>
 
   <section id="settings">
@@ -431,6 +496,59 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     show(0);
     tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
       tabs.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');show(+b.dataset.i)});
+  }
+
+  // ---- task explorer ----
+  if(document.getElementById('txtbl')){
+    var DOMC={'Astronomy':'#7c3aed','Biology':'#0d9488','Earth & Physics':'#2563eb',
+      'Ecology & Hydrology':'#16a34a','Materials & Engineering':'#d97706','Social Sciences':'#db2777'};
+    var T=D.tasks,fd='',fg='',fq='';
+    var tbl=document.getElementById('txtbl'),ct=document.getElementById('txct');
+    var HF='https://huggingface.co/datasets/RealSR/SciLaws-Bench/tree/main/tasks/';
+    function esc(x){return String(x).replace(/[&<>"]/g,function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+    function num(n){return n.toLocaleString('en-US')}
+    function chips(el,items,get,set){
+      el.innerHTML=items.map(function(it){
+        return '<button data-v="'+esc(it.v)+'"'+(get()===it.v?' class="on"':'')+'>'+
+          (it.c?'<i style="background:'+it.c+'"></i>':'')+esc(it.t)+'</button>'}).join('');
+      el.onclick=function(e){var b=e.target.closest('button');if(!b)return;
+        set(b.dataset.v);
+        el.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+        b.classList.add('on');draw()};
+    }
+    function draw(){
+      var q=fq.trim().toLowerCase();
+      var rows=T.filter(function(t){
+        if(fd&&t.domain!==fd)return false;
+        if(fg&&t.group!==fg)return false;
+        if(q&&(t.name+' '+t.target+' '+t.sub+' '+t.domain).toLowerCase().indexOf(q)<0)return false;
+        return true});
+      ct.textContent=rows.length===T.length?T.length+' problems'
+        :rows.length+' of '+T.length+' problems';
+      if(!rows.length){tbl.innerHTML='<tbody><tr><td class="tx-none">No problem matches that filter.</td></tr></tbody>';return}
+      tbl.innerHTML='<thead><tr><th>Problem</th><th>Discipline</th><th>Type</th><th>Target</th>'+
+        '<th class="r">Inputs</th><th class="r">Train</th><th class="r">Test</th></tr></thead><tbody>'+
+        rows.map(function(t){
+          var dir=(t.group==='single'?'typeI/':'typeII/')+t.id;
+          return '<tr><td><a href="'+HF+esc(dir)+'" target="_blank" rel="noopener">'+esc(t.name)+
+            '</a><span class="sub">'+esc(t.sub)+'</span></td>'+
+            '<td><span class="tx-dom"><i style="background:'+(DOMC[t.domain]||'#8494a8')+'"></i>'+esc(t.domain)+'</span></td>'+
+            '<td><span class="tx-g'+(t.group==='multi'?' m':'')+'">'+(t.group==='multi'?'multi':'single')+'</span></td>'+
+            '<td><span class="tg">'+esc(t.target)+(t.unit?' <em>'+esc(t.unit)+'</em>':'')+'</span></td>'+
+            '<td class="r">'+t.ni+'</td><td class="r">'+num(t.tr)+'</td><td class="r">'+num(t.te)+'</td></tr>'
+        }).join('')+'</tbody>';
+    }
+    chips(document.getElementById('txgrp'),
+      [{v:'',t:'all'},{v:'single',t:'single-group'},{v:'multi',t:'multi-group'}],
+      function(){return fg},function(v){fg=v});
+    chips(document.getElementById('txdom'),
+      [{v:'',t:'all disciplines'}].concat(D.domains.map(function(d){
+        return {v:d.name,t:d.name.toLowerCase()+' \u00b7 '+d.count,c:DOMC[d.name]}})),
+      function(){return fd},function(v){fd=v});
+    var qi=document.getElementById('txq');
+    qi.addEventListener('input',function(){fq=qi.value;draw()});
+    draw();
   }
 
   // scroll spy

@@ -37,832 +37,124 @@ window.SCILAWS = {
   }
  ],
  "tasks": [
-  {
-   "id": "afm_nanoindentation_spherical_zef18__force_indentation",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "afm nanoindentation spherical zef18",
-   "target": "force_indentation"
-  },
-  {
-   "id": "blood_clot_constitutive__tau_ss",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "blood clot constitutive",
-   "target": "tau_ss"
-  },
-  {
-   "id": "dna_melting_temperature_khandelwal__Tm",
-   "domain": "Biology",
-   "group": "single",
-   "name": "dna melting temperature khandelwal",
-   "target": "Tm"
-  },
-  {
-   "id": "drosophila_isolation_by_distance_dest__M_stat",
-   "domain": "Biology",
-   "group": "single",
-   "name": "drosophila isolation by distance dest",
-   "target": "M_stat"
-  },
-  {
-   "id": "ecoli_antibiotic_temperature_growth__OD24h",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "ecoli antibiotic temperature growth",
-   "target": "OD24h"
-  },
-  {
-   "id": "ecoli_growth_curve_chemically_defined__od600",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "ecoli growth curve chemically defined",
-   "target": "od600"
-  },
-  {
-   "id": "measles_tsir_uk__cases_weekly",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "measles tsir uk",
-   "target": "cases_weekly"
-  },
-  {
-   "id": "metabolic_scaling_anage__log_bmr_W",
-   "domain": "Biology",
-   "group": "single",
-   "name": "metabolic scaling anage",
-   "target": "log_bmr_W"
-  },
-  {
-   "id": "mosquito_larvicide_resistance_culex__probit_mortality",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "mosquito larvicide resistance culex",
-   "target": "probit_mortality"
-  },
-  {
-   "id": "mouse_skin_biaxial_constitutive__sigma11",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "mouse skin biaxial constitutive",
-   "target": "sigma11"
-  },
-  {
-   "id": "mouse_skin_biaxial_constitutive__sigma22",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "mouse skin biaxial constitutive",
-   "target": "sigma22"
-  },
-  {
-   "id": "soil_exoenzyme_kinetics_alves__activity_rate",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "soil exoenzyme kinetics alves",
-   "target": "activity_rate"
-  },
-  {
-   "id": "spirometry_nhanes__FEV1_L",
-   "domain": "Biology",
-   "group": "single",
-   "name": "spirometry nhanes",
-   "target": "FEV1_L"
-  },
-  {
-   "id": "spirometry_nhanes__FVC_L",
-   "domain": "Biology",
-   "group": "single",
-   "name": "spirometry nhanes",
-   "target": "FVC_L"
-  },
-  {
-   "id": "tumor_growth_mouse__tumor_volume",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "tumor growth mouse",
-   "target": "tumor_volume"
-  },
-  {
-   "id": "v1_orientation_tuning_stringer__neuron_response",
-   "domain": "Biology",
-   "group": "multi",
-   "name": "v1 orientation tuning stringer",
-   "target": "neuron_response"
-  },
-  {
-   "id": "baseflow_recession_nwis__Q_t",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "baseflow recession nwis",
-   "target": "Q_t"
-  },
-  {
-   "id": "biodiversity_distance_decay__Sim_sor",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "biodiversity distance decay",
-   "target": "Sim_sor"
-  },
-  {
-   "id": "bird_flight_speed_alerstam__Ue",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "bird flight speed alerstam",
-   "target": "Ue"
-  },
-  {
-   "id": "budyko_partitioning_mach__et_over_p",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "budyko partitioning mach",
-   "target": "et_over_p"
-  },
-  {
-   "id": "catchment_mean_runoff_camels__q_mean",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "catchment mean runoff camels",
-   "target": "q_mean"
-  },
-  {
-   "id": "coral_reef_fish_growth_wicquart__length_mm",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "coral reef fish growth wicquart",
-   "target": "length_mm"
-  },
-  {
-   "id": "hacks_law_river_length_hydrosheds__main_length_km",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "hacks law river length hydrosheds",
-   "target": "main_length_km"
-  },
-  {
-   "id": "island_species_richness_terceira__S_terceira",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "island species richness terceira",
-   "target": "S_terceira"
-  },
-  {
-   "id": "lake_thermocline_depth_pilla__z_t",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "lake thermocline depth pilla",
-   "target": "z_t"
-  },
-  {
-   "id": "latent_heat_flux_kgdsr__LE",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "latent heat flux kgdsr",
-   "target": "LE"
-  },
-  {
-   "id": "leaf_light_response_photosynthesis_schmiege__net_assimilation",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "leaf light response photosynthesis schmiege",
-   "target": "net_assimilation"
-  },
-  {
-   "id": "pfas_soil_sorption__log_kd",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "pfas soil sorption",
-   "target": "log_kd"
-  },
-  {
-   "id": "plant_competition_reciprocal_yield__mean_plant_mass",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "plant competition reciprocal yield",
-   "target": "mean_plant_mass"
-  },
-  {
-   "id": "predator_functional_response_forage__prey_eaten",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "predator functional response forage",
-   "target": "prey_eaten"
-  },
-  {
-   "id": "rock_core_permeability_norweg__log_k",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "rock core permeability norweg",
-   "target": "log_k"
-  },
-  {
-   "id": "soil_water_retention_gshp__theta",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "soil water retention gshp",
-   "target": "theta"
-  },
-  {
-   "id": "stomatal_conductance_sapfluxnet__gc",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "stomatal conductance sapfluxnet",
-   "target": "gc"
-  },
-  {
-   "id": "streamchannel_at_station_hydraulic_geometry_ifmha__chan_width",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "streamchannel at station hydraulic geometry ifmha",
-   "target": "chan_width"
-  },
-  {
-   "id": "thermal_performance_curve__pf_utpc",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "thermal performance curve",
-   "target": "pf_utpc"
-  },
-  {
-   "id": "tree_biomass_allometry_chave__agb",
-   "domain": "Ecology & Hydrology",
-   "group": "single",
-   "name": "tree biomass allometry chave",
-   "target": "agb"
-  },
-  {
-   "id": "tree_height_diameter_chave__height_m",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "tree height diameter chave",
-   "target": "height_m"
-  },
-  {
-   "id": "woody_plant_allometry_baad__a_lf",
-   "domain": "Ecology & Hydrology",
-   "group": "multi",
-   "name": "woody plant allometry baad",
-   "target": "a_lf"
-  },
-  {
-   "id": "alkali_rydberg_levels_quantum_defect__binding_energy",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "alkali rydberg levels quantum defect",
-   "target": "binding_energy"
-  },
-  {
-   "id": "alpha_decay_geiger_nuttall_nubase__log_half_life",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "alpha decay geiger nuttall nubase",
-   "target": "log_half_life"
-  },
-  {
-   "id": "cloud_cover_parameterization__cloud_cover",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "cloud cover parameterization",
-   "target": "cloud_cover"
-  },
-  {
-   "id": "cosmic_ray_eas_auger__dE_dX",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "cosmic ray eas auger",
-   "target": "dE_dX"
-  },
-  {
-   "id": "electron_impact_ionization_alecs__cross_section",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "electron impact ionization alecs",
-   "target": "cross_section"
-  },
-  {
-   "id": "exfor_neutron_capture_resonance_gold__sigma_E",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "exfor neutron capture resonance gold",
-   "target": "sigma_E"
-  },
-  {
-   "id": "geomagnetic_storm_dst__dDst_dt",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "geomagnetic storm dst",
-   "target": "dDst_dt"
-  },
-  {
-   "id": "ghg_emission_drivers__CDE",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ghg emission drivers",
-   "target": "CDE"
-  },
-  {
-   "id": "ghg_emission_drivers__EC",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ghg emission drivers",
-   "target": "EC"
-  },
-  {
-   "id": "ghg_emission_drivers__ME",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ghg emission drivers",
-   "target": "ME"
-  },
-  {
-   "id": "ghg_emission_drivers__NOE",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ghg emission drivers",
-   "target": "NOE"
-  },
-  {
-   "id": "gravity_wgs84_somigliana__g0",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "gravity wgs84 somigliana",
-   "target": "g0"
-  },
-  {
-   "id": "ground_motion_ita18__log10_pga",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ground motion ita18",
-   "target": "log10_pga"
-  },
-  {
-   "id": "gutenberg_richter_b_value_usgs__gr_freq_mag",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "gutenberg richter b value usgs",
-   "target": "gr_freq_mag"
-  },
-  {
-   "id": "liquid_dispersion_glycols__refractive_index",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "liquid dispersion glycols",
-   "target": "refractive_index"
-  },
-  {
-   "id": "mauna_loa_co2_keeling_curve_noaa__co2_ppm",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "mauna loa co2 keeling curve noaa",
-   "target": "co2_ppm"
-  },
-  {
-   "id": "nuclear_binding_energy_ame2020__BE_per_A",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "nuclear binding energy ame2020",
-   "target": "BE_per_A"
-  },
-  {
-   "id": "ocean_mesoscale_eddy_closure__Sx",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "ocean mesoscale eddy closure",
-   "target": "Sx"
-  },
-  {
-   "id": "optical_dispersion_sellmeier__refractive_index",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "optical dispersion sellmeier",
-   "target": "refractive_index"
-  },
-  {
-   "id": "parker_spiral_imf__B_phi",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "parker spiral imf",
-   "target": "B_phi"
-  },
-  {
-   "id": "pp_total_cross_section_donnachie_landshoff__sigma_tot",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "pp total cross section donnachie landshoff",
-   "target": "sigma_tot"
-  },
-  {
-   "id": "proton_em_form_factor__GE_over_GD",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "proton em form factor",
-   "target": "GE_over_GD"
-  },
-  {
-   "id": "spectrophotometry_beer_lambert_chromate__absorbance",
-   "domain": "Earth & Physics",
-   "group": "multi",
-   "name": "spectrophotometry beer lambert chromate",
-   "target": "absorbance"
-  },
-  {
-   "id": "volcanic_column_mer_ivespa__H_top",
-   "domain": "Earth & Physics",
-   "group": "single",
-   "name": "volcanic column mer ivespa",
-   "target": "H_top"
-  },
-  {
-   "id": "binary_pulsar_post_keplerian_atnf__PBDOT",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "binary pulsar post keplerian atnf",
-   "target": "PBDOT"
-  },
-  {
-   "id": "bns_merger_disk_ejecta__Mdisk",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "bns merger disk ejecta",
-   "target": "Mdisk"
-  },
-  {
-   "id": "bns_merger_disk_ejecta__Mej",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "bns merger disk ejecta",
-   "target": "Mej"
-  },
-  {
-   "id": "bns_merger_disk_ejecta__vej",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "bns merger disk ejecta",
-   "target": "vej"
-  },
-  {
-   "id": "bns_postmerger_waveform_core__f2",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "bns postmerger waveform core",
-   "target": "f2"
-  },
-  {
-   "id": "cepheid_period_luminosity__M_W",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "cepheid period luminosity",
-   "target": "M_W"
-  },
-  {
-   "id": "eclipsing_binary_mass_luminosity_debcat__log_L_Lsun",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "eclipsing binary mass luminosity debcat",
-   "target": "log_L_Lsun"
-  },
-  {
-   "id": "exoplanet_mass_radius__R",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "exoplanet mass radius",
-   "target": "R"
-  },
-  {
-   "id": "galaxy_mass_metallicity_sdss__oh",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "galaxy mass metallicity sdss",
-   "target": "oh"
-  },
-  {
-   "id": "galaxy_stellar_mass_sdss__log_M_star",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "galaxy stellar mass sdss",
-   "target": "log_M_star"
-  },
-  {
-   "id": "mars_crater_size_frequency__N_cum",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "mars crater size frequency",
-   "target": "N_cum"
-  },
-  {
-   "id": "neo_size_frequency_distribution__N_cum_H",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "neo size frequency distribution",
-   "target": "N_cum_H"
-  },
-  {
-   "id": "protoplanetary_disk_mmflux__F_mm",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "protoplanetary disk mmflux",
-   "target": "F_mm"
-  },
-  {
-   "id": "red_giant_asteroseismology__delta_nu",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "red giant asteroseismology",
-   "target": "delta_nu"
-  },
-  {
-   "id": "red_giant_asteroseismology__nu_max",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "red giant asteroseismology",
-   "target": "nu_max"
-  },
-  {
-   "id": "smbh_mass_sigma_relation__log_M_BH",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "smbh mass sigma relation",
-   "target": "log_M_BH"
-  },
-  {
-   "id": "sne_ia_distance_modulus_pantheonplus__mu",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "sne ia distance modulus pantheonplus",
-   "target": "mu"
-  },
-  {
-   "id": "solar_spectrum_sorce_sim__planck_radiance",
-   "domain": "Astronomy",
-   "group": "multi",
-   "name": "solar spectrum sorce sim",
-   "target": "planck_radiance"
-  },
-  {
-   "id": "solar_sunspot_silso__ssn",
-   "domain": "Astronomy",
-   "group": "multi",
-   "name": "solar sunspot silso",
-   "target": "ssn"
-  },
-  {
-   "id": "ttauri_accretion__L_acc",
-   "domain": "Astronomy",
-   "group": "single",
-   "name": "ttauri accretion",
-   "target": "L_acc"
-  },
-  {
-   "id": "baseball_pythagorean_winpct_lahman__win_pct",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "baseball pythagorean winpct lahman",
-   "target": "win_pct"
-  },
-  {
-   "id": "cobb_douglas_growth_pwt__log_Y",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "cobb douglas growth pwt",
-   "target": "log_Y"
-  },
-  {
-   "id": "commuting_gravity_lodes__flow_Tij",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "commuting gravity lodes",
-   "target": "flow_Tij"
-  },
-  {
-   "id": "income_distribution_wid__pareto_alpha",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "income distribution wid",
-   "target": "pareto_alpha"
-  },
-  {
-   "id": "intertemporal_discount__p_ll",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "intertemporal discount",
-   "target": "p_ll"
-  },
-  {
-   "id": "life_expectancy_oeppen_vaupel_hmd__e0",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "life expectancy oeppen vaupel hmd",
-   "target": "e0"
-  },
-  {
-   "id": "life_expectancy_preston__e0_vs_gdppc",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "life expectancy preston",
-   "target": "e0_vs_gdppc"
-  },
-  {
-   "id": "mincer_earnings_acs_pums__log_wage",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "mincer earnings acs pums",
-   "target": "log_wage"
-  },
-  {
-   "id": "mortality_gompertz_makeham_hmd__log_m_adult",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "mortality gompertz makeham hmd",
-   "target": "log_m_adult"
-  },
-  {
-   "id": "mortality_gompertz_makeham_hmd_postwar__log_m_adult",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "mortality gompertz makeham hmd postwar",
-   "target": "log_m_adult"
-  },
-  {
-   "id": "mortality_heligman_pollard_hmd__log_m_full",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "mortality heligman pollard hmd",
-   "target": "log_m_full"
-  },
-  {
-   "id": "running_endurance_iaaf__velocity",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "running endurance iaaf",
-   "target": "velocity"
-  },
-  {
-   "id": "sex_mortality_ratio_hmd__log_sex_ratio",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "sex mortality ratio hmd",
-   "target": "log_sex_ratio"
-  },
-  {
-   "id": "top_income_share_wid__top_share_log",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "top income share wid",
-   "target": "top_share_log"
-  },
-  {
-   "id": "trade_gravity_cepii__log_tradeflow",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "trade gravity cepii",
-   "target": "log_tradeflow"
-  },
-  {
-   "id": "traffic_flow_density_ngsim__q_flow",
-   "domain": "Social Sciences",
-   "group": "single",
-   "name": "traffic flow density ngsim",
-   "target": "q_flow"
-  },
-  {
-   "id": "urban_scaling_msa_bea__log_GMP",
-   "domain": "Social Sciences",
-   "group": "multi",
-   "name": "urban scaling msa bea",
-   "target": "log_GMP"
-  },
-  {
-   "id": "chiller_gordon_ng_universal__one_over_COP_minus_1",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "chiller gordon ng universal",
-   "target": "one_over_COP_minus_1"
-  },
-  {
-   "id": "co2_adsorption_zeolite_isodb_toth__n_ads",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "co2 adsorption zeolite isodb toth",
-   "target": "n_ads"
-  },
-  {
-   "id": "disinfection_kinetics_chick_watson__log_reduction",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "disinfection kinetics chick watson",
-   "target": "log_reduction"
-  },
-  {
-   "id": "fluid_surface_tension_nist_webbook_eotvos__sigma",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "fluid surface tension nist webbook eotvos",
-   "target": "sigma"
-  },
-  {
-   "id": "hea_hardness_lattice_distortion_couzinie__HV",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "hea hardness lattice distortion couzinie",
-   "target": "HV"
-  },
-  {
-   "id": "her_hor_pt_acid_kucernak__current_density",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "her hor pt acid kucernak",
-   "target": "current_density"
-  },
-  {
-   "id": "li_metal_battery_capacity_stanford__cap_dischg_mAh",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "li metal battery capacity stanford",
-   "target": "cap_dischg_mAh"
-  },
-  {
-   "id": "liion_capacity_fade_nasa_pcoe__capacity_Ah",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "liion capacity fade nasa pcoe",
-   "target": "capacity_Ah"
-  },
-  {
-   "id": "lpbf_meltpool_rosenthal_inconel__depth",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "lpbf meltpool rosenthal inconel",
-   "target": "depth"
-  },
-  {
-   "id": "magnet_3c90_core_loss__log_P_vol",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "magnet 3c90 core loss",
-   "target": "log_P_vol"
-  },
-  {
-   "id": "materials_project_elastic_birch_murnaghan__K_VRH",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "materials project elastic birch murnaghan",
-   "target": "K_VRH"
-  },
-  {
-   "id": "mof_co2_adsorption_langmuir_crafted__q_CO2",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "mof co2 adsorption langmuir crafted",
-   "target": "q_CO2"
-  },
-  {
-   "id": "open_channel_flow_manning_usgs__mean_velocity",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "open channel flow manning usgs",
-   "target": "mean_velocity"
-  },
-  {
-   "id": "polymer_melt_viscosity_polyverse__log10_eta_poise",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "polymer melt viscosity polyverse",
-   "target": "log10_eta_poise"
-  },
-  {
-   "id": "pv_module_temperature_efficiency_pvpmc__P_max",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "pv module temperature efficiency pvpmc",
-   "target": "P_max"
-  },
-  {
-   "id": "silicate_melt_viscosity_gpvisc__log_viscosity",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "silicate melt viscosity gpvisc",
-   "target": "log_viscosity"
-  },
-  {
-   "id": "solar_flat_plate_collector_graz_efficiency__eta_thermal",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "solar flat plate collector graz efficiency",
-   "target": "eta_thermal"
-  },
-  {
-   "id": "weir_flow_tilting_pugh__discharge",
-   "domain": "Materials & Engineering",
-   "group": "multi",
-   "name": "weir flow tilting pugh",
-   "target": "discharge"
-  },
-  {
-   "id": "wind_turbine_power_curve_engie__power_kW",
-   "domain": "Materials & Engineering",
-   "group": "single",
-   "name": "wind turbine power curve engie",
-   "target": "power_kW"
-  }
+  {"id": "afm_nanoindentation_spherical_zef18__force_indentation", "domain": "Biology", "sub": "biophysics", "group": "multi", "name": "afm nanoindentation spherical zef18", "target": "force_N", "unit": "N", "ni": 2, "tr": 836775, "te": 213268},
+  {"id": "alkali_rydberg_levels_quantum_defect__binding_energy", "domain": "Earth & Physics", "sub": "atomic spectroscopy", "group": "multi", "name": "alkali rydberg levels quantum defect", "target": "binding_energy_cm1", "unit": "cm^-1", "ni": 2, "tr": 199, "te": 229},
+  {"id": "alpha_decay_geiger_nuttall_nubase__log_half_life", "domain": "Earth & Physics", "sub": "nuclear physics", "group": "multi", "name": "alpha decay geiger nuttall nubase", "target": "log10_half_life_s", "unit": "", "ni": 1, "tr": 143, "te": 73},
+  {"id": "baseball_pythagorean_winpct_lahman__win_pct", "domain": "Social Sciences", "sub": "sports analytics", "group": "single", "name": "baseball pythagorean winpct lahman", "target": "win_pct", "unit": "", "ni": 3, "tr": 2012, "te": 938},
+  {"id": "baseflow_recession_nwis__Q_t", "domain": "Ecology & Hydrology", "sub": "hydrology", "group": "multi", "name": "baseflow recession nwis", "target": "Q_t", "unit": "ft3/s", "ni": 2, "tr": 88395, "te": 28504},
+  {"id": "binary_pulsar_post_keplerian_atnf__PBDOT", "domain": "Astronomy", "sub": "pulsar timing", "group": "single", "name": "binary pulsar post keplerian atnf", "target": "PBDOT", "unit": "s/s", "ni": 2, "tr": 71, "te": 10},
+  {"id": "biodiversity_distance_decay__Sim_sor", "domain": "Ecology & Hydrology", "sub": "community ecology", "group": "multi", "name": "biodiversity distance decay", "target": "Sim_sor", "unit": "", "ni": 1, "tr": 1816, "te": 448},
+  {"id": "bird_flight_speed_alerstam__Ue", "domain": "Ecology & Hydrology", "sub": "avian ecology", "group": "single", "name": "bird flight speed alerstam", "target": "Ue_ms", "unit": "m/s", "ni": 2, "tr": 69, "te": 62},
+  {"id": "blood_clot_constitutive__tau_ss", "domain": "Biology", "sub": "biomechanics", "group": "multi", "name": "blood clot constitutive", "target": "tau_ss", "unit": "kPa", "ni": 3, "tr": 82478, "te": 23573},
+  {"id": "bns_merger_disk_ejecta__Mdisk", "domain": "Astronomy", "sub": "gravitational-wave astrophysics", "group": "single", "name": "bns merger disk ejecta", "target": "Mdisk", "unit": "M_sun", "ni": 6, "tr": 52, "te": 76},
+  {"id": "bns_merger_disk_ejecta__Mej", "domain": "Astronomy", "sub": "gravitational-wave astrophysics", "group": "single", "name": "bns merger disk ejecta", "target": "Mej", "unit": "M_sun", "ni": 8, "tr": 50, "te": 54},
+  {"id": "bns_merger_disk_ejecta__vej", "domain": "Astronomy", "sub": "gravitational-wave astrophysics", "group": "single", "name": "bns merger disk ejecta", "target": "vej", "unit": "c", "ni": 6, "tr": 207, "te": 35},
+  {"id": "bns_postmerger_waveform_core__f2", "domain": "Astronomy", "sub": "gravitational-wave-astrophysics", "group": "single", "name": "bns postmerger waveform core", "target": "f2", "unit": "kHz", "ni": 7, "tr": 102, "te": 41},
+  {"id": "budyko_partitioning_mach__et_over_p", "domain": "Ecology & Hydrology", "sub": "hydrology", "group": "single", "name": "budyko partitioning mach", "target": "et_over_p", "unit": "", "ni": 9, "tr": 840, "te": 156},
+  {"id": "catchment_mean_runoff_camels__q_mean", "domain": "Ecology & Hydrology", "sub": "hydrology", "group": "single", "name": "catchment mean runoff camels", "target": "q_mean", "unit": "mm/day", "ni": 13, "tr": 469, "te": 201},
+  {"id": "cepheid_period_luminosity__M_W", "domain": "Astronomy", "sub": "stellar astrophysics", "group": "single", "name": "cepheid period luminosity", "target": "M_W", "unit": "mag", "ni": 2, "tr": 24, "te": 7},
+  {"id": "chiller_gordon_ng_universal__one_over_COP_minus_1", "domain": "Materials & Engineering", "sub": "engineering", "group": "multi", "name": "chiller gordon ng universal", "target": "one_over_COP_minus_1", "unit": "dimensionless", "ni": 3, "tr": 1026, "te": 486},
+  {"id": "cloud_cover_parameterization__cloud_cover", "domain": "Earth & Physics", "sub": "atmospheric science", "group": "single", "name": "cloud cover parameterization", "target": "cloud_cover", "unit": "", "ni": 8, "tr": 32088, "te": 8022},
+  {"id": "co2_adsorption_zeolite_isodb_toth__n_ads", "domain": "Materials & Engineering", "sub": "adsorption", "group": "multi", "name": "co2 adsorption zeolite isodb toth", "target": "n_ads", "unit": "mmol/g", "ni": 1, "tr": 799, "te": 179},
+  {"id": "cobb_douglas_growth_pwt__log_Y", "domain": "Social Sciences", "sub": "macroeconomics", "group": "multi", "name": "cobb douglas growth pwt", "target": "log_Y", "unit": "", "ni": 3, "tr": 7145, "te": 1642},
+  {"id": "commuting_gravity_lodes__flow_Tij", "domain": "Social Sciences", "sub": "mobility", "group": "single", "name": "commuting gravity lodes", "target": "log10_Tij", "unit": "log10(workers)", "ni": 4, "tr": 30163, "te": 5284},
+  {"id": "coral_reef_fish_growth_wicquart__length_mm", "domain": "Ecology & Hydrology", "sub": "fish growth", "group": "multi", "name": "coral reef fish growth wicquart", "target": "Li_sp_m", "unit": "", "ni": 1, "tr": 4286, "te": 1624},
+  {"id": "cosmic_ray_eas_auger__dE_dX", "domain": "Earth & Physics", "sub": "astroparticle physics", "group": "multi", "name": "cosmic ray eas auger", "target": "dE_dX", "unit": "PeV/(g/cm^2)", "ni": 1, "tr": 241682, "te": 79641},
+  {"id": "disinfection_kinetics_chick_watson__log_reduction", "domain": "Materials & Engineering", "sub": "water treatment", "group": "multi", "name": "disinfection kinetics chick watson", "target": "log_reduction", "unit": "", "ni": 1, "tr": 3750, "te": 254},
+  {"id": "dna_melting_temperature_khandelwal__Tm", "domain": "Biology", "sub": "biochemistry", "group": "single", "name": "dna melting temperature khandelwal", "target": "Tm", "unit": "°C", "ni": 4, "tr": 344, "te": 100},
+  {"id": "drosophila_isolation_by_distance_dest__M_stat", "domain": "Biology", "sub": "population genetics", "group": "single", "name": "drosophila isolation by distance dest", "target": "M_stat", "unit": "", "ni": 2, "tr": 828, "te": 550},
+  {"id": "eclipsing_binary_mass_luminosity_debcat__log_L_Lsun", "domain": "Astronomy", "sub": "stellar astrophysics", "group": "single", "name": "eclipsing binary mass luminosity debcat", "target": "log_L_Lsun", "unit": "dex", "ni": 2, "tr": 238, "te": 355},
+  {"id": "ecoli_antibiotic_temperature_growth__OD24h", "domain": "Biology", "sub": "biology", "group": "multi", "name": "ecoli antibiotic temperature growth", "target": "OD24h", "unit": "OD600 (dimensionless)", "ni": 1, "tr": 1763, "te": 448},
+  {"id": "ecoli_growth_curve_chemically_defined__od600", "domain": "Biology", "sub": "predictive microbiology", "group": "multi", "name": "ecoli growth curve chemically defined", "target": "od600", "unit": "OD (dimensionless)", "ni": 1, "tr": 108535, "te": 13445},
+  {"id": "electron_impact_ionization_alecs__cross_section", "domain": "Earth & Physics", "sub": "atomic molecular physics", "group": "multi", "name": "electron impact ionization alecs", "target": "cross_section_1e16cm2", "unit": "1e-16 cm^2", "ni": 1, "tr": 176, "te": 354},
+  {"id": "exfor_neutron_capture_resonance_gold__sigma_E", "domain": "Earth & Physics", "sub": "nuclear reactions", "group": "single", "name": "exfor neutron capture resonance gold", "target": "log10_sigma_b", "unit": "log10(barn)", "ni": 1, "tr": 1732, "te": 433},
+  {"id": "exoplanet_mass_radius__R", "domain": "Astronomy", "sub": "exoplanets", "group": "single", "name": "exoplanet mass radius", "target": "R", "unit": "R_earth", "ni": 1, "tr": 2041, "te": 1021},
+  {"id": "fluid_surface_tension_nist_webbook_eotvos__sigma", "domain": "Materials & Engineering", "sub": "physical chemistry", "group": "multi", "name": "fluid surface tension nist webbook eotvos", "target": "sigma", "unit": "N/m", "ni": 4, "tr": 7407, "te": 2396},
+  {"id": "galaxy_mass_metallicity_sdss__oh", "domain": "Astronomy", "sub": "extragalactic", "group": "single", "name": "galaxy mass metallicity sdss", "target": "oh", "unit": "dex", "ni": 2, "tr": 155923, "te": 38981},
+  {"id": "galaxy_stellar_mass_sdss__log_M_star", "domain": "Astronomy", "sub": "galaxies", "group": "single", "name": "galaxy stellar mass sdss", "target": "log_M_star", "unit": "dex", "ni": 7, "tr": 160000, "te": 40000},
+  {"id": "geomagnetic_storm_dst__dDst_dt", "domain": "Earth & Physics", "sub": "space physics", "group": "single", "name": "geomagnetic storm dst", "target": "dDst_dt", "unit": "nT/hr", "ni": 8, "tr": 230087, "te": 3672},
+  {"id": "ghg_emission_drivers__CDE", "domain": "Earth & Physics", "sub": "climate economics", "group": "single", "name": "ghg emission drivers", "target": "CDE", "unit": "kg CO2", "ni": 6, "tr": 3555, "te": 838},
+  {"id": "ghg_emission_drivers__EC", "domain": "Earth & Physics", "sub": "energy", "group": "single", "name": "ghg emission drivers", "target": "EC", "unit": "TJ", "ni": 6, "tr": 3372, "te": 1124},
+  {"id": "ghg_emission_drivers__ME", "domain": "Earth & Physics", "sub": "climate economics", "group": "single", "name": "ghg emission drivers", "target": "ME", "unit": "kg CH4", "ni": 6, "tr": 3555, "te": 838},
+  {"id": "ghg_emission_drivers__NOE", "domain": "Earth & Physics", "sub": "climate economics", "group": "single", "name": "ghg emission drivers", "target": "NOE", "unit": "kg N2O", "ni": 6, "tr": 3555, "te": 838},
+  {"id": "gravity_wgs84_somigliana__g0", "domain": "Earth & Physics", "sub": "geodesy", "group": "single", "name": "gravity wgs84 somigliana", "target": "g0", "unit": "m/s^2", "ni": 1, "tr": 10635, "te": 4337},
+  {"id": "ground_motion_ita18__log10_pga", "domain": "Earth & Physics", "sub": "seismology", "group": "single", "name": "ground motion ita18", "target": "log10_pga", "unit": "log10(cm/s^2)", "ni": 11, "tr": 3449, "te": 1204},
+  {"id": "gutenberg_richter_b_value_usgs__gr_freq_mag", "domain": "Earth & Physics", "sub": "seismology", "group": "single", "name": "gutenberg richter b value usgs", "target": "log10_N", "unit": "", "ni": 1, "tr": 19, "te": 17},
+  {"id": "hacks_law_river_length_hydrosheds__main_length_km", "domain": "Ecology & Hydrology", "sub": "hydrology", "group": "single", "name": "hacks law river length hydrosheds", "target": "main_length_km", "unit": "km", "ni": 5, "tr": 28340, "te": 7085},
+  {"id": "hea_hardness_lattice_distortion_couzinie__HV", "domain": "Materials & Engineering", "sub": "physical metallurgy", "group": "single", "name": "hea hardness lattice distortion couzinie", "target": "HV", "unit": "kgf/mm²", "ni": 3, "tr": 56, "te": 14},
+  {"id": "her_hor_pt_acid_kucernak__current_density", "domain": "Materials & Engineering", "sub": "electrochemistry", "group": "single", "name": "her hor pt acid kucernak", "target": "current_density", "unit": "A cm-2", "ni": 4, "tr": 676, "te": 334},
+  {"id": "income_distribution_wid__pareto_alpha", "domain": "Social Sciences", "sub": "income inequality", "group": "multi", "name": "income distribution wid", "target": "log_top_share", "unit": "", "ni": 4, "tr": 38775, "te": 8800},
+  {"id": "intertemporal_discount__p_ll", "domain": "Social Sciences", "sub": "decision", "group": "multi", "name": "intertemporal discount", "target": "p_ll", "unit": "", "ni": 6, "tr": 680, "te": 340},
+  {"id": "island_species_richness_terceira__S_terceira", "domain": "Ecology & Hydrology", "sub": "community ecology", "group": "single", "name": "island species richness terceira", "target": "S_terceira", "unit": "", "ni": 5, "tr": 34, "te": 18},
+  {"id": "lake_thermocline_depth_pilla__z_t", "domain": "Ecology & Hydrology", "sub": "limnology", "group": "single", "name": "lake thermocline depth pilla", "target": "z_t_m", "unit": "m", "ni": 2, "tr": 978, "te": 245},
+  {"id": "latent_heat_flux_kgdsr__LE", "domain": "Ecology & Hydrology", "sub": "hydrology", "group": "multi", "name": "latent heat flux kgdsr", "target": "LE", "unit": "W m^-2", "ni": 13, "tr": 1334530, "te": 647698},
+  {"id": "leaf_light_response_photosynthesis_schmiege__net_assimilation", "domain": "Ecology & Hydrology", "sub": "plant ecophysiology", "group": "multi", "name": "leaf light response photosynthesis schmiege", "target": "A_n", "unit": "umol CO2 m-2 s-1", "ni": 1, "tr": 1108, "te": 303},
+  {"id": "li_metal_battery_capacity_stanford__cap_dischg_mAh", "domain": "Materials & Engineering", "sub": "electrochemistry", "group": "multi", "name": "li metal battery capacity stanford", "target": "cap_dischg_mAh", "unit": "mAh", "ni": 8, "tr": 7470, "te": 3535},
+  {"id": "life_expectancy_oeppen_vaupel_hmd__e0", "domain": "Social Sciences", "sub": "demography", "group": "multi", "name": "life expectancy oeppen vaupel hmd", "target": "e0", "unit": "years", "ni": 1, "tr": 2665, "te": 1306},
+  {"id": "life_expectancy_preston__e0_vs_gdppc", "domain": "Social Sciences", "sub": "demography", "group": "single", "name": "life expectancy preston", "target": "e0_vs_gdppc", "unit": "years", "ni": 1, "tr": 38, "te": 19},
+  {"id": "liion_capacity_fade_nasa_pcoe__capacity_Ah", "domain": "Materials & Engineering", "sub": "electrochemistry", "group": "single", "name": "liion capacity fade nasa pcoe", "target": "capacity_Ah", "unit": "Ah", "ni": 1, "tr": 382, "te": 254},
+  {"id": "liquid_dispersion_glycols__refractive_index", "domain": "Earth & Physics", "sub": "optics", "group": "single", "name": "liquid dispersion glycols", "target": "refractive_index", "unit": "", "ni": 2, "tr": 230, "te": 170},
+  {"id": "lpbf_meltpool_rosenthal_inconel__depth", "domain": "Materials & Engineering", "sub": "additive manufacturing", "group": "single", "name": "lpbf meltpool rosenthal inconel", "target": "meltpool_depth_um", "unit": "um", "ni": 3, "tr": 48, "te": 20},
+  {"id": "magnet_3c90_core_loss__log_P_vol", "domain": "Materials & Engineering", "sub": "power magnetics", "group": "single", "name": "magnet 3c90 core loss", "target": "log_P_vol", "unit": "log10(kW/m^3)", "ni": 4, "tr": 3444, "te": 769},
+  {"id": "mars_crater_size_frequency__N_cum", "domain": "Astronomy", "sub": "planetary science", "group": "single", "name": "mars crater size frequency", "target": "N_cum", "unit": "km^-2", "ni": 3, "tr": 56, "te": 18},
+  {"id": "materials_project_elastic_birch_murnaghan__K_VRH", "domain": "Materials & Engineering", "sub": "solid-state mechanics", "group": "single", "name": "materials project elastic birch murnaghan", "target": "K_VRH_GPa", "unit": "GPa", "ni": 4, "tr": 827, "te": 177},
+  {"id": "mauna_loa_co2_keeling_curve_noaa__co2_ppm", "domain": "Earth & Physics", "sub": "atmosphere", "group": "single", "name": "mauna loa co2 keeling curve noaa", "target": "co2_ppm", "unit": "ppm", "ni": 6, "tr": 742, "te": 76},
+  {"id": "measles_tsir_uk__cases_weekly", "domain": "Biology", "sub": "epidemiology", "group": "multi", "name": "measles tsir uk", "target": "dlog_cases", "unit": "log-ratio (dimensionless)", "ni": 5, "tr": 7111, "te": 3829},
+  {"id": "metabolic_scaling_anage__log_bmr_W", "domain": "Biology", "sub": "physiology", "group": "single", "name": "metabolic scaling anage", "target": "log_bmr_W", "unit": "log10(W)", "ni": 1, "tr": 238, "te": 158},
+  {"id": "mincer_earnings_acs_pums__log_wage", "domain": "Social Sciences", "sub": "labor economics", "group": "single", "name": "mincer earnings acs pums", "target": "log_wage", "unit": "ln(USD)", "ni": 2, "tr": 53287, "te": 26713},
+  {"id": "mof_co2_adsorption_langmuir_crafted__q_CO2", "domain": "Materials & Engineering", "sub": "adsorption", "group": "multi", "name": "mof co2 adsorption langmuir crafted", "target": "q_CO2_mmol_per_g", "unit": "mmol/g", "ni": 1, "tr": 2340, "te": 780},
+  {"id": "mortality_gompertz_makeham_hmd__log_m_adult", "domain": "Social Sciences", "sub": "demography", "group": "multi", "name": "mortality gompertz makeham hmd", "target": "log_m_adult", "unit": "", "ni": 2, "tr": 177703, "te": 87186},
+  {"id": "mortality_gompertz_makeham_hmd_postwar__log_m_adult", "domain": "Social Sciences", "sub": "demography", "group": "multi", "name": "mortality gompertz makeham hmd postwar", "target": "log_m_adult", "unit": "", "ni": 2, "tr": 70267, "te": 46860},
+  {"id": "mortality_heligman_pollard_hmd__log_m_full", "domain": "Social Sciences", "sub": "demography", "group": "multi", "name": "mortality heligman pollard hmd", "target": "log_m_full", "unit": "", "ni": 2, "tr": 132858, "te": 65272},
+  {"id": "mosquito_larvicide_resistance_culex__probit_mortality", "domain": "Biology", "sub": "insecticide resistance", "group": "multi", "name": "mosquito larvicide resistance culex", "target": "corrected_mortality", "unit": "", "ni": 2, "tr": 1846, "te": 571},
+  {"id": "mouse_skin_biaxial_constitutive__sigma11", "domain": "Biology", "sub": "biomechanics", "group": "multi", "name": "mouse skin biaxial constitutive", "target": "sigma11", "unit": "MPa", "ni": 2, "tr": 11340, "te": 3972},
+  {"id": "mouse_skin_biaxial_constitutive__sigma22", "domain": "Biology", "sub": "biomechanics", "group": "multi", "name": "mouse skin biaxial constitutive", "target": "sigma22", "unit": "MPa", "ni": 2, "tr": 11340, "te": 3972},
+  {"id": "neo_size_frequency_distribution__N_cum_H", "domain": "Astronomy", "sub": "planetary science", "group": "single", "name": "neo size frequency distribution", "target": "N_cum_H", "unit": "", "ni": 1, "tr": 57, "te": 14},
+  {"id": "nuclear_binding_energy_ame2020__BE_per_A", "domain": "Earth & Physics", "sub": "nuclear astrophysics", "group": "single", "name": "nuclear binding energy ame2020", "target": "BE_per_A", "unit": "MeV", "ni": 5, "tr": 2078, "te": 470},
+  {"id": "ocean_mesoscale_eddy_closure__Sx", "domain": "Earth & Physics", "sub": "ocean dynamics", "group": "single", "name": "ocean mesoscale eddy closure", "target": "Sx", "unit": "m s^-2", "ni": 8, "tr": 54272, "te": 14336},
+  {"id": "open_channel_flow_manning_usgs__mean_velocity", "domain": "Materials & Engineering", "sub": "open-channel hydraulics", "group": "multi", "name": "open channel flow manning usgs", "target": "V_mps", "unit": "m/s", "ni": 2, "tr": 855088, "te": 217682},
+  {"id": "optical_dispersion_sellmeier__refractive_index", "domain": "Earth & Physics", "sub": "optics", "group": "multi", "name": "optical dispersion sellmeier", "target": "n", "unit": "dimensionless", "ni": 1, "tr": 201, "te": 53},
+  {"id": "parker_spiral_imf__B_phi", "domain": "Earth & Physics", "sub": "heliospheric physics", "group": "single", "name": "parker spiral imf", "target": "B_phi_nT", "unit": "nT", "ni": 3, "tr": 2554, "te": 731},
+  {"id": "pfas_soil_sorption__log_kd", "domain": "Ecology & Hydrology", "sub": "environmental chemistry", "group": "single", "name": "pfas soil sorption", "target": "log_kd", "unit": "log10(L/kg)", "ni": 14, "tr": 685, "te": 540},
+  {"id": "plant_competition_reciprocal_yield__mean_plant_mass", "domain": "Ecology & Hydrology", "sub": "plant ecology", "group": "multi", "name": "plant competition reciprocal yield", "target": "mean_mass_g", "unit": "g/plant", "ni": 1, "tr": 522, "te": 203},
+  {"id": "polymer_melt_viscosity_polyverse__log10_eta_poise", "domain": "Materials & Engineering", "sub": "polymer physics", "group": "multi", "name": "polymer melt viscosity polyverse", "target": "log10_eta_poise", "unit": "log10(poise)", "ni": 4, "tr": 276, "te": 365},
+  {"id": "pp_total_cross_section_donnachie_landshoff__sigma_tot", "domain": "Earth & Physics", "sub": "high energy physics", "group": "single", "name": "pp total cross section donnachie landshoff", "target": "sigma_tot", "unit": "mb", "ni": 1, "tr": 105, "te": 23},
+  {"id": "predator_functional_response_forage__prey_eaten", "domain": "Ecology & Hydrology", "sub": "ecology", "group": "multi", "name": "predator functional response forage", "target": "prey_eaten", "unit": "", "ni": 1, "tr": 6329, "te": 2253},
+  {"id": "proton_em_form_factor__GE_over_GD", "domain": "Earth & Physics", "sub": "nuclear particle physics", "group": "single", "name": "proton em form factor", "target": "GE_over_GD", "unit": "", "ni": 1, "tr": 37, "te": 10},
+  {"id": "protoplanetary_disk_mmflux__F_mm", "domain": "Astronomy", "sub": "star and planet formation", "group": "single", "name": "protoplanetary disk mmflux", "target": "log10_F_1p3_Jy", "unit": "dex(Jy)", "ni": 5, "tr": 168, "te": 38},
+  {"id": "pv_module_temperature_efficiency_pvpmc__P_max", "domain": "Materials & Engineering", "sub": "photovoltaics", "group": "single", "name": "pv module temperature efficiency pvpmc", "target": "P_max_W", "unit": "W", "ni": 4, "tr": 9665, "te": 6445},
+  {"id": "red_giant_asteroseismology__delta_nu", "domain": "Astronomy", "sub": "asteroseismology", "group": "single", "name": "red giant asteroseismology", "target": "delta_nu", "unit": "uHz", "ni": 4, "tr": 12875, "te": 3219},
+  {"id": "red_giant_asteroseismology__nu_max", "domain": "Astronomy", "sub": "asteroseismology", "group": "single", "name": "red giant asteroseismology", "target": "nu_max", "unit": "μHz", "ni": 4, "tr": 12875, "te": 3219},
+  {"id": "rock_core_permeability_norweg__log_k", "domain": "Ecology & Hydrology", "sub": "petrophysics", "group": "single", "name": "rock core permeability norweg", "target": "log_k", "unit": "log10(mD)", "ni": 1, "tr": 51908, "te": 22246},
+  {"id": "running_endurance_iaaf__velocity", "domain": "Social Sciences", "sub": "sports science", "group": "single", "name": "running endurance iaaf", "target": "velocity", "unit": "m/s", "ni": 2, "tr": 28, "te": 14},
+  {"id": "sex_mortality_ratio_hmd__log_sex_ratio", "domain": "Social Sciences", "sub": "demography", "group": "multi", "name": "sex mortality ratio hmd", "target": "log_sex_ratio", "unit": "", "ni": 2, "tr": 177220, "te": 87170},
+  {"id": "silicate_melt_viscosity_gpvisc__log_viscosity", "domain": "Materials & Engineering", "sub": "geophysics", "group": "multi", "name": "silicate melt viscosity gpvisc", "target": "log_viscosity", "unit": "log10 Pa·s", "ni": 13, "tr": 10209, "te": 2405},
+  {"id": "smbh_mass_sigma_relation__log_M_BH", "domain": "Astronomy", "sub": "extragalactic astrophysics", "group": "single", "name": "smbh mass sigma relation", "target": "log_M_BH", "unit": "log10(M_sun)", "ni": 4, "tr": 99, "te": 25},
+  {"id": "sne_ia_distance_modulus_pantheonplus__mu", "domain": "Astronomy", "sub": "observational cosmology", "group": "single", "name": "sne ia distance modulus pantheonplus", "target": "mu", "unit": "mag", "ni": 1, "tr": 1392, "te": 308},
+  {"id": "soil_exoenzyme_kinetics_alves__activity_rate", "domain": "Biology", "sub": "soil ecology", "group": "multi", "name": "soil exoenzyme kinetics alves", "target": "activity_rate", "unit": "nmol g^-1 h^-1", "ni": 1, "tr": 6411, "te": 2135},
+  {"id": "soil_water_retention_gshp__theta", "domain": "Ecology & Hydrology", "sub": "soil physics", "group": "multi", "name": "soil water retention gshp", "target": "theta", "unit": "m^3/m^3", "ni": 1, "tr": 21752, "te": 4568},
+  {"id": "solar_flat_plate_collector_graz_efficiency__eta_thermal", "domain": "Materials & Engineering", "sub": "solar thermal engineering", "group": "single", "name": "solar flat plate collector graz efficiency", "target": "eta_thermal", "unit": "", "ni": 4, "tr": 252, "te": 63},
+  {"id": "solar_spectrum_sorce_sim__planck_radiance", "domain": "Astronomy", "sub": "solar physics", "group": "multi", "name": "solar spectrum sorce sim", "target": "spectral_radiance", "unit": "W m⁻² nm⁻¹ sr⁻¹", "ni": 1, "tr": 13314, "te": 7342},
+  {"id": "solar_sunspot_silso__ssn", "domain": "Astronomy", "sub": "solar physics", "group": "multi", "name": "solar sunspot silso", "target": "ssn", "unit": "", "ni": 3, "tr": 2852, "te": 475},
+  {"id": "spectrophotometry_beer_lambert_chromate__absorbance", "domain": "Earth & Physics", "sub": "analytical spectroscopy", "group": "multi", "name": "spectrophotometry beer lambert chromate", "target": "absorbance", "unit": "", "ni": 2, "tr": 4411, "te": 1100},
+  {"id": "spirometry_nhanes__FEV1_L", "domain": "Biology", "sub": "pulmonology", "group": "single", "name": "spirometry nhanes", "target": "FEV1_L", "unit": "L", "ni": 2, "tr": 2900, "te": 725},
+  {"id": "spirometry_nhanes__FVC_L", "domain": "Biology", "sub": "pulmonology", "group": "single", "name": "spirometry nhanes", "target": "FVC_L", "unit": "L", "ni": 2, "tr": 1038, "te": 260},
+  {"id": "stomatal_conductance_sapfluxnet__gc", "domain": "Ecology & Hydrology", "sub": "plant ecophysiology", "group": "multi", "name": "stomatal conductance sapfluxnet", "target": "Gc_proxy", "unit": "cm3 cm-2 h-1 kPa-1", "ni": 1, "tr": 8766, "te": 2445},
+  {"id": "streamchannel_at_station_hydraulic_geometry_ifmha__chan_width", "domain": "Ecology & Hydrology", "sub": "fluvial geomorphology", "group": "multi", "name": "streamchannel at station hydraulic geometry ifmha", "target": "chan_width", "unit": "ft", "ni": 1, "tr": 1573, "te": 1488},
+  {"id": "thermal_performance_curve__pf_utpc", "domain": "Ecology & Hydrology", "sub": "thermal physiology", "group": "multi", "name": "thermal performance curve", "target": "performance", "unit": "", "ni": 1, "tr": 7010, "te": 1861},
+  {"id": "top_income_share_wid__top_share_log", "domain": "Social Sciences", "sub": "income inequality", "group": "multi", "name": "top income share wid", "target": "top_share_log", "unit": "", "ni": 5, "tr": 35640, "te": 11715},
+  {"id": "trade_gravity_cepii__log_tradeflow", "domain": "Social Sciences", "sub": "international economics", "group": "single", "name": "trade gravity cepii", "target": "log_tradeflow", "unit": "log(thousands current USD)", "ni": 7, "tr": 470769, "te": 109477},
+  {"id": "traffic_flow_density_ngsim__q_flow", "domain": "Social Sciences", "sub": "transportation", "group": "single", "name": "traffic flow density ngsim", "target": "q_veh_h_lane", "unit": "veh/h/lane", "ni": 5, "tr": 2286, "te": 572},
+  {"id": "tree_biomass_allometry_chave__agb", "domain": "Ecology & Hydrology", "sub": "forest ecology", "group": "single", "name": "tree biomass allometry chave", "target": "agb_kg", "unit": "kg", "ni": 3, "tr": 3003, "te": 1001},
+  {"id": "tree_height_diameter_chave__height_m", "domain": "Ecology & Hydrology", "sub": "forest ecology", "group": "multi", "name": "tree height diameter chave", "target": "height_m", "unit": "m", "ni": 1, "tr": 3297, "te": 707},
+  {"id": "ttauri_accretion__L_acc", "domain": "Astronomy", "sub": "stellar astrophysics", "group": "single", "name": "ttauri accretion", "target": "logL_acc", "unit": "log10(L_sun)", "ni": 4, "tr": 90, "te": 79},
+  {"id": "tumor_growth_mouse__tumor_volume", "domain": "Biology", "sub": "oncology", "group": "multi", "name": "tumor growth mouse", "target": "tumor_volume_mm3", "unit": "mm^3", "ni": 1, "tr": 571, "te": 183},
+  {"id": "urban_scaling_msa_bea__log_GMP", "domain": "Social Sciences", "sub": "urban economics", "group": "multi", "name": "urban scaling msa bea", "target": "log_GMP", "unit": "ln(million USD, chained 2017)", "ni": 1, "tr": 6732, "te": 2244},
+  {"id": "v1_orientation_tuning_stringer__neuron_response", "domain": "Biology", "sub": "neuroscience", "group": "multi", "name": "v1 orientation tuning stringer", "target": "neuron_response", "unit": "au", "ni": 1, "tr": 257670, "te": 3600},
+  {"id": "volcanic_column_mer_ivespa__H_top", "domain": "Earth & Physics", "sub": "volcanology", "group": "single", "name": "volcanic column mer ivespa", "target": "H_top_km_avl", "unit": "km", "ni": 1, "tr": 98, "te": 32},
+  {"id": "weir_flow_tilting_pugh__discharge", "domain": "Materials & Engineering", "sub": "hydraulics", "group": "multi", "name": "weir flow tilting pugh", "target": "Q_m3s", "unit": "m³ s⁻¹", "ni": 3, "tr": 303, "te": 137},
+  {"id": "wind_turbine_power_curve_engie__power_kW", "domain": "Materials & Engineering", "sub": "wind energy", "group": "single", "name": "wind turbine power curve engie", "target": "power_kW", "unit": "kW", "ni": 1, "tr": 168955, "te": 171525},
+  {"id": "woody_plant_allometry_baad__a_lf", "domain": "Ecology & Hydrology", "sub": "forest ecology", "group": "multi", "name": "woody plant allometry baad", "target": "a_lf", "unit": "m2", "ni": 2, "tr": 586, "te": 183}
  ],
  "leaderboard": [
   {
