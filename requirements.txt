@@ -1,0 +1,14 @@
+# Core: load a task, run the three scorers, query a Parallel world.
+# Enough for everything in the Quick start except running the reference agent.
+#
+# Python 3.10+. Verified end to end on 3.10.12 and 3.13.11.
+numpy
+pandas
+scipy
+pyyaml
+joblib
+scikit-learn
+
+# `hf download`, used to fetch the tasks. Older installs expose the same
+# command as `huggingface-cli`.
+huggingface_hub

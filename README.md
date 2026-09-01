@@ -44,6 +44,7 @@ SCILAWS-BENCH/
 │   ├── task_index.csv    # 118 tasks: discipline, target, row counts, license
 │   └── LICENSES.md       # per-task upstream data licenses
 ├── scripts/              # dataset export, local site preview
+├── requirements.txt      # core; requirements-agent.txt adds the agent's client
 └── tasks/                # ← downloaded from HF (RealSR/SciLaws-Bench); not tracked here
 ```
 
@@ -55,10 +56,10 @@ SCILAWS-BENCH/
 Every command below is tested as written.
 
 ```bash
-# 1. Code (this repo)
+# 1. Code (this repo). Python 3.10+.
 git clone https://github.com/yiyihum/SciLaws-Bench.git
 cd SciLaws-Bench
-pip install numpy pandas scipy pyyaml joblib scikit-learn huggingface_hub
+pip install -r requirements.txt          # add -r requirements-agent.txt to run the agent
 
 # 2. Data — 118 tasks, ~1.1 GB, from https://huggingface.co/datasets/RealSR/SciLaws-Bench
 hf download RealSR/SciLaws-Bench --repo-type dataset --local-dir . --include 'tasks/*'
@@ -186,10 +187,10 @@ See [`harness/VALIDITY_JUDGE.md`](harness/VALIDITY_JUDGE.md) and
 
 ## Running the reference agent
 
-The agent talks to a model provider, so it needs one extra package and a key:
+The agent talks to a model provider, so it needs the client package and a key:
 
 ```bash
-pip install openai                      # not needed for scoring, only for the agent
+pip install -r requirements-agent.txt   # adds `openai`; scoring does not need it
 export OPENAI_API_KEY=...               # or the key matching your alias: see below
 ```
 

@@ -20,9 +20,18 @@ budgets, system-prompt placement) — the per-source branch in `call_llm_api`
 normalises them all to the same `(content, reasoning_content, breakdown)`
 return tuple.
 """
+from __future__ import annotations
+
 import os
 
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ModuleNotFoundError as exc:  # the reference agent's only extra dependency
+    raise ModuleNotFoundError(
+        "the reference agent needs the `openai` package: "
+        "`pip install -r requirements-agent.txt` from the repository root. "
+        "Scoring a submission does not need it."
+    ) from exc
 
 try:
     from dotenv import load_dotenv

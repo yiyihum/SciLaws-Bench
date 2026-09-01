@@ -1,0 +1,11 @@
+# Additionally required to run the reference agent in baseline_agent/.
+# Scoring a submission does not need any of this.
+-r requirements.txt
+
+# Every provider is reached over the OpenAI wire protocol, including
+# DeepSeek, OpenRouter and a local server — so this one client covers them all.
+openai
+
+# Optional: lets the agent read provider keys from a .env file instead of
+# requiring them to be exported.
+python-dotenv
