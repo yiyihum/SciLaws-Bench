@@ -248,7 +248,7 @@ the task you use.
 @article{huang2026scilaws,
   title   = {Can LLMs Discover Scientific Laws in Real and Parallel Worlds?},
   author  = {Huang, Yiming and Liu, Ziche and Wu, Zhuohang and Wang, Yiqian and
-             Cui, Junxia and Zou, Xinkai and Mao, Linjun and Huang, Nan and
+             Cui, Junxia and Zou, Xinkai and Mao, Lingjun and Huang, Nan and
              Yu, Naicheng and Zhu, Kaijie and Ma, Yue and Zhou, Kun and
              Peng, Letian and Shang, Jingbo},
   journal = {arXiv preprint},
