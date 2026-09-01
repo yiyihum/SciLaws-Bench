@@ -84,13 +84,13 @@ def predict(X):
 The scorer replies with, among other fields:
 
 ```json
-{"status": "ok", "result": {"numeric_score": 0.508, "metric": "rmse",
- "best_reference_id": "temesi_2023_hardness_bonding"}}
+{"status": "ok", "contract_ok": true, "numeric_score": 0.0, "raw_metric": 424.0789795633554,
+ "score": {"metric": "rmse", "best_reference_id": "temesi_2023_hardness_bonding"}}
 ```
 
 `numeric_score` is reference-relative: the strongest published formula anchors 0.5, a
-perfect predictor 1.0 (the 0.508 above is GPT-5.5's actual panel submission for this
-task; the naive linear model scores 0.0).
+perfect predictor 1.0. The stub above is a naive linear guess, so it scores 0.0;
+GPT-5.5's actual panel submission for this task scores 0.508.
 
 To open a task's **Parallel world** and query it directly:
 
@@ -186,6 +186,13 @@ See [`harness/VALIDITY_JUDGE.md`](harness/VALIDITY_JUDGE.md) and
 
 ## Running the reference agent
 
+The agent talks to a model provider, so it needs one extra package and a key:
+
+```bash
+pip install openai                      # not needed for scoring, only for the agent
+export OPENAI_API_KEY=...               # or the key matching your alias: see below
+```
+
 ```bash
 # SciLaws-Real: fixed records
 python baseline_agent/run_baseline.py tasks/typeI/<task> <model_alias> --score
@@ -194,8 +201,12 @@ python baseline_agent/run_baseline.py tasks/typeI/<task> <model_alias> --score
 python baseline_agent/run_baseline.py tasks/typeI/<task> <model_alias> --simulator
 ```
 
-Model aliases are resolved in `baseline_agent/call_llm_api.py`. Default budget is 30
-interaction turns (`--max-turns`). Simulator runs are scored by
+Model aliases are resolved in `baseline_agent/call_llm_api.py`, which picks the provider
+from the alias and reads its key from the environment (a `.env` file also works if
+`python-dotenv` is installed): `OPENAI_API_KEY` for the OpenAI aliases (`gpt4omini`,
+`gpt5mini`, `gpt55`, …), `ANTHROPIC_API_KEY`, `GOOGLE_API_KEY` / `GEMINI_API_KEY`,
+`OPENROUTER_API_KEY`, `DMXAPI_KEY`. The DeepSeek aliases are the exception — they read
+`baseline_agent/key`. Default budget is 30 interaction turns (`--max-turns`). Simulator runs are scored by
 `harness/evaluate_parallel.py`, not by `--score`.
 
 ## Results

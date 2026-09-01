@@ -56,7 +56,7 @@ def main() -> None:
                     help=("enable simulator-backed mode. With current tasks, pass "
                           "`--simulator`; old named layouts may pass a simulator name."))
     ap.add_argument("--score", action="store_true",
-                    help="score the submission with the sibling harness (needs scoring/)")
+                    help="score the submission with the sibling harness/ scorer")
     ap.add_argument("--include-test-range", dest="include_test_range",
                     action="store_true", default=None,
                     help="include public metadata input train->test ranges in the task prompt (fixed real-data mode default)")
