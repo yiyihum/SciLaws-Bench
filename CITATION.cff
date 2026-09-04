@@ -31,3 +31,8 @@ authors:
   - family-names: Shang
     given-names: Jingbo
 year: 2026
+identifiers:
+  - type: other
+    value: "arXiv:2609.01552"
+    description: arXiv preprint
+url: "https://arxiv.org/abs/2609.01552"

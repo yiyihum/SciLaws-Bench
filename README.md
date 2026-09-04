@@ -6,7 +6,7 @@
 
 118 law-discovery problems curated from 381 scientific papers · 291 candidate laws · ~8.2M real data points · 6 disciplines
 
-[Project page](https://yiyihum.github.io/SciLaws-Bench/) · [Paper (PDF)](docs/assets/scilaws_bench_paper.pdf) · [Dataset on Hugging Face](https://huggingface.co/datasets/RealSR/SciLaws-Bench)
+[Project page](https://yiyihum.github.io/SciLaws-Bench/) · [arXiv:2609.01552](https://arxiv.org/abs/2609.01552) · [Dataset on Hugging Face](https://huggingface.co/datasets/RealSR/SciLaws-Bench)
 
 </div>
 
@@ -250,7 +250,7 @@ the task you use.
              Cui, Junxia and Zou, Xinkai and Mao, Lingjun and Huang, Nan and
              Yu, Naicheng and Zhu, Kaijie and Ma, Yue and Zhou, Kun and
              Peng, Letian and Shang, Jingbo},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2609.01552},
   year    = {2026}
 }
 ```

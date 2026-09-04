@@ -8,6 +8,7 @@ task_categories:
 language:
   - en
 tags:
+  - arxiv:2609.01552
   - symbolic-regression
   - scientific-discovery
   - equation-discovery
@@ -29,7 +30,7 @@ textbook equations.
 
 - Code and harness: https://github.com/yiyihum/SciLaws-Bench
 - Project page: https://yiyihum.github.io/SciLaws-Bench/
-- Paper: https://yiyihum.github.io/SciLaws-Bench/assets/scilaws_bench_paper.pdf
+- Paper: https://arxiv.org/abs/2609.01552
 
 ## Two settings per problem
 
@@ -132,7 +133,7 @@ non-commercial, so check the task you use, and cite its upstream source.
              Cui, Junxia and Zou, Xinkai and Mao, Lingjun and Huang, Nan and
              Yu, Naicheng and Zhu, Kaijie and Ma, Yue and Zhou, Kun and
              Peng, Letian and Shang, Jingbo},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2609.01552},
   year    = {2026}
 }
 ```
