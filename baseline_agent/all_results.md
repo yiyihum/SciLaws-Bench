@@ -1,12 +1,14 @@
-# SciLaws-Bench Overall Results
+# Reference Agent Results
 
-Updated: 2026-07-02.
+Scores of the reference agent (`baseline_agent/`) on all 118 SciLaws-Bench tasks,
+with `max_turns=30`. Real-setting prompts include the input ranges only; Parallel-setting
+prompts do not include test ranges. These are the numbers reported in the paper.
 
-Setting: all rows use all 118 tasks and `max_turns=30`; real prompts include input ranges only. Parallel prompts do not include test ranges. OpenAI rows include real + parallel runs; the `gemini-3.5-flash-fg` and `claude-opus-4-8-fg` rows are C48/G35 real + parallel runs. The `deepseek-v4-pro` and `qwen3.7-max` rows use the extracted `baseline_agent/batch_runs/deepseek_qwen` run, with real numeric, real validity, and parallel structure scored. The `glm-5.2` row includes real numeric + real validity from the warm-resumed merged real run, and parallel structure from the merged parallel run after forced-final salvage brought submissions to 118/118.
-
-Note: `gpt5.4-mini` real validity completed after this comparison file was first written; the table below includes the final aggregated validity values.
-
-Scoring note: all real numeric, parallel structure, and validity values use strict aggregation. Missing, null, import-error, execution-error, contract-invalid, or anti-hacking-failed submissions contribute `0.0`. Blank cells mean the metric has not been run or scored yet, rather than a zero score. `claude-opus-4-8-fg` is missing one real typeII submission; the overall and typeII validity rows count that missing task as `0.0`. In parallel, `gemini-3.5-flash-fg` is missing one typeI submission and `claude-opus-4-8-fg` is missing one typeII submission; both are counted as `0.0`. `qwen3.7-max` is missing two real submissions and two parallel submissions; those tasks are counted as `0.0`.
+Scoring: every value uses strict aggregation over all 118 tasks. A submission that is
+missing, `null`, fails to import or execute, violates the contract, or fails the
+anti-hacking check contributes `0.0` to its model's score. "Qualified" counts tasks
+whose submission passed all of those checks. The `-fg` suffix marks runs made with the
+provider's first-party API.
 
 ## Overall
 
@@ -117,24 +119,3 @@ Scoring note: all real numeric, parallel structure, and validity values use stri
 | `gpt-4o-mini` | ALL | 118 | 104 | 2 | 0.5602 |
 | `gpt-4o-mini` | typeI | 66 | 64 | 2 | 0.6817 |
 | `gpt-4o-mini` | typeII | 52 | 40 | 0 | 0.4060 |
-
-## Source Runs
-
-- Three-model run: `baseline_agent/batch_runs/gpt4omini_gpt5mini_gpt55_real_parallel_30turn_medium_range_20260629`
-- gpt5.4-mini run: `baseline_agent/batch_runs/gpt54mini_real_parallel_30turn_medium_range_20260629`
-- gpt5.4-mini validity output: `baseline_agent/batch_runs/gpt54mini_real_parallel_30turn_medium_range_20260629/validity_real/out/gpt5.4-mini`
-- Gemini/Claude C48/G35 run: `baseline_agent/batch_runs/c48-g35/runs`
-- Gemini/Claude rescored numeric summaries: `baseline_agent/batch_runs/c48-g35/runs/*/real/summary_rescored.json`
-- Gemini/Claude validity summaries: `baseline_agent/batch_runs/c48-g35/validity_out/*_validity_20260701/validity_summary.json`
-- Gemini/Claude parallel summaries: `baseline_agent/batch_runs/c48-g35/parallel_out/*_parallel_20260702/parallel_summary.json`
-- OpenRouter real typeI run: `baseline_agent/batch_runs/or_glm52_deepseekv4pro_qwen37max_real_typeI_30turn_medium_range_noreasoning_20260701/summary.with_timeouts.json`
-- OpenRouter real typeII run: `baseline_agent/batch_runs/or_glm52_deepseekv4pro_qwen37max_real_typeII_30turn_medium_range_20260701/summary.with_timeouts.json`
-- OpenRouter original parallel agent run: `baseline_agent/batch_runs/or_glm52_deepseekv4pro_qwen37max_parallel_typeI_typeII_30turn_medium_20260701/summary.with_timeouts.json`
-- DeepSeek/Qwen extracted run: `baseline_agent/batch_runs/deepseek_qwen`
-- DeepSeek/Qwen real validity summaries: `baseline_agent/batch_runs/deepseek_qwen/validity_out/*/validity_summary.json`
-- DeepSeek/Qwen parallel structure summaries: `baseline_agent/batch_runs/deepseek_qwen/parallel_out/*/parallel_summary.json`
-- `glm-5.2` merged + warm-resumed real submissions/trajectories (source for the numeric/validity rows above): `baseline_agent/batch_runs/glm52/merged/real`
-- `glm-5.2` real numeric summary: `baseline_agent/batch_runs/glm52/merged/real/numeric/_numeric_summary.json`
-- `glm-5.2` real validity summary: `baseline_agent/batch_runs/glm52/merged/real/validity/validity_summary.json`
-- `glm-5.2` merged parallel submissions/trajectories: `baseline_agent/batch_runs/glm52/merged/parallel`
-- `glm-5.2` parallel structure summary: `baseline_agent/batch_runs/glm52/merged/parallel_out/or-glm52/parallel_summary.json`

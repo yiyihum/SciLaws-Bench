@@ -182,8 +182,7 @@ python harness/evaluate_parallel.py \
   --dispatch codex
 ```
 
-See [`harness/VALIDITY_JUDGE.md`](harness/VALIDITY_JUDGE.md) and
-[`harness/SIMULATOR.md`](harness/SIMULATOR.md) for the judging and simulator protocols.
+See [`harness/VALIDITY_JUDGE.md`](harness/VALIDITY_JUDGE.md) for the judging protocol.
 
 ## Running the reference agent
 
@@ -232,7 +231,7 @@ model varies. Values are percentages.
 | GPT-4o-mini | 20.59 | 56.02 | 33.47 |
 
 Single/multi-group breakdowns are on the project page and in the paper.
-`baseline_agent/all_results.md` records the source run paths for these numbers.
+`baseline_agent/all_results.md` has the per-split and per-metric breakdown.
 
 ## Licensing
 
