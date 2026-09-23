@@ -147,6 +147,10 @@ def predict(X):
 - `USED_INPUTS` lists the columns `predict` reads; `X[:, i]` is `USED_INPUTS[i]`.
 - `predict` must return an ndarray of shape `(N,)`, fully numeric (no fitting
   at evaluation time), and use only the actual input column names.
+- `predict` must be row-independent: `predict(X)[i]` may depend only on `X[i]`,
+  never on other rows (no sorting, differencing, cumulative sums, or aggregates
+  across the batch). The scorer re-checks rows one at a time; a batch-dependent
+  `predict` scores 0.
 '''
 
 
@@ -299,6 +303,10 @@ def predict(X):
 - `USED_INPUTS` lists the columns `predict` reads; `X[:, i]` is `USED_INPUTS[i]`.
 - `predict` must return an ndarray of shape `(N,)`, fully numeric (no fitting
   at evaluation time), and use only the actual input column names.
+- `predict` must be row-independent: `predict(X)[i]` may depend only on `X[i]`,
+  never on other rows (no sorting, differencing, cumulative sums, or aggregates
+  across the batch). The scorer re-checks rows one at a time; a batch-dependent
+  `predict` scores 0.
 '''
 
 
@@ -441,6 +449,10 @@ def predict(X, n_s, K):
 - `predict` must return an ndarray of shape `(N,)`, finite for all rows. Keep
   `fit()` fast and robust (it runs once per cluster under a time limit) — guard
   against failures by returning sensible fallback parameters.
+- `predict` must be row-independent: `predict(X)[i]` may depend only on `X[i]`,
+  never on other rows (no sorting, differencing, cumulative sums, or aggregates
+  across the batch). The scorer re-checks rows one at a time; a batch-dependent
+  `predict` scores 0.
 '''
 
 
