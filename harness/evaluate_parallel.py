@@ -36,6 +36,9 @@ from typing import Any
 import numpy as np
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from eval_formula import check_row_independence  # noqa: E402
+
 
 DEFAULT_CHUNK_SIZE = 3
 DEFAULT_MAX_WORKERS = 1
@@ -655,15 +658,21 @@ def _contract_check(stage_task_dir: Path, stage_id: str) -> tuple[bool, str]:
         extra = set(params) - set(local)
         if missing or extra:
             return False, f"fit keys mismatch: missing={sorted(missing)} extra={sorted(extra)}"
-        y = module.predict(X, **params)
+        predict_call = lambda Xr: module.predict(Xr, **params)  # noqa: E731
     else:
-        y = module.predict(X)
+        predict_call = module.predict
+    y = predict_call(X)
 
     arr = np.asarray(y, dtype=float)
     if arr.shape != (len(X),):
         return False, f"predict returned shape {arr.shape}, expected {(len(X),)}"
     if not np.all(np.isfinite(arr)):
         return False, "predict returned non-finite values"
+    # Same row-independence rule as the numeric scorer: predict(X)[i] may
+    # depend only on X[i].
+    row_dependence = check_row_independence(predict_call, X, arr)
+    if row_dependence:
+        return False, f"row_dependence: {row_dependence}"
     return True, ""
 
 
