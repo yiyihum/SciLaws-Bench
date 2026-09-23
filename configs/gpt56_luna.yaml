@@ -1,0 +1,15 @@
+# SCILAWS-PARALLEL external run: gpt-5.6-luna at medium reasoning effort.
+# Frozen for this handoff (checked by scripts/preflight.py against manifests/handoff.json).
+run_name: gpt56_luna_parallel      # results go to runs/<run_name>/
+model_alias: gpt-5.6-luna          # name recorded in trajectories
+model_id: gpt-5.6-luna             # exact model string sent to the API
+provider: openai                   # OpenAI Chat Completions (canonical `oa` client path)
+base_url: https://api.openai.com/v1
+api_key_env: OPENAI_API_KEY        # the key is read ONLY from this environment variable
+reasoning_model: true              # -> reasoning_effort + max_completion_tokens=65536, no temperature
+reasoning_effort: medium
+max_turns: 30                      # paper protocol
+llm_timeout_seconds: 120           # per API call (canonical: 120 s, 1 SDK retry)
+task_timeout_seconds: 7200         # wall-clock cap per task attempt; exceeding it = infra failure
+max_attempts: 3                    # initial attempt + at most 2 cold restarts, infra failures only
+jobs: 40                           # default concurrency; override with JOBS=N or --jobs N

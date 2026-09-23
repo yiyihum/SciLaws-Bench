@@ -1,0 +1,14 @@
+# Zero-API self-test only (used by scripts/preflight.py). Scripted fake LLM; never a real result.
+run_name: selftest_fake
+model_alias: fake-selftest
+model_id: fake-selftest
+provider: fake
+base_url: none
+api_key_env: NONE
+reasoning_model: false
+reasoning_effort: none
+max_turns: 30
+llm_timeout_seconds: 120
+task_timeout_seconds: 60
+max_attempts: 3
+jobs: 4

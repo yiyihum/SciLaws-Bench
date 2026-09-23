@@ -1,0 +1,13 @@
+{
+  "purpose": "Frozen expectations for the 2026-09 external SCILAWS-PARALLEL run. preflight.py fails if the config or the request the canonical client would send deviates.",
+  "model_id": "gpt-5.6-luna",
+  "provider": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 65536,
+  "max_turns": 30,
+  "llm_timeout_seconds": 120,
+  "client_max_retries": 1,
+  "forbidden_request_keys": ["temperature", "top_p", "top_k", "presence_penalty", "frequency_penalty", "stream"],
+  "max_attempts": 3
+}

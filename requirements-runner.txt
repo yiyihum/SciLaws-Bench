@@ -1,0 +1,10 @@
+# SCILAWS-PARALLEL external runner. Python 3.11-3.13 (3.13 recommended).
+# Pinned to the interpreter that produced the paper's Table-2 runs; the
+# simulator state (state.joblib) is a pickle and is version-sensitive.
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.2
+scikit-learn==1.8.0
+joblib==1.5.3
+PyYAML==6.0.3
+openai==2.34.0

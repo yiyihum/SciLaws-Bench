@@ -1,0 +1,480 @@
+{
+  "benchmark": "SCILAWS-PARALLEL (SciLaws-Bench, arXiv:2609.01552)",
+  "n_tasks": 118,
+  "n_typeII_multi": 52,
+  "n_typeI_single": 66,
+  "tasks": [
+    {
+      "task": "baseball_pythagorean_winpct_lahman__win_pct",
+      "type": "typeI"
+    },
+    {
+      "task": "binary_pulsar_post_keplerian_atnf__PBDOT",
+      "type": "typeI"
+    },
+    {
+      "task": "bird_flight_speed_alerstam__Ue",
+      "type": "typeI"
+    },
+    {
+      "task": "bns_merger_disk_ejecta__Mdisk",
+      "type": "typeI"
+    },
+    {
+      "task": "bns_merger_disk_ejecta__Mej",
+      "type": "typeI"
+    },
+    {
+      "task": "bns_merger_disk_ejecta__vej",
+      "type": "typeI"
+    },
+    {
+      "task": "bns_postmerger_waveform_core__f2",
+      "type": "typeI"
+    },
+    {
+      "task": "budyko_partitioning_mach__et_over_p",
+      "type": "typeI"
+    },
+    {
+      "task": "catchment_mean_runoff_camels__q_mean",
+      "type": "typeI"
+    },
+    {
+      "task": "cepheid_period_luminosity__M_W",
+      "type": "typeI"
+    },
+    {
+      "task": "cloud_cover_parameterization__cloud_cover",
+      "type": "typeI"
+    },
+    {
+      "task": "commuting_gravity_lodes__flow_Tij",
+      "type": "typeI"
+    },
+    {
+      "task": "dna_melting_temperature_khandelwal__Tm",
+      "type": "typeI"
+    },
+    {
+      "task": "drosophila_isolation_by_distance_dest__M_stat",
+      "type": "typeI"
+    },
+    {
+      "task": "eclipsing_binary_mass_luminosity_debcat__log_L_Lsun",
+      "type": "typeI"
+    },
+    {
+      "task": "exfor_neutron_capture_resonance_gold__sigma_E",
+      "type": "typeI"
+    },
+    {
+      "task": "exoplanet_mass_radius__R",
+      "type": "typeI"
+    },
+    {
+      "task": "galaxy_mass_metallicity_sdss__oh",
+      "type": "typeI"
+    },
+    {
+      "task": "galaxy_stellar_mass_sdss__log_M_star",
+      "type": "typeI"
+    },
+    {
+      "task": "geomagnetic_storm_dst__dDst_dt",
+      "type": "typeI"
+    },
+    {
+      "task": "ghg_emission_drivers__CDE",
+      "type": "typeI"
+    },
+    {
+      "task": "ghg_emission_drivers__EC",
+      "type": "typeI"
+    },
+    {
+      "task": "ghg_emission_drivers__ME",
+      "type": "typeI"
+    },
+    {
+      "task": "ghg_emission_drivers__NOE",
+      "type": "typeI"
+    },
+    {
+      "task": "gravity_wgs84_somigliana__g0",
+      "type": "typeI"
+    },
+    {
+      "task": "ground_motion_ita18__log10_pga",
+      "type": "typeI"
+    },
+    {
+      "task": "gutenberg_richter_b_value_usgs__gr_freq_mag",
+      "type": "typeI"
+    },
+    {
+      "task": "hacks_law_river_length_hydrosheds__main_length_km",
+      "type": "typeI"
+    },
+    {
+      "task": "hea_hardness_lattice_distortion_couzinie__HV",
+      "type": "typeI"
+    },
+    {
+      "task": "her_hor_pt_acid_kucernak__current_density",
+      "type": "typeI"
+    },
+    {
+      "task": "island_species_richness_terceira__S_terceira",
+      "type": "typeI"
+    },
+    {
+      "task": "lake_thermocline_depth_pilla__z_t",
+      "type": "typeI"
+    },
+    {
+      "task": "life_expectancy_preston__e0_vs_gdppc",
+      "type": "typeI"
+    },
+    {
+      "task": "liion_capacity_fade_nasa_pcoe__capacity_Ah",
+      "type": "typeI"
+    },
+    {
+      "task": "liquid_dispersion_glycols__refractive_index",
+      "type": "typeI"
+    },
+    {
+      "task": "lpbf_meltpool_rosenthal_inconel__depth",
+      "type": "typeI"
+    },
+    {
+      "task": "magnet_3c90_core_loss__log_P_vol",
+      "type": "typeI"
+    },
+    {
+      "task": "mars_crater_size_frequency__N_cum",
+      "type": "typeI"
+    },
+    {
+      "task": "materials_project_elastic_birch_murnaghan__K_VRH",
+      "type": "typeI"
+    },
+    {
+      "task": "mauna_loa_co2_keeling_curve_noaa__co2_ppm",
+      "type": "typeI"
+    },
+    {
+      "task": "metabolic_scaling_anage__log_bmr_W",
+      "type": "typeI"
+    },
+    {
+      "task": "mincer_earnings_acs_pums__log_wage",
+      "type": "typeI"
+    },
+    {
+      "task": "neo_size_frequency_distribution__N_cum_H",
+      "type": "typeI"
+    },
+    {
+      "task": "nuclear_binding_energy_ame2020__BE_per_A",
+      "type": "typeI"
+    },
+    {
+      "task": "ocean_mesoscale_eddy_closure__Sx",
+      "type": "typeI"
+    },
+    {
+      "task": "parker_spiral_imf__B_phi",
+      "type": "typeI"
+    },
+    {
+      "task": "pfas_soil_sorption__log_kd",
+      "type": "typeI"
+    },
+    {
+      "task": "pp_total_cross_section_donnachie_landshoff__sigma_tot",
+      "type": "typeI"
+    },
+    {
+      "task": "proton_em_form_factor__GE_over_GD",
+      "type": "typeI"
+    },
+    {
+      "task": "protoplanetary_disk_mmflux__F_mm",
+      "type": "typeI"
+    },
+    {
+      "task": "pv_module_temperature_efficiency_pvpmc__P_max",
+      "type": "typeI"
+    },
+    {
+      "task": "red_giant_asteroseismology__delta_nu",
+      "type": "typeI"
+    },
+    {
+      "task": "red_giant_asteroseismology__nu_max",
+      "type": "typeI"
+    },
+    {
+      "task": "rock_core_permeability_norweg__log_k",
+      "type": "typeI"
+    },
+    {
+      "task": "running_endurance_iaaf__velocity",
+      "type": "typeI"
+    },
+    {
+      "task": "smbh_mass_sigma_relation__log_M_BH",
+      "type": "typeI"
+    },
+    {
+      "task": "sne_ia_distance_modulus_pantheonplus__mu",
+      "type": "typeI"
+    },
+    {
+      "task": "solar_flat_plate_collector_graz_efficiency__eta_thermal",
+      "type": "typeI"
+    },
+    {
+      "task": "spirometry_nhanes__FEV1_L",
+      "type": "typeI"
+    },
+    {
+      "task": "spirometry_nhanes__FVC_L",
+      "type": "typeI"
+    },
+    {
+      "task": "trade_gravity_cepii__log_tradeflow",
+      "type": "typeI"
+    },
+    {
+      "task": "traffic_flow_density_ngsim__q_flow",
+      "type": "typeI"
+    },
+    {
+      "task": "tree_biomass_allometry_chave__agb",
+      "type": "typeI"
+    },
+    {
+      "task": "ttauri_accretion__L_acc",
+      "type": "typeI"
+    },
+    {
+      "task": "volcanic_column_mer_ivespa__H_top",
+      "type": "typeI"
+    },
+    {
+      "task": "wind_turbine_power_curve_engie__power_kW",
+      "type": "typeI"
+    },
+    {
+      "task": "afm_nanoindentation_spherical_zef18__force_indentation",
+      "type": "typeII"
+    },
+    {
+      "task": "alkali_rydberg_levels_quantum_defect__binding_energy",
+      "type": "typeII"
+    },
+    {
+      "task": "alpha_decay_geiger_nuttall_nubase__log_half_life",
+      "type": "typeII"
+    },
+    {
+      "task": "baseflow_recession_nwis__Q_t",
+      "type": "typeII"
+    },
+    {
+      "task": "biodiversity_distance_decay__Sim_sor",
+      "type": "typeII"
+    },
+    {
+      "task": "blood_clot_constitutive__tau_ss",
+      "type": "typeII"
+    },
+    {
+      "task": "chiller_gordon_ng_universal__one_over_COP_minus_1",
+      "type": "typeII"
+    },
+    {
+      "task": "co2_adsorption_zeolite_isodb_toth__n_ads",
+      "type": "typeII"
+    },
+    {
+      "task": "cobb_douglas_growth_pwt__log_Y",
+      "type": "typeII"
+    },
+    {
+      "task": "coral_reef_fish_growth_wicquart__length_mm",
+      "type": "typeII"
+    },
+    {
+      "task": "cosmic_ray_eas_auger__dE_dX",
+      "type": "typeII"
+    },
+    {
+      "task": "disinfection_kinetics_chick_watson__log_reduction",
+      "type": "typeII"
+    },
+    {
+      "task": "ecoli_antibiotic_temperature_growth__OD24h",
+      "type": "typeII"
+    },
+    {
+      "task": "ecoli_growth_curve_chemically_defined__od600",
+      "type": "typeII"
+    },
+    {
+      "task": "electron_impact_ionization_alecs__cross_section",
+      "type": "typeII"
+    },
+    {
+      "task": "fluid_surface_tension_nist_webbook_eotvos__sigma",
+      "type": "typeII"
+    },
+    {
+      "task": "income_distribution_wid__pareto_alpha",
+      "type": "typeII"
+    },
+    {
+      "task": "intertemporal_discount__p_ll",
+      "type": "typeII"
+    },
+    {
+      "task": "latent_heat_flux_kgdsr__LE",
+      "type": "typeII"
+    },
+    {
+      "task": "leaf_light_response_photosynthesis_schmiege__net_assimilation",
+      "type": "typeII"
+    },
+    {
+      "task": "li_metal_battery_capacity_stanford__cap_dischg_mAh",
+      "type": "typeII"
+    },
+    {
+      "task": "life_expectancy_oeppen_vaupel_hmd__e0",
+      "type": "typeII"
+    },
+    {
+      "task": "measles_tsir_uk__cases_weekly",
+      "type": "typeII"
+    },
+    {
+      "task": "mof_co2_adsorption_langmuir_crafted__q_CO2",
+      "type": "typeII"
+    },
+    {
+      "task": "mortality_gompertz_makeham_hmd__log_m_adult",
+      "type": "typeII"
+    },
+    {
+      "task": "mortality_gompertz_makeham_hmd_postwar__log_m_adult",
+      "type": "typeII"
+    },
+    {
+      "task": "mortality_heligman_pollard_hmd__log_m_full",
+      "type": "typeII"
+    },
+    {
+      "task": "mosquito_larvicide_resistance_culex__probit_mortality",
+      "type": "typeII"
+    },
+    {
+      "task": "mouse_skin_biaxial_constitutive__sigma11",
+      "type": "typeII"
+    },
+    {
+      "task": "mouse_skin_biaxial_constitutive__sigma22",
+      "type": "typeII"
+    },
+    {
+      "task": "open_channel_flow_manning_usgs__mean_velocity",
+      "type": "typeII"
+    },
+    {
+      "task": "optical_dispersion_sellmeier__refractive_index",
+      "type": "typeII"
+    },
+    {
+      "task": "plant_competition_reciprocal_yield__mean_plant_mass",
+      "type": "typeII"
+    },
+    {
+      "task": "polymer_melt_viscosity_polyverse__log10_eta_poise",
+      "type": "typeII"
+    },
+    {
+      "task": "predator_functional_response_forage__prey_eaten",
+      "type": "typeII"
+    },
+    {
+      "task": "sex_mortality_ratio_hmd__log_sex_ratio",
+      "type": "typeII"
+    },
+    {
+      "task": "silicate_melt_viscosity_gpvisc__log_viscosity",
+      "type": "typeII"
+    },
+    {
+      "task": "soil_exoenzyme_kinetics_alves__activity_rate",
+      "type": "typeII"
+    },
+    {
+      "task": "soil_water_retention_gshp__theta",
+      "type": "typeII"
+    },
+    {
+      "task": "solar_spectrum_sorce_sim__planck_radiance",
+      "type": "typeII"
+    },
+    {
+      "task": "solar_sunspot_silso__ssn",
+      "type": "typeII"
+    },
+    {
+      "task": "spectrophotometry_beer_lambert_chromate__absorbance",
+      "type": "typeII"
+    },
+    {
+      "task": "stomatal_conductance_sapfluxnet__gc",
+      "type": "typeII"
+    },
+    {
+      "task": "streamchannel_at_station_hydraulic_geometry_ifmha__chan_width",
+      "type": "typeII"
+    },
+    {
+      "task": "thermal_performance_curve__pf_utpc",
+      "type": "typeII"
+    },
+    {
+      "task": "top_income_share_wid__top_share_log",
+      "type": "typeII"
+    },
+    {
+      "task": "tree_height_diameter_chave__height_m",
+      "type": "typeII"
+    },
+    {
+      "task": "tumor_growth_mouse__tumor_volume",
+      "type": "typeII"
+    },
+    {
+      "task": "urban_scaling_msa_bea__log_GMP",
+      "type": "typeII"
+    },
+    {
+      "task": "v1_orientation_tuning_stringer__neuron_response",
+      "type": "typeII"
+    },
+    {
+      "task": "weir_flow_tilting_pugh__discharge",
+      "type": "typeII"
+    },
+    {
+      "task": "woody_plant_allometry_baad__a_lf",
+      "type": "typeII"
+    }
+  ]
+}

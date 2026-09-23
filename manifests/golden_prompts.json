@@ -1,0 +1,595 @@
+{
+  "prompts": {
+    "afm_nanoindentation_spherical_zef18__force_indentation": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "52dea5c36248272f8fd984810c9587a21eec9f601f9c47b567b3796aa30b39ae"
+    },
+    "alkali_rydberg_levels_quantum_defect__binding_energy": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "2c33f213730760b529f4771868548a65d181723e2611a8f13bf625555be14e48"
+    },
+    "alpha_decay_geiger_nuttall_nubase__log_half_life": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "0358d84c3afadd881c7cfc7aedbd2094cd93ee0e2b4d46fe7a1c28e2dd26eccb"
+    },
+    "baseball_pythagorean_winpct_lahman__win_pct": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "696b71ae13ab871f38f967bd8dc8b6f44b5e2a2075f262543db932d28355ab7b"
+    },
+    "baseflow_recession_nwis__Q_t": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "d961f4be1d12428bdbed66d6c321f6bd4cf9e43ccf370795edd4e9323507b747"
+    },
+    "binary_pulsar_post_keplerian_atnf__PBDOT": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "d8247dba13916aafbad2c501c312172343d99884cee4c0636f71423c275a46d5"
+    },
+    "biodiversity_distance_decay__Sim_sor": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "fe45ba6e0a6b374fa1831c6a5a1a8b40e186794abcdd74677783cfbbbc4c68c1"
+    },
+    "bird_flight_speed_alerstam__Ue": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "cccbeed2f98c5fe2571c32192c7d1363590acbdeedc1a00bebaa6c7462efe706"
+    },
+    "blood_clot_constitutive__tau_ss": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "19d29b9acc22bb9691bd808e1993eb72398ae05d8392337bde72b485481b06e8"
+    },
+    "bns_merger_disk_ejecta__Mdisk": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "bd1e56f34a0cf7afc37050ef568f78b3c68a36b05d5e95d4f9ebbd1dca521300"
+    },
+    "bns_merger_disk_ejecta__Mej": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "54cb4aba85428cdea349ba29a66420fee3d35df49cedeef01852077a754bff70"
+    },
+    "bns_merger_disk_ejecta__vej": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "7f519ccc19a06f2396118271cf09e512a6a695c545df2b8bede09987e2cfc98f"
+    },
+    "bns_postmerger_waveform_core__f2": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "ac96a9f2cd1f61d1db1194338a1749f618fe8584dda6b4fff6bb4204eadf87cd"
+    },
+    "budyko_partitioning_mach__et_over_p": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "40d2d2ed22ae3ce7bbc3a81b032ba527b94de647c3ed3159b443de1fecd86af8"
+    },
+    "catchment_mean_runoff_camels__q_mean": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "00c4debe4055659418557997bf45bfee85f45863b5ee9780b74f3f1d6fd50a96"
+    },
+    "cepheid_period_luminosity__M_W": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "88535309496d70ac85ef03e30793e279f1fb4841a208b7a610a4bed46be3e33c"
+    },
+    "chiller_gordon_ng_universal__one_over_COP_minus_1": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "2cabf3bc4890810395f3dc308f25525fabbf1fed1c535a19613f0d5a043e2db9"
+    },
+    "cloud_cover_parameterization__cloud_cover": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "9e6fd7f90f4bfed200b76a50856b635ae113348eb0a7e247eaaf6100cd326c8a"
+    },
+    "co2_adsorption_zeolite_isodb_toth__n_ads": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "9859cf07d4b1216ff164804710db08f9fccdc34168713e8df1ae2be683777afa"
+    },
+    "cobb_douglas_growth_pwt__log_Y": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "f3b7679753d80576e8f4fa8b440a032f6cc6b3c078923373c73173157383e680"
+    },
+    "commuting_gravity_lodes__flow_Tij": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "e7cb98df6a0c026ed2a6eb286826f00f9e710c6053dcf4b34bb2a831ebf69580"
+    },
+    "coral_reef_fish_growth_wicquart__length_mm": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "00afa08622d3066dcfb8ef0ff47bda6a43f90af298499f029b881a6a398932c6"
+    },
+    "cosmic_ray_eas_auger__dE_dX": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "ef86a26ef0012809a6d20f51dd95196a53b7c008c10b524d4acc98bdd858b5bb"
+    },
+    "disinfection_kinetics_chick_watson__log_reduction": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "c62130e8d4b849c298588c5b489662366a4c41d076ee8078c2614dd43f6bf190"
+    },
+    "dna_melting_temperature_khandelwal__Tm": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "9e18b1fc73a373c62223080406e151000aff8c5712474d5cfbceb7e147b6695e"
+    },
+    "drosophila_isolation_by_distance_dest__M_stat": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "6247a024dfbfb2fe0e9cc72c84e2beaa4103e8ee0f65a9eadfce3512a9ece158"
+    },
+    "eclipsing_binary_mass_luminosity_debcat__log_L_Lsun": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "fe1d0be3add779a3b457b9f1db57aa6429e23c68a2ebe2a98288aaa370cb9754"
+    },
+    "ecoli_antibiotic_temperature_growth__OD24h": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "6174e1fa47941c0269943124fc2c8645ce82482b429e9614083fa32be0f2037a"
+    },
+    "ecoli_growth_curve_chemically_defined__od600": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "d5fbc30af24ca576e77edec92748c98746b564d3f3e05f115b185f43f8556724"
+    },
+    "electron_impact_ionization_alecs__cross_section": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "eea6e92dfe827236e8fe4d196e980fc3aa50bf3ab0d65c1f55da0ea974a8f5d9"
+    },
+    "exfor_neutron_capture_resonance_gold__sigma_E": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "80d9d84745ef976cb71f35fc5706a53604048c9674c1213be875a47e55c4ce9d"
+    },
+    "exoplanet_mass_radius__R": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "865982df2fd97ab45f7df642518a7ff2b35ecf781e498867ad56f77ff709495a"
+    },
+    "fluid_surface_tension_nist_webbook_eotvos__sigma": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "011af9c8644571745267118f8f9d925fc599f9c8dff5501a77c8529c424a6625"
+    },
+    "galaxy_mass_metallicity_sdss__oh": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "3a7b8fb13e1026fa4aa9471fda899aac3da54f909147a6517c9486c3c05c1325"
+    },
+    "galaxy_stellar_mass_sdss__log_M_star": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "eb4461dddaa23ac532a140a4dc690d69d1b29dea8db006d0582384f964a44b60"
+    },
+    "geomagnetic_storm_dst__dDst_dt": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "31f023ce8aa49bd9e7d20c830ec6a7b6a662d1239f4c09abd1290cbc50087a7a"
+    },
+    "ghg_emission_drivers__CDE": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "50cc3a89f529a0fec70c5d26ba240361450650dc29a40b4e12b3af132636a91e"
+    },
+    "ghg_emission_drivers__EC": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "834c07e41ed80460ac930f1fb51b16878b23105bbcd0c37ea55493f3b58cdc9b"
+    },
+    "ghg_emission_drivers__ME": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "5ad6b712e80e43d44222848a4da0a6b7851aa3f601a94e30db279237b73e5a7d"
+    },
+    "ghg_emission_drivers__NOE": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "23f8ae5da10faf09ae28a1e055f2e73ecb8511e4c135d852f192faf04b836e12"
+    },
+    "gravity_wgs84_somigliana__g0": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "e3c1580c357d68d19abfbd30c4553b6f54c64ac63666c01252ceac0eca58fc10"
+    },
+    "ground_motion_ita18__log10_pga": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "824d206975ea66c35f853fb6ecea0d0469db1eba928c02da4573c35fa5dd37b5"
+    },
+    "gutenberg_richter_b_value_usgs__gr_freq_mag": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "954ae1f88db4160c863f06580b021a944b143da16a78e15d1ab13760a2063c93"
+    },
+    "hacks_law_river_length_hydrosheds__main_length_km": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "4125716bdda5ef784c5c187c04a4c6f850045722b775528bf837b80d65979c40"
+    },
+    "hea_hardness_lattice_distortion_couzinie__HV": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "bf67c0ea7f6211194e1a56c40800222b9b9363ebd1602bda2bf563f6a44b805f"
+    },
+    "her_hor_pt_acid_kucernak__current_density": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "61fc0cb1a711395b9b830df0d27ba14fd347d2ef8bc3c9430f6eed29c530689f"
+    },
+    "income_distribution_wid__pareto_alpha": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "ad903fc03f9ebe9cb7b0b42edfe1925c0dfbb99d535578981fd9bb4739c7891e"
+    },
+    "intertemporal_discount__p_ll": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "ca7abe48315e911b8438653687037eed1403e109e505e5c30da87cb25b4813ee"
+    },
+    "island_species_richness_terceira__S_terceira": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "f00f8594b1a9a84e69e17e5af71dde7a9489ddd6476a44eaa28337f92b19f124"
+    },
+    "lake_thermocline_depth_pilla__z_t": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "5cae97fc359d5486d7e8a15d39a0dae57b6260f1fb966a6c988e7b280e0f2c52"
+    },
+    "latent_heat_flux_kgdsr__LE": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "abddf28f8a8741aa2dc9fdee336916bcc28dae6f5c771a47334f13659d446e81"
+    },
+    "leaf_light_response_photosynthesis_schmiege__net_assimilation": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "94de0676bad817507129e2f3cc76afe2ecfc5446585382de6ab4faeb428c5c2b"
+    },
+    "li_metal_battery_capacity_stanford__cap_dischg_mAh": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "b1ab04aa66a67e4d3d9e50256e235f95eade53c3d5247b231e3700d6bca38ef9"
+    },
+    "life_expectancy_oeppen_vaupel_hmd__e0": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "505517e66e2d489eede6676fa491b30a1bc7be3c253b6028b7be6af35b7b700a"
+    },
+    "life_expectancy_preston__e0_vs_gdppc": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "596d12bdfa2cac6d992d6979b748797708bd68d04f9ccbd0411ae57918792e14"
+    },
+    "liion_capacity_fade_nasa_pcoe__capacity_Ah": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "7d11a7ce03e39080d05b87f4a63360d3eb14978d91fdf0c8528a5927253787ec"
+    },
+    "liquid_dispersion_glycols__refractive_index": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "58ef02aa2e58b0eeaced908fa6f101fbacdc2af3560e7e6686c658720c7548db"
+    },
+    "lpbf_meltpool_rosenthal_inconel__depth": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "ea8a460f8836346dfbb5f95f25b5a895c04ad6ba9a3f8f3b7432304cfdb44986"
+    },
+    "magnet_3c90_core_loss__log_P_vol": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "ecd584fb11829b5ecf16237f5bf8eb5c5b98934c468fb50296a7d0070f6b9630"
+    },
+    "mars_crater_size_frequency__N_cum": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "24bb0b25e1c576ee091b088fd7788ec4e8e154066d980cf82193c9fa71ed69d6"
+    },
+    "materials_project_elastic_birch_murnaghan__K_VRH": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "b7060720b66847985f90a64b270e3408008bb1239896bbac6d284075fc9a738f"
+    },
+    "mauna_loa_co2_keeling_curve_noaa__co2_ppm": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "dbee565417499c1d8e8c4fa687ce3e6f15b7e8b930dbc2dd96e83b1cb3e465b2"
+    },
+    "measles_tsir_uk__cases_weekly": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "c30f40892c5a098dfcc0dcb61f10e9cdc3c1a2a93222400bbf6f479fa97e7dfb"
+    },
+    "metabolic_scaling_anage__log_bmr_W": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "fefbed8e5407f2acff798a0b0e8e2748020aa35c6263ec567bd57f08802232f8"
+    },
+    "mincer_earnings_acs_pums__log_wage": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "97459520fa989bc7c7f294ae57f1db60e9f281b4df88269093a82200f1f34153"
+    },
+    "mof_co2_adsorption_langmuir_crafted__q_CO2": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "740f6d165c4ee3548d46d15c76ca8258e3427a01119181482101b4ab3884d3a0"
+    },
+    "mortality_gompertz_makeham_hmd__log_m_adult": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "da22f10d150fc670f99ef5ceb5e1d494358d7f93a1f046aa62aeb0fba6da5e29"
+    },
+    "mortality_gompertz_makeham_hmd_postwar__log_m_adult": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "9e6b4327613589c656df2b7df4355679ae1be5f87b905509d0d368d460ca1617"
+    },
+    "mortality_heligman_pollard_hmd__log_m_full": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "39ade22f2bede6998392199d7d12aef7ff91a67b272b4632d75d10c5418323b9"
+    },
+    "mosquito_larvicide_resistance_culex__probit_mortality": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "97f6c719d341c66f4eb26e68e56437b447727e6127efc8b097003ec724127b7a"
+    },
+    "mouse_skin_biaxial_constitutive__sigma11": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "63785a0ee25fe13dcd254d9d384bd154c14da3692ea352d482e045f4be0c1f4c"
+    },
+    "mouse_skin_biaxial_constitutive__sigma22": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "83f88f0f4856504e2cf3c1ee22459d9f3e0c9d94511be57a30121143e4c34605"
+    },
+    "neo_size_frequency_distribution__N_cum_H": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "f0ad54c1e01f928fe352cc98c34dbf1532bc36efb5f63860351d49ee40c4a621"
+    },
+    "nuclear_binding_energy_ame2020__BE_per_A": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "b3921de6fc1349bff41bbdf8731f693c89cb1a83fe0d04587fd19c9e44e5d59d"
+    },
+    "ocean_mesoscale_eddy_closure__Sx": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "e6c954bcc3117b30fe260b26ce2a61aa5bf0239e1498c1a9afdae024dd360774"
+    },
+    "open_channel_flow_manning_usgs__mean_velocity": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "03d87bd1dfd2597eada5a696f0236da287e68686400d01103407a846b9f0dcf9"
+    },
+    "optical_dispersion_sellmeier__refractive_index": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "10251cecf090bb94f1fdb2600ceb3c9304b99818054e1912a793392dd9715437"
+    },
+    "parker_spiral_imf__B_phi": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "0119ea3b984bdcd8e50013c49d2cb4b5c8637503327bf8d5ba26ab276f396f7e"
+    },
+    "pfas_soil_sorption__log_kd": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "acc016d6e7d5d6b3463b1207a34e7a4e30b410a4f8af106b03d0d95364970649"
+    },
+    "plant_competition_reciprocal_yield__mean_plant_mass": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "681b36577fac12fad9fc07f8585ae0ca24a9a8edc574727eacdfbb06219318d0"
+    },
+    "polymer_melt_viscosity_polyverse__log10_eta_poise": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "e1bf939a87506db9bb98d1641477ed8fa77b0cc549644b59f59a9d15bc9eb99a"
+    },
+    "pp_total_cross_section_donnachie_landshoff__sigma_tot": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "d358fcb3eccb310aadf6a8978749aa3c5f0d54bee6ac012b7a2d7c73b1ffc9c1"
+    },
+    "predator_functional_response_forage__prey_eaten": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "5ab51ce9eaee4f3c17e177d6efe8eadc2d820bfd8e32ae98caa2a3cb00d3634d"
+    },
+    "proton_em_form_factor__GE_over_GD": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "e26974bae6da7d9c5648ffd4b238fb527de24906b90a18746e16aa45afa60115"
+    },
+    "protoplanetary_disk_mmflux__F_mm": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "26688f47a7e7d719d5f36fcd02e6e3fc6b19442dc3f65db3fcac71e242c70f01"
+    },
+    "pv_module_temperature_efficiency_pvpmc__P_max": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "aecc8c03530862ca0239e64394a032a2493a3dac11fde56f02bf304c1aace999"
+    },
+    "red_giant_asteroseismology__delta_nu": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "7f3acf09ffef8695dffdafb09d61e02c0448b08a5a2fdb388170a955748ebb0b"
+    },
+    "red_giant_asteroseismology__nu_max": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "2fa62f25a917c25209139e50852fe01316fc2b4902e1dac84f969e4fd3b3bcc3"
+    },
+    "rock_core_permeability_norweg__log_k": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "729814f8a4c27527b9b6fe5b8120b823dfa6a084728c7b7475d30a7a8073a8d3"
+    },
+    "running_endurance_iaaf__velocity": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "b845a5bce20e1c67e0d6a7db8e6b908ce6fa64507fc2ddc9bb364efe6d71b61b"
+    },
+    "sex_mortality_ratio_hmd__log_sex_ratio": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "dbfff5095ad77f1ce7bfe4e6f7220b7d1dc11fdca0b7d119ff9917850b8abead"
+    },
+    "silicate_melt_viscosity_gpvisc__log_viscosity": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "9c146003307ff9682b4a39e5fe14c325f1b1aabadb3c210476e4e64cc0e01c3f"
+    },
+    "smbh_mass_sigma_relation__log_M_BH": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "1e80414881f776fcd2d46f6b7f38e0a5c1104454830cacab3660c62b442287ed"
+    },
+    "sne_ia_distance_modulus_pantheonplus__mu": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "a8e27474a40adb5fa7a76ad293e6036820fc9e264ea8e67e4fe6c005bc906c1c"
+    },
+    "soil_exoenzyme_kinetics_alves__activity_rate": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "25556fff75ec8759c74349c1b0cffebc47315b32960d33b965e73bdef4bb592e"
+    },
+    "soil_water_retention_gshp__theta": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "63c9780a5c109bb5590d1215b9ba62ca102a70441c4f8c58d6b41d3316bfcb43"
+    },
+    "solar_flat_plate_collector_graz_efficiency__eta_thermal": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "2a6fe87b53ea1b5d2c432a9ced0d8e59d45db77e8a2e9125f9db954823ebbe04"
+    },
+    "solar_spectrum_sorce_sim__planck_radiance": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "74bc089df40ae7a47266ad8d3eb4c17d42e4b4636b49389f40b3ff839f2b0d4b"
+    },
+    "solar_sunspot_silso__ssn": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "9f58dfc4fd3ac71d8bb97c26a01f609448429132af515dcb66b5528e0d0382e9"
+    },
+    "spectrophotometry_beer_lambert_chromate__absorbance": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "f8def11b5c54b6a0449eefda62cefc501c45bdd578519d5ee50eba89eaf7b7c0"
+    },
+    "spirometry_nhanes__FEV1_L": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "10a6f39270e09f9af1bf9faf6b5840b76a86e9df6c66436976a8fe0668bbdb4c"
+    },
+    "spirometry_nhanes__FVC_L": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "cee96ffb75a315dbfe144a3e1313ab9bed670155edad6005dfd6568dd9b31f66"
+    },
+    "stomatal_conductance_sapfluxnet__gc": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "b7ca76ca954702f60360fb16a613faffcf0815f501bab43ba5ef6383e1f5441b"
+    },
+    "streamchannel_at_station_hydraulic_geometry_ifmha__chan_width": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "85dacd0daa53dd1514971644ca0aca3b73ab142dba45097f0047ee01994bbbed"
+    },
+    "thermal_performance_curve__pf_utpc": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "1c654d59ad56cbb6d64b18d15cb8bc66f409c0eeb7da253e178c7e1887074244"
+    },
+    "top_income_share_wid__top_share_log": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "1ae635b13b76fadd2eeae222ce3a3e8e56db1a18d19e427f93e51af7485f694f"
+    },
+    "trade_gravity_cepii__log_tradeflow": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "0fcc3d308cf229312c5ed042e11de7ebcb975d35288974292d0d5ac603fb5706"
+    },
+    "traffic_flow_density_ngsim__q_flow": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "d861372ee698524e225ddc896aa79f39a8a58ec7c5baf21405ea7d8e5819b59b"
+    },
+    "tree_biomass_allometry_chave__agb": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "a0fafaed3687d1d53c0968b6497acdf8aabb7a2bffa31c53532fac5cb13796be"
+    },
+    "tree_height_diameter_chave__height_m": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "d3d3e1e645658cbc54ff9c802b9a5b2d333972a422098826e7c789c5ad725fc8"
+    },
+    "ttauri_accretion__L_acc": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "1d712cc9f4c63b9273885fc3179fa48652e23a56f122a41987a56e29592a15a4"
+    },
+    "tumor_growth_mouse__tumor_volume": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "c95613fbe516358410cd27402e1080830d83fb203ef2c13ba87fb3f4b9075ee9"
+    },
+    "urban_scaling_msa_bea__log_GMP": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "31ab8d15b31d1381ff199dbdae5f73be32b3d47478b7f978023e762993f553fe"
+    },
+    "v1_orientation_tuning_stringer__neuron_response": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "a750bf089e4bdd1a057ada8f6c3ca8a0102d24101e3c1b01e874b87a15da9614"
+    },
+    "volcanic_column_mer_ivespa__H_top": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "ce3d5cd1d63c2998ebdff92075079b7f4e26b2906135aca293c0f8e42e8cb9c9"
+    },
+    "weir_flow_tilting_pugh__discharge": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "f6353b6fec51819279096c5aff4c2ae4f10edd9ac5b34e5b828146a2fee0bbf6"
+    },
+    "wind_turbine_power_curve_engie__power_kW": {
+      "system_sha256": "9609d5423306851b690a3815fb07c9956eda6f000238ef0c0c077fb15b80ddc2",
+      "type": "typeI",
+      "user_sha256": "097db318df1207acb3aeeb3a04a73f45805014cf39e8dff0e5a76ad85baaf89b"
+    },
+    "woody_plant_allometry_baad__a_lf": {
+      "system_sha256": "8443dfc353b6e041fd4b62fd908fe4ed67e3936771ae612430fbe09e596a72ce",
+      "type": "typeII",
+      "user_sha256": "173571a5ba45c0883a40e0768d99b24be35f4baf1ab8eea629a56d9ce31e4eda"
+    }
+  },
+  "source": "Table-2 GPT-5.5 SCILAWS-PARALLEL run (2026-06-29), messages[0:2] of each trajectory; max_turns=30"
+}

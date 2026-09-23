@@ -29,3 +29,8 @@ baseline_agent/key
 
 # OS
 .DS_Store
+
+# SCILAWS-PARALLEL external runner (branch scilaws-parallel-external-runner)
+runs/
+dist/
+scilaws_fetch_*/

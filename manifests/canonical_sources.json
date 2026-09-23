@@ -1,0 +1,16 @@
+{
+  "grader_files": {
+    "harness/evaluate_parallel.py": "05914108769a89175f03653d4e520c10e0b30ca0b3f68e6755cccaf672f4bb5e"
+  },
+  "runtime_files": {
+    "baseline_agent/agent.py": "7aaea2db6a311f0f980fc1cf1f2a9df80a6cc20e3c4ea46a273ff753889604d8",
+    "baseline_agent/call_llm_api.py": "4c991d581117766262861e9b2332df67a0af395fa830177347d693610f01c974",
+    "baseline_agent/run_baseline.py": "034daa060ad5bc3e055f411efbb2c06145aedc257e06ef1a606a744d8c5e5490",
+    "baseline_agent/task.py": "63284b1ce2df85e3f290e3d98438a8782a1abee188ca8944975508252a1f2db0",
+    "harness/agent_protocol.py": "226835f93f5ef74c4680cc849d0a427f8c0186fb464145415bb064ead3a2bf96",
+    "harness/prompts.py": "42b2e08d1891df0cb3354453424a8fd33e7c683752ae9992de89d793674f04bf",
+    "harness/sim_runtime.py": "d59f6d3e9405335000662e1d7a9ca850c06bbb65980ee05758ed25f11246c825"
+  },
+  "upstream_commit": "9239f66b921cb89c7a9d14061f782fdce49dcfb5",
+  "upstream_repo": "https://github.com/yiyihum/SciLaws-Bench"
+}
