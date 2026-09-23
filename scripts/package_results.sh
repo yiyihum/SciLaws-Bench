@@ -5,7 +5,9 @@
 #   bash scripts/package_results.sh --allow-incomplete   # partial bundle (not all tasks terminal)
 set -euo pipefail
 cd "$(dirname "$0")/.."
-PY="${PYTHON:-python}"
+PY="${PYTHON:-}"
+if [[ -z "$PY" && -x .venv/bin/python ]]; then PY=.venv/bin/python; fi   # set up by run_parallel.sh
+PY="${PY:-python}"
 args=("$@")
 if [[ " $* " != *" --config "* && " $* " != *" --run-name "* ]]; then
   args=(--config configs/gpt56_luna.yaml "${args[@]}")

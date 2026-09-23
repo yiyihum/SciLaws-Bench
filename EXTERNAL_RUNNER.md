@@ -15,6 +15,12 @@ Frozen configuration for this run: **`gpt-5.6-luna`, reasoning effort `medium`,
 `max_completion_tokens=65536`, provider-default sampling, no streaming, 30 turns**
 (`configs/gpt56_luna.yaml`).
 
+**Shortcut:** `export OPENAI_API_KEY=... && JOBS=40 bash scripts/run_parallel.sh` runs
+steps 1–3 and 5 in one command (reusing whatever is already set up) and launches only if
+preflight prints `READY`. Re-run it to resume. `DRY_RUN=1` stops before launching;
+`TASKS_ARCHIVE=<file>` installs tasks from an archive instead of Hugging Face. The
+sections below are the manual equivalent.
+
 ## 1. Setup (Python 3.11-3.13; 3.13 recommended)
 
 ```bash

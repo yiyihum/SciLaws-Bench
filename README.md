@@ -1,3 +1,25 @@
+> ## SCILAWS-PARALLEL External Runner
+>
+> This branch (`scilaws-parallel-external-runner`) runs the **SciLaws-Parallel** benchmark,
+> **118 tasks = 66 Single + 52 Multi**, with **`gpt-5.6-luna`** at **`reasoning_effort=medium`**.
+> It uses the exact paper / Table-2 harness (prompts, agent loop, sandbox and query caps
+> unchanged from `main` @ `9239f66`). **You do not run the official judge**: send the
+> packaged results back and we score them.
+>
+> ```bash
+> git clone -b scilaws-parallel-external-runner https://github.com/yiyihum/SciLaws-Bench.git scilaws-runner
+> cd scilaws-runner
+> export OPENAI_API_KEY=...
+> JOBS=40 bash scripts/run_parallel.sh     # sets up .venv, fetches + verifies tasks, preflight, launch
+> ```
+>
+> - **Monitor:** `bash scripts/monitor.sh --watch 30`
+> - **Resume:** `JOBS=40 bash scripts/run_parallel.sh` (the same command; finished tasks are skipped)
+> - **Package:** `bash scripts/package_results.sh` (send us the `dist/*.tar.gz` it prints)
+>
+> `JOBS` is the number of concurrent tasks; set it to what your API quota sustains.
+> Details are in [`EXTERNAL_RUNNER.md`](EXTERNAL_RUNNER.md).
+
 <div align="center">
 
 # SciLaws-Bench
