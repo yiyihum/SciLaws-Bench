@@ -40,6 +40,14 @@ lists explicitly: `max_law_constants`, `max_local_params`,
 tables, profiles, or large literal arrays into `OTHER_CONSTANTS` to evade the
 caps.
 
+`predict` must be row-independent: `predict(X)[i]` may depend only on `X[i]`
+(and the fitted parameters), never on other rows of the batch — no sorting,
+differencing, cumulative sums, or aggregates across test rows. The numeric
+scorer re-evaluates sampled test rows one at a time; if any single-row
+prediction differs from the batch prediction (relative tolerance `1e-4`), or
+`predict` fails on a single row, the submission is a contract violation
+(`status = contract_fail`, `numeric_score = 0`).
+
 ## Tool-call protocol (`agent_protocol.py`)
 
 A chat-driven agent emits exactly ONE XML tag per turn; the harness runs it and

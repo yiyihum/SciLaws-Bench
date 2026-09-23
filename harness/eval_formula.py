@@ -192,6 +192,39 @@ def _timeout_handler(signum, frame):  # noqa: ARG001
     raise _Timeout()
 
 
+# A law maps one input row to one prediction: predict(X)[i] may depend only on
+# X[i]. Re-evaluating sampled rows one at a time catches submissions that
+# sort / difference / aggregate across the test batch (a row permutation test
+# would miss those that sort internally and restore the order).
+ROW_PROBE_MAX = 32
+ROW_PROBE_RTOL = 1e-4
+ROW_PROBE_ATOL = 1e-9
+
+
+def check_row_independence(predict_call, X: np.ndarray, y_pred: np.ndarray,
+                           seed: int = 0) -> str | None:
+    """Return None if sampled rows predict the same alone as in the batch,
+    else a short description of the first violation."""
+    n = len(X)
+    if n <= 1:
+        return None
+    rng = np.random.default_rng(seed)
+    idx = rng.choice(n, size=min(ROW_PROBE_MAX, n), replace=False)
+    for i in idx:
+        try:
+            yi = np.asarray(predict_call(X[i:i + 1]), dtype=float).reshape(-1)
+        except Exception as exc:  # noqa: BLE001
+            return f"predict() fails on a single row ({type(exc).__name__}: {exc})"
+        if yi.shape != (1,):
+            return f"predict() on a single row returned shape {yi.shape}"
+        ref = float(y_pred[i])
+        if not np.isclose(yi[0], ref, rtol=ROW_PROBE_RTOL,
+                          atol=ROW_PROBE_ATOL * max(1.0, abs(ref))):
+            return (f"row {int(i)}: predict alone = {yi[0]:.6g} but in the batch "
+                    f"= {ref:.6g}; output depends on other rows")
+    return None
+
+
 # --------------------------------------------------------------------------
 # core
 # --------------------------------------------------------------------------
@@ -236,6 +269,7 @@ def run_formula(mod, clusters: dict, target_name: str,
     per_cluster: dict[int, dict] = {}
     n_failed = 0
     max_fit_seconds = 0.0
+    row_dependence: str | None = None
 
     for cid in cluster_ids:
         fr = fit_by_cluster[cid]
@@ -267,6 +301,10 @@ def run_formula(mod, clusters: dict, target_name: str,
             y_pred = np.asarray(mod.predict(X_test, **LAW, **local), dtype=float)
             if not np.all(np.isfinite(y_pred)):
                 raise RuntimeError("predict returned non-finite values")
+            if row_dependence is None:
+                row_dependence = check_row_independence(
+                    lambda Xr: mod.predict(Xr, **LAW, **local), X_test, y_pred,
+                    seed=int(cid))
 
             m = metrics(y_test, y_pred)
             per_cluster[cid] = {"metrics": m, "failed": False, "error": None}
@@ -284,6 +322,7 @@ def run_formula(mod, clusters: dict, target_name: str,
         "n_clusters_fitted": len(cluster_ids) - n_failed,
         "n_clusters_failed": n_failed,
         "max_fit_seconds": max_fit_seconds,
+        "row_dependence": row_dependence,
     }
 
 
@@ -312,7 +351,10 @@ def run_formula_flat(mod, flat: dict, target_name: str) -> dict:
         y_pred = np.asarray(mod.predict(X_test, **LAW), dtype=float)
         if not np.all(np.isfinite(y_pred)):
             raise RuntimeError("predict returned non-finite values")
-        return {"metrics": metrics(y_test, y_pred), "failed": False, "error": None}
+        row_dependence = check_row_independence(
+            lambda Xr: mod.predict(Xr, **LAW), X_test, y_pred)
+        return {"metrics": metrics(y_test, y_pred), "failed": False, "error": None,
+                "row_dependence": row_dependence}
     except Exception as exc:  # noqa: BLE001
         return {"metrics": None, "failed": True,
-                "error": f"{type(exc).__name__}: {exc}"}
+                "error": f"{type(exc).__name__}: {exc}", "row_dependence": None}

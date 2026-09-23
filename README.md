@@ -145,7 +145,9 @@ def fit(X, y, **LAW_CONSTANTS):    # Type II only, when LOCAL_FITTABLE is non-em
     return {"param": value}
 ```
 
-Type I submissions must not define `fit()`. The full contract is in
+Type I submissions must not define `fit()`. `predict` must be row-independent —
+`predict(X)[i]` may depend only on `X[i]`; the scorer re-checks sampled rows one at
+a time and scores a batch-dependent `predict` as a contract violation. The full contract is in
 [`harness/AGENT_INTERFACE.md`](harness/AGENT_INTERFACE.md).
 
 ## Scoring

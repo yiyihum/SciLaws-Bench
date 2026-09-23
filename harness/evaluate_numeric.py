@@ -521,6 +521,17 @@ def score_one(mod, label: str, data: dict, ref_metrics: dict, meta: dict,
                      "n_clusters_failed": sub_result["n_clusters_failed"],
                      "n_seeds": N_SEEDS}
 
+    row_dependence = sub_result.get("row_dependence")
+    if row_dependence:
+        return _zero_score_result(
+            label,
+            meta,
+            "contract_fail",
+            contract_ok=False,
+            violations=[f"row_dependence: {row_dependence}"],
+            note="predict(X)[i] must depend only on X[i]",
+        )
+
     numeric = float(np.mean(numeric_per_seed)) if numeric_per_seed else 0.0
     numeric_std = float(np.std(numeric_per_seed)) if numeric_per_seed else 0.0
     raw_numeric_vals = [v for v in raw_numeric_per_seed if isinstance(v, (int, float))]
