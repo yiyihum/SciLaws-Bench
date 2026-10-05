@@ -97,6 +97,7 @@ figcaption{font-size:13.5px;color:var(--fg-3);margin-top:10px;line-height:1.6;
   padding-left:14px;border-left:2px solid var(--line)}
 figcaption b{color:var(--fg-2)}
 .hero-fig img{border:none;border-radius:0;background:transparent}
+figure.narrow{max-width:520px}
 
 /* pull numbers */
 .figures{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);
@@ -124,6 +125,12 @@ figcaption b{color:var(--fg-2)}
 .eq{font-family:"IBM Plex Mono",monospace;font-size:14px;background:var(--bg-2);
   border:1px solid var(--line);border-radius:3px;padding:11px 14px;margin-top:14px;color:var(--fg-2);
   display:inline-block}
+
+/* text + figure side by side */
+.split{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:30px}
+.split figure{margin:0}
+@media(max-width:700px){.split{grid-template-columns:minmax(0,1fr)}}
+.h3{font-family:Newsreader,serif;font-size:22px;font-weight:600;letter-spacing:-.015em;margin:0 0 10px}
 
 /* domain list */
 .domlist{margin:20px 0 0;border-top:1px solid var(--line)}
@@ -179,13 +186,14 @@ figcaption b{color:var(--fg-2)}
 
 /* table */
 .tablewrap{overflow-x:auto;margin:24px 0 0}
-table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
-caption{text-align:left;font-size:13.5px;color:var(--fg-3);padding-bottom:10px}
-th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--fg-3);font-weight:600;padding:9px 12px;text-align:right;border-bottom:1.5px solid var(--fg);white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:720px}
+caption{text-align:left;font-size:13.5px;color:var(--fg-3);padding-bottom:10px;max-width:748px}
+th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--fg-3);font-weight:600;padding:9px 6px;text-align:right;border-bottom:1.5px solid var(--fg);white-space:nowrap}
 th:first-child{text-align:left}
-td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line-2);font-variant-numeric:tabular-nums;
-  font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--fg-2)}
+tr.grp th{text-align:center;border-bottom:1px solid var(--line);padding-bottom:6px;color:var(--fg-2)}
+td{padding:9px 6px;text-align:right;border-bottom:1px solid var(--line-2);font-variant-numeric:tabular-nums;
+  font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--fg-2)}
 td:first-child{text-align:left;font-family:Inter,sans-serif;font-weight:600;color:var(--fg);
   white-space:nowrap}
 tr:hover td{background:var(--card)}
@@ -374,7 +382,8 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <li><a href="#examples"><span class="nm">04</span> Examples</a></li>
     <li><a href="#results"><span class="nm">05</span> Results</a></li>
     <li><a href="#findings"><span class="nm">06</span> Findings</a></li>
-    <li><a href="#cite"><span class="nm">07</span> Citation</a></li>
+    <li><a href="#conclusion"><span class="nm">07</span> Conclusion</a></li>
+    <li><a href="#cite"><span class="nm">08</span> Citation</a></li>
   </ul>
   <div class="railbtns">
     <a class="rb solid" href="https://arxiv.org/abs/2609.01552" data-link="arxiv"><svg class="ic" aria-hidden="true"><use href="#i-arxiv"/></svg>arXiv <span>↗</span></a>
@@ -390,21 +399,21 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <p class="standfirst">We took <b>118 open problems out of 381 scientific papers</b> — the kind a research community is still arguing about — and asked frontier models to find the law twice: once from the measurements science already has, and once inside a world whose law has never been written down.</p>
 
     <div class="byline">
-      <b>Yiming Huang</b><sup>1*</sup>, <b>Ziche Liu</b><sup>1*</sup>, Zhuohang Wu<sup>2</sup>, Yiqian Wang<sup>3</sup>, Junxia Cui<sup>1</sup>, Xinkai Zou<sup>1</sup>, Lingjun Mao<sup>1</sup>, Nan Huang<sup>1</sup>, Naicheng Yu<sup>1</sup>, Kaijie Zhu<sup>4</sup>, Yue Ma<sup>1</sup>, Kun Zhou<sup>1</sup>, Letian Peng<sup>1†</sup>, Jingbo Shang<sup>1†</sup>
+      <b>Yiming Huang</b><sup>1*</sup>, <b>Ziche Liu</b><sup>1*</sup>, Junxia Cui<sup>1</sup>, Zhuohang Wu<sup>2</sup>, Yiqian Wang<sup>3</sup>, Xinkai Zou<sup>1</sup>, Lingjun Mao<sup>1</sup>, Nan Huang<sup>1</sup>, Naicheng Yu<sup>1</sup>, Kaijie Zhu<sup>4</sup>, Yue Ma<sup>1</sup>, Kun Zhou<sup>1</sup>, Letian Peng<sup>1†</sup>, Jingbo Shang<sup>1†</sup>
       <span class="aff">1 UC San Diego · 2 UC Irvine · 3 Cushing Academy · 4 UC Santa Barbara &nbsp;&nbsp;|&nbsp;&nbsp; *equal contribution &nbsp;†corresponding authors</span>
     </div>
 
     <figure style="margin-top:0" class="hero-fig">
-      <img src="assets/figures/main-f1.webp" alt="Overview of SciLaws-Bench.">
-      <figcaption><b>The construction, in one picture.</b> Every curated problem is instantiated twice — as a fixed-record <b>Real</b> task scored on predictive fit and scientific validity, and as a queryable <b>Parallel</b> world scored on how much of a hidden law the model recovers.</figcaption>
+      <img src="assets/figures/overview.webp" alt="Overview of SciLaws-Bench: task curation, data simulator construction, and Real and Parallel discovery.">
+      <figcaption><b>Overview of SciLaws-Bench.</b> Agent-built, human-audited task packages (top) feed a hidden-law synthesis and residual-calibrated simulator (middle). The same discovery agent then works either from a fixed observed dataset (<b>Real</b>, scored on S<sub>N</sub> and S<sub>V</sub>) or by querying the simulator (<b>Parallel</b>, scored on S<sub>S</sub>).</figcaption>
     </figure>
   </div>
 
   <section id="abstract" class="first">
     <h2>Abstract</h2>
-    <p>Scientific equation discovery has long been central to scientific progress, proceeding through iterative cycles of hypothesis generation, observational testing, and refinement under scientific constraints. As LLM capabilities advance and their role in AI for Science expands, it remains an open problem whether they can genuinely discover scientific laws — and how that ability should be evaluated. Existing evaluations either simplify discovery through synthetic settings or reuse published targets that may already be familiar to the models.</p>
-    <p>We introduce <b>SciLaws-Bench</b>, a benchmark for scientific law discovery built from published research and real scientific data: 118 problems drawn from 381 papers, covering 291 candidate laws and roughly 8M real data points across six disciplines. Each problem is instantiated in two complementary settings. <b>SciLaws-Real</b> asks models to propose laws from fixed real observations, evaluating held-out predictive fit and scientific validity derived from the source literature. <b>SciLaws-Parallel</b> asks models to actively query residual-calibrated worlds and recover synthesized hidden laws derived from published forms.</p>
-    <p>We find that predictive fit can diverge from scientific validity, that memorization shapes whether models reproduce or move beyond published formulas, and that a best-of-<i>N</i> study reveals a selection bottleneck.</p>
+    <p>Scientific law discovery has long been central to scientific progress, proceeding through iterative cycles of generating hypotheses, testing them against empirical evidence, and refining them under scientific constraints. As large language models (LLMs) become increasingly involved in scientific research, whether they can discover scientific laws and how to evaluate this ability remain open questions. A central evaluation challenge is to move beyond familiar published equations while keeping discovery tasks grounded in scientific data and constraints.</p>
+    <p>We introduce <b>SciLaws-Bench</b>, a curated collection of scientific task packages grounded in the source literature, each linking a scientific problem, supporting data, published reference equations, and scientific-validity rubrics. Through agent-assisted curation and human verification, we assemble 118 problems spanning six disciplines, drawing on 381 papers, 291 candidate laws, and roughly 8M data points. Each problem supports two complementary evaluation settings. <b>SciLaws-Real</b> uses fixed scientific data to evaluate proposed laws for held-out predictive fit and scientific validity. <b>SciLaws-Parallel</b> evaluates recovery of a newly synthesized structural variant of a published equation through active queries to a simulator calibrated to the source data.</p>
+    <p>Our evaluation reveals three limitations: good predictive fit need not imply scientific validity, recovering a published formula does not establish recovery of its new structural terms, and candidate selection remains a bottleneck in scientific law discovery.</p>
     <div class="figures" id="figs"></div>
   </section>
 
@@ -414,10 +423,18 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <p>A problem is admitted only when three things hold at once: the paper states an established closed-form law with enough validity constraints to check it; the dataset is public and large enough to evaluate on; and, jointly, the target does not leak into the inputs while at least one published formula beats a naive baseline. That last clause is what keeps the benchmark honest — every task has a real law that really works, and a real gap left to close.</p>
     <p><b>66 problems are single-group:</b> one global law, one parameter set. <b>52 are multi-group:</b> related groups share a functional form while a few parameter values differ, so a model must find a law that <em>transfers</em> rather than fit each group on its own. No prior benchmark covers that setting.</p>
     <div class="domlist" id="domlist"></div>
+    <p style="margin-top:26px">After filtering, papers are converted to Markdown and the relevant task fields are extracted, while the associated data tables are merged and standardized. Each package holds task metadata, executable reference formulas in Python, cleaned data splits, and a frozen, source-grounded validity rubric. Human reviewers check variable mappings, formula implementations, split rationales, and rubric items against the cited sources.</p>
     <figure>
-      <img src="assets/figures/20260826_0054_pipeline.webp" alt="The SciLaws-Bench construction pipeline.">
-      <figcaption><b>Curation pipeline.</b> LLM-assisted search and screening, human verification, standardization into executable task packages, then hidden-law synthesis and residual calibration for the Parallel worlds.</figcaption>
+      <img src="assets/figures/pipeline.webp" alt="Worked example of the SciLaws-Bench construction pipeline.">
+      <figcaption><b>Construction pipeline, worked example.</b> From paper–dataset curation and a fixed-data Real task to hidden-law synthesis and a residual-calibrated Parallel world.</figcaption>
     </figure>
+    <div class="split">
+      <div>
+        <h3 class="h3">Less familiar than textbook laws</h3>
+        <p>A cold-recall audit asks a model to write the reference formula from the variable specification alone, before it sees any data. Across ten OpenAI models, the mean cold-recall rate is <b>58.8%</b> on AI-Feynman and <b>28.3%</b> on SciLaws-Real. GPT-6 recalls 76.0% of AI-Feynman formulas and 33.9% of ours.</p>
+      </div>
+      <figure><img src="assets/figures/memorization_feynman_vs_realsr.webp" alt="Cold-recall rates on AI-Feynman versus SciLaws-Real."><figcaption><b>Memorization comparison</b> on matched models.</figcaption></figure>
+    </div>
 
     <div class="tx">
       <div class="tx-hd">
@@ -441,7 +458,7 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
       <div class="hd"><h3>SciLaws-Real</h3><span class="chip">fixed records</span></div>
       <p style="margin-bottom:0">The measurements have already been collected. A model reads the scientific context and the training records and proposes a closed-form law. Published formulas act as reference baselines, not as recovery targets — a model is free, and rewarded, for going past them.</p>
       <ul class="deflist">
-        <li><span class="t">S_N — numeric fit</span>Reference-relative on held-out data: the strongest published formula scores 0.5, a perfect predictor 1.0. Splits test interpolation, input-range extrapolation, temporal transfer, cross-condition generalization, or entirely held-out groups.</li>
+        <li><span class="t">S_N — numeric fit</span>Reference-relative on held-out data: the strongest published formula scores 0.5, a perfect predictor 1.0. Single-group splits test interpolation, input-range extrapolation, temporal transfer, or cross-condition generalization. Multi-group tasks hold out whole groups: the optical-dispersion task trains on 11 crystals and tests on CdSe, TiO<sub>2</sub> and ZnWO<sub>4</sub>, calibrating each on short wavelengths and scoring the shared law on long ones.</li>
         <li><span class="t">S_V — scientific validity</span>A code-enabled judge executes each item of a frozen, source-grounded rubric, behind a global anti-hacking gate that rejects lookup tables and runaway free parameters.
           <div class="eq">S_V(t) = a_t · M_t / N_t</div></li>
       </ul>
@@ -449,33 +466,35 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
 
     <div class="setting par">
       <div class="hd"><h3>SciLaws-Parallel</h3><span class="chip">active queries</span></div>
-      <p style="margin-bottom:0">The same problem, rebuilt as a world you can run experiments in. Its generating mechanism is a newly synthesized structural variant of the published formula — data-consistent, physically screened, and absent from the literature. The model starts with no observations at all.</p>
+      <p style="margin-bottom:0">The same problem, rebuilt as a world you can run experiments in. It keeps the scientific context, input ranges, validity constraints and group structure, but its generating equation is a newly synthesized structural variant of a published formula. The model starts with no observations, chooses inputs (and groups) within a query budget, and infers the hidden law from the responses.</p>
       <ul class="deflist">
+        <li><span class="t">Hidden-law synthesis</span>Several agents independently propose structural variants of the selected published baseline. Candidates pass an execution and fit check, then scientific-validity and integrity screening; a final judge picks one winner on simplicity, physical plausibility and source consistency.</li>
         <li><span class="t">S_S — structure recovery</span>Five levels: 0 unrelated · 0.25 right variables or trends · 0.5 the published base form · 0.75 base plus most added terms · 1.0 the complete hidden structure.</li>
-        <li><span class="t">Residual calibration</span>Parameters fitted on the real records, residuals debiased and resampled by k-NN bootstrap so the empirical scatter survives, noise scaled to keep the law identifiable inside the query budget.
+        <li><span class="t">Residual calibration</span>Parameters are fitted to the source data (per group for multi-group tasks). Residuals in linear or log space are detrended and resampled by k-NN bootstrap, and their scale is calibrated against the hidden-law signal without imposing one noise distribution on every task.
           <div class="eq">y = f(X) + α · resample(X)</div></li>
       </ul>
       <figure>
         <img src="assets/figures/sim3_worlds.webp" alt="Parallel worlds and the corresponding real records.">
-        <figcaption><b>Calibrated worlds against their real counterparts.</b> (a)–(c) single-group tasks; (d) a multi-group task with one shared functional form and group-specific parameters.</figcaption>
+        <figcaption><b>Calibrated worlds against their real counterparts.</b> (a)–(c) single-group tasks; (d) a multi-group task with one shared functional form and group-specific parameters. α is the residual-noise calibration factor; 1.00 keeps the debiased residual scale.</figcaption>
       </figure>
     </div>
   </section>
 
   <section id="examples">
     <h2>Examples</h2>
-    <p class="dek">Eight tasks spanning all six disciplines and both settings, each with one real agent trajectory. The task cards are taken from each task's <code>metadata.yaml</code>; the traces are verbatim logs from the nine-model panel — four reproduced from the paper's appendix, four excerpted from the same run archive — with every cut marked.</p>
+    <p class="dek">Eight tasks spanning all six disciplines and both settings, each with one real agent trajectory. The task cards are taken from each task's <code>metadata.yaml</code>; the traces are verbatim logs from the paper's original nine-model run — four reproduced in the appendix, four excerpted from the same archive — with every cut marked. Panel-wide counts in these cards refer to that nine-model run unless they name the fourteen-model panel.</p>
     <div class="quad" id="case-tabs"></div>
     <div id="case-view"></div>
   </section>
 
   <section id="results">
     <h2>Results</h2>
-    <p class="dek">Nine frontier models, one fixed harness: a ReAct-style agent with a Python sandbox, up to 30 turns, and a fixed experimentation budget in the Parallel setting. Only the base model varies.</p>
+    <p class="dek">Fourteen models from the GPT, Claude, Gemini, DeepSeek, Qwen, Kimi and GLM families, one fixed harness: a ReAct-style agent with a Python sandbox, up to 30 turns, and a task-specific query budget in the Parallel setting. Models with configurable reasoning effort run at medium. Only the base model varies.</p>
+    <p>GPT-6 leads all three metrics on aggregate. Against their predecessors GPT-5.5 and Claude Opus 4.8, GPT-6 and Claude Opus 5.5 gain 14.2 and 8.7 points of structure recovery, but only 1.1 and 0.5 points of scientific validity. Paired task-bootstrap tests support GPT-6's gain over GPT-5.5 in S<sub>S</sub>, not in fit or validity.</p>
     <div class="tablewrap">
-      <table id="lb"><caption>All values are percentages. <b>Single</b> = one global law; <b>Multi</b> = shared form with per-group parameters. Best per column in blue.</caption></table>
+      <table id="lb"><caption>All values are percentages; <b>All</b> is the per-task mean over all tasks. <b>Single</b> = one global law; <b>Multi</b> = shared form with per-group parameters. <b>Submit</b>: share of the 236 runs (both settings) returning a runnable formula. <b>Hack</b>: share of Real tasks failing the anti-hacking check. Best per column in blue.</caption></table>
     </div>
-    <p style="font-size:14px;color:var(--fg-3);margin-top:16px">S<sub>V</sub>, S<sub>S</sub> and the memorization verdict are LLM-judged. Against majority labels from five domain experts, the judges reach Cohen's κ = 0.82, 0.84 and 0.77 — all inside the corresponding human–human ranges.</p>
+    <p style="font-size:14px;color:var(--fg-3);margin-top:16px">S<sub>V</sub> and S<sub>S</sub> are judged by GPT-5.4-mini (xhigh reasoning); memorization by GPT-4.1. On a stratified sample of 135 items per judge, against majority labels from five domain experts, Cohen's κ is 0.82 for validity, 0.84 for structure (quadratically weighted) and 0.77 for memorization, each inside the pairwise human–human range.</p>
   </section>
 
   <section id="findings">
@@ -484,46 +503,56 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <div class="find">
       <div class="no">Finding one</div>
       <h3>A better fit is not a better law</h3>
-      <p>Across 3,616 within-task model pairs with unequal fit, numeric fit and scientific validity agree only 54.9% of the time — and reach 69.5% only once the fit margin exceeds ΔS<sub>N</sub> ≥ 0.4. On a nuclear-physics task the best-fitting submission introduces a resonance peak that does not exist. On the proton form-factor task the failure runs the other way: all nine models submit physically valid forms, and seven still lose to the published reference.</p>
+      <p>Within the same task, fit and validity agree in only 53.6% of 9,279 unequal-fit model pairs (validity ties count as half). Concordance reaches 66.4% only once the fit margin is ΔS<sub>N</sub> ≥ 0.4. Mean S<sub>N</sub> and S<sub>S</sub> correlate across models (r = 0.83), yet within GPT-6 their task-level correlation is r = 0.06. On the Keeling task GPT-5.5 beats the published reference on Real but recovers only the trend on Parallel; on Sellmeier it falls below the reference on Real and recovers the full hidden law on Parallel.</p>
+      <p>On a gold neutron-capture task, Qwen3.7-Max posts the best fit (S<sub>N</sub> = 0.73) with a law that adds a second resonance near 47 eV that the data do not contain. It meets 2 of 5 rubric items and fails the anti-hacking check, so S<sub>V</sub> = 0.</p>
       <div class="marginal">
-        <div><div class="n t">54.9%</div><div class="l">fit–validity concordance</div></div>
-        <div><div class="n t">69.5%</div><div class="l">only at ΔS<sub>N</sub> ≥ 0.4</div></div>
-        <div><div class="n o">7 / 9</div><div class="l">valid yet below reference</div></div>
+        <div><div class="n t">53.6%</div><div class="l">fit–validity concordance, 9,279 pairs</div></div>
+        <div><div class="n t">66.4%</div><div class="l">only at ΔS<sub>N</sub> ≥ 0.4</div></div>
+        <div><div class="n o">r = 0.06</div><div class="l">S<sub>N</sub> vs S<sub>S</sub> across tasks, GPT-6</div></div>
       </div>
-      <figure><img src="assets/figures/coupling_domain_performance.webp" alt="Fit-validity concordance and per-domain leaders."><figcaption><b>(a)</b> concordance as a function of fit margin. <b>(b)</b> aggregate rankings hide the domain picture — GPT-5.5 leads fit in five of six domains and ranks seventh in Biology.</figcaption></figure>
+      <figure class="narrow"><img src="assets/figures/coupling_domain_performance.webp" alt="Fit-validity concordance as a function of fit margin."><figcaption><b>Fit–validity concordance</b> as a function of fit margin. Shading marks 95% task-bootstrap confidence intervals.</figcaption></figure>
     </div>
 
     <div class="find">
       <div class="no">Finding two</div>
-      <h3>Memory hands back the published form, never the new terms</h3>
-      <p>A cold-recall audit sorts the tasks into <b>Canon</b>, <b>Mid</b> and <b>Moat</b>. Only 11.9% of problems are recalled by all nine models; 47.5% by none. On Real, models beat the published baseline <em>more</em> often precisely where they cannot recall it — GPT-5.5 goes from 21% to 54% between Canon and Moat. On Parallel, recall lifts recovery of the published base form from 0.59 to 0.85, yet recovery of the complete hidden law stays flat near 0.08 at every tier, moving only with capability: 0% for GPT-4o-mini, 21% for GPT-5.5.</p>
+      <h3>Memory hands back the published form, rarely the new terms</h3>
+      <p>A cold-recall audit counts a formula as recalled when at least three of five generated implementations match the reference. It sorts the 118 tasks into <b>Canon</b> (11, recalled by all fourteen models), <b>Mid</b> (61) and <b>Moat</b> (46, recalled by none). Even Claude Opus 5.5, the strongest recaller, reproduces only 44.1% of the reference formulas.</p>
+      <p>On Real, beating the reference is more common where recall cannot help: averaged across models, the above-reference share rises from 12% on Canon to 36% on Moat, while the reference-level share falls from 49% to 16% (GPT-6: 36% → 59%). On Parallel, published-form recovery falls from 92% on Canon to 61% on Moat, but full-law recovery stays within 12–13% at every tier. It moves with the model instead, from 0% for GPT-4o-mini to 42% for GPT-6. On Beer–Lambert, all fourteen models recover the published form and none recovers the full hidden law.</p>
       <div class="marginal">
-        <div><div class="n p">47.5%</div><div class="l">recalled by no model — the discovery moat</div></div>
-        <div><div class="n p">11.9%</div><div class="l">recalled by all nine</div></div>
-        <div><div class="n o">0.08</div><div class="l">full-law recovery, flat across tiers</div></div>
+        <div><div class="n p">39.0%</div><div class="l">of tasks recalled by no model — the discovery moat</div></div>
+        <div><div class="n p">9.3%</div><div class="l">recalled by all fourteen</div></div>
+        <div><div class="n o">12–13%</div><div class="l">full-law recovery, flat across tiers</div></div>
       </div>
-      <figure><img src="assets/figures/mem_figure5.webp" alt="Cold recall and recovery across the two settings."></figure>
+      <figure><img src="assets/figures/mem_figure5.webp" alt="Reference-beating and recovery by recall tier, and full-law recovery per model."><figcaption><b>(a)</b> Tasks above or near the best baseline by recall tier; bars are model means. <b>(b)</b> Published-form vs. full-law recovery by tier. <b>(c)</b> Full-law recovery per model, all tasks vs. Moat.</figcaption></figure>
     </div>
 
     <div class="find">
       <div class="no">Finding three</div>
-      <h3>Models write better laws than they can pick</h3>
-      <p>Draw 20 candidates per task, then let the same model run a knockout tournament over them. From N=5 to N=20 the oracle gains 4.5 points of fit and 5.3 points of validity; self-selection captures under 2 points of either. Inside the five-candidate groups the selector actually sees, 60% of its winners are Pareto-dominated by a sibling candidate — beaten on one metric and no worse on the other. The bottleneck is not generation.</p>
+      <h3>Models find better laws than they submit</h3>
+      <p>Models search differently. GPT-5.5 and GPT-6 often compare more than five candidates in one fitting step, while Gemini 3.5 Flash spends more turns; Claude Opus 5.5 compares more candidates than Opus 4.8 in fewer turns. Scoring every executable intermediate candidate on held-out data shows the cost of selection: the mean gap between the best candidate and the submitted law is 0.14 in S<sub>N</sub> for GPT-5.4-mini, against 0.03–0.04 for GPT-6 and Claude Opus 5.5.</p>
+      <p>Best-of-<i>N</i> sampling with GPT-5.4-mini on all 118 Real tasks shows the same gap across trajectories. From N = 5 to N = 20, the oracle gains 4.5 points of S<sub>N</sub> and 5.3 points of S<sub>V</sub>; self-selection gains under 2 points on either. In the five-candidate groups the selector sees, 60% of its winners are Pareto-dominated by another candidate.</p>
       <div class="marginal">
-        <div><div class="n o">0.93</div><div class="l">oracle joint balance at N=20</div></div>
-        <div><div class="n t">0.61</div><div class="l">self-selected</div></div>
-        <div><div class="n o">60%</div><div class="l">winners Pareto-dominated</div></div>
+        <div><div class="n o">0.14</div><div class="l">best-candidate vs submitted S<sub>N</sub>, GPT-5.4-mini</div></div>
+        <div><div class="n t">+4.5 / +5.3</div><div class="l">oracle S<sub>N</sub> / S<sub>V</sub> gain, N = 5 → 20</div></div>
+        <div><div class="n o">60%</div><div class="l">selected winners Pareto-dominated</div></div>
       </div>
-      <figure><img src="assets/figures/repeated_sampling.webp" alt="Self-selected versus oracle best-of-N performance."></figure>
+      <figure><img src="assets/figures/discovery_process.webp" alt="Search breadth versus interaction length, and best-candidate versus final-submission performance."><figcaption><b>(a)</b> Search breadth and interaction length, coloured by numeric performance. <b>(b)</b> Best-candidate versus final-submission performance; marker size shows candidate count.</figcaption></figure>
+      <figure><img src="assets/figures/repeated_sampling.webp" alt="Self-selected versus oracle best-of-N performance."><figcaption>Self-selected vs. oracle best-of-<i>N</i> for <b>(a)</b> S<sub>N</sub>, <b>(b)</b> S<sub>V</sub>, and <b>(c)</b> joint balance (the worse of the two pool-normalized scores). Error bars are 95% task-bootstrap confidence intervals.</figcaption></figure>
     </div>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>Current LLMs show some ability to discover scientific laws, but they do not yet do so reliably. Predictive fit does not establish scientific validity; memory helps models recover published forms while full structural recovery stays hard; and agents evaluate better laws than they submit.</p>
+    <p><b>Scope.</b> The benchmark covers closed-form law discovery with specified variables and scientific context, which is only part of the discovery process. Validity is judged against constraints drawn from the literature, which may not capture every relevant requirement. The task packages are built to support agents that design informative experiments, reason beyond memorized laws, and reliably pick scientifically valid hypotheses.</p>
   </section>
 
   <section id="cite">
     <h2>Citation</h2>
 <pre><b>@article</b>{huang2026scilaws,
   title   = {Can LLMs Discover Scientific Laws in Real and Parallel Worlds?},
-  author  = {Huang, Yiming and Liu, Ziche and Wu, Zhuohang and Wang, Yiqian and
-             Cui, Junxia and Zou, Xinkai and Mao, Lingjun and Huang, Nan and
+  author  = {Huang, Yiming and Liu, Ziche and Cui, Junxia and Wu, Zhuohang and
+             Wang, Yiqian and Zou, Xinkai and Mao, Lingjun and Huang, Nan and
              Yu, Naicheng and Zhu, Kaijie and Ma, Yue and Zhou, Kun and
              Peng, Letian and Shang, Jingbo},
   journal = {arXiv preprint arXiv:2609.01552},
@@ -553,15 +582,15 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
       '<div class="bar"><i style="width:'+(100*d.count/mx)+'%"></i></div>'+
       '<div class="ct">'+d.count+'</div></div>'}).join('');
 
-  const L=D.leaderboard,K=['sn_single','sn_multi','sn_all','sv_single','sv_multi','sv_all','ss_single','ss_multi','ss_all'];
-  const best={};K.forEach(function(k){best[k]=Math.max.apply(null,L.map(function(r){return r[k]}))});
-  let h='<thead><tr><th>Base model</th>'+
-    '<th>S<sub>N</sub> single</th><th>multi</th><th>all</th>'+
-    '<th>S<sub>V</sub> single</th><th>multi</th><th>all</th>'+
-    '<th>S<sub>S</sub> single</th><th>multi</th><th>all</th></tr></thead><tbody>';
+  const L=D.leaderboard,K=['sn_single','sn_multi','sn_all','sv_single','sv_multi','sv_all','ss_single','ss_multi','ss_all','submit','hack'];
+  const best={};K.forEach(function(k){best[k]=(k==='hack'?Math.min:Math.max).apply(null,L.map(function(r){return r[k]}))});
+  let h='<thead><tr class="grp"><th></th><th colspan="3">Real · S<sub>N</sub></th><th colspan="3">Real · S<sub>V</sub></th>'+
+    '<th colspan="3">Parallel · S<sub>S</sub></th><th>Submit</th><th>Hack</th></tr>'+
+    '<tr><th>Base model</th><th>single</th><th>multi</th><th>all</th><th>single</th><th>multi</th><th>all</th>'+
+    '<th>single</th><th>multi</th><th>all</th><th>↑</th><th>↓</th></tr></thead><tbody>';
   L.forEach(function(r){
     h+='<tr><td>'+r.model+'</td>'+K.map(function(k){
-      return '<td class="'+(r[k]===best[k]?'hi':'')+'">'+r[k].toFixed(1)+'</td>'}).join('')+'</tr>';
+      return '<td class="'+(r[k]===best[k]?'hi':'')+'">'+r[k].toFixed(k==='submit'||k==='hack'?1:2)+'</td>'}).join('')+'</tr>';
   });
   const t=document.getElementById('lb');
   t.insertAdjacentHTML('beforeend',h+'</tbody>');

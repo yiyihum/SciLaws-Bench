@@ -134,9 +134,9 @@
   // 6. Agents
   (() => {
     let g = eyebrow('EXPERIMENTS');
-    g += `<text x="110" y="230" font-size="120" class="disp real rise" ${d(.3)}>9</text>`;
-    g += `<text x="190" y="215" font-size="34" class="rise" ${d(.5)}>frontier LLMs</text>`;
-    g += `<text x="110" y="290" font-size="24" class="mute rise" ${d(.8)}>GPT-5.5 · Claude Opus 4.8 · Gemini 3.5 Flash · DeepSeek-V4 Pro · Qwen3.7-Max …</text>`;
+    g += `<text x="110" y="230" font-size="120" class="disp real rise" ${d(.3)}>14</text>`;
+    g += `<text x="250" y="215" font-size="34" class="rise" ${d(.5)}>frontier LLMs</text>`;
+    g += `<text x="110" y="290" font-size="24" class="mute rise" ${d(.8)}>GPT-6 · Claude Opus 5.5 · Gemini 3.5 Flash · Kimi K3 · DeepSeek-V4 Pro …</text>`;
     // ReAct loop
     const cx = 420, cy = 560, r = 160;
     g += `<circle class="draw" ${dt(1.2, 1.5)} pathLength="1" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--chalk)" stroke-opacity=".35" stroke-width="3"/>`;
@@ -154,7 +154,7 @@
     g += `<text x="900" y="670" font-size="26" class="par fade" ${d(6.2)}>Depth</text><text x="1030" y="670" font-size="22" class="mute fade" ${d(6.2)}>few candidates, refined over many turns</text>`;
     for (let i = 0; i < 3; i++) g += `<g class="pop" ${d(6.4 + i * .3)}><circle cx="${935 + i * 150}" cy="735" r="${16 + i * 9}" fill="none" stroke="var(--par)" stroke-width="4"/><circle cx="${935 + i * 150}" cy="735" r="${6 + i * 4}" fill="var(--par)"/></g>`;
     scenes.push({ name: 'Experiments', dur: 9.5, svg: svg(g), turns: true,
-      cap: 'Nine frontier LLMs run in the same ReAct agent framework, with a Python sandbox and up to 30 turns per trial. Their trajectories show two styles: <b>breadth</b> and <i>depth</i>.' });
+      cap: 'Fourteen LLMs from seven families run in the same ReAct agent framework, with a Python sandbox and up to 30 turns per trial. Their trajectories show two styles: <b>breadth</b> and <i>depth</i>.' });
   })();
 
   // 7. Finding 1
@@ -201,7 +201,7 @@
   (() => {
     seed = 41;
     let g = eyebrow('FINDING 3', 'real');
-    g += `<text x="110" y="190" font-size="46" class="disp rise" ${d(.2)}>Better at generating than selecting</text>`;
+    g += `<text x="110" y="190" font-size="46" class="disp rise" ${d(.2)}>Models find better laws than they submit</text>`;
     g += axes(130, 250, 1000, 470);
     g += `<text x="630" y="780" text-anchor="middle" font-size="22" class="mute fade">turns within a trajectory →</text>`;
     g += `<text x="90" y="485" text-anchor="middle" font-size="22" class="mute fade" transform="rotate(-90 90 485)">candidate law quality →</text>`;
@@ -219,7 +219,7 @@
     g += `<path class="line draw" ${dt(5.4, .8)} pathLength="1" stroke="var(--rose)" stroke-width="2.5" stroke-dasharray="1" d="M1180 ${B[1]} H1210 V${S[1]} H1180"/>`;
     g += `<text x="1230" y="${(B[1] + S[1]) / 2 + 10}" font-size="28" class="rose fade" ${d(5.8)}>selection gap</text>`;
     scenes.push({ name: 'Finding 3', dur: 9.5, svg: svg(g),
-      cap: 'Scoring intermediate candidates shows weaker models propose laws as good as the leaders’, yet submit worse ones. In Best-of-N search, <b>self-selection</b> captures only a small fraction of the gains.' });
+      cap: 'Scoring every intermediate candidate shows models often find a better-fitting law than the one they submit. In best-of-N search, <b>self-selection</b> captures little of the available gain.' });
   })();
 
   // 10. Ending
