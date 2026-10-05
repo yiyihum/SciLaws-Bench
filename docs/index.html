@@ -379,11 +379,12 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <li><a href="#abstract"><span class="nm">01</span> Abstract</a></li>
     <li><a href="#corpus"><span class="nm">02</span> The corpus</a></li>
     <li><a href="#settings"><span class="nm">03</span> Two settings</a></li>
-    <li><a href="#examples"><span class="nm">04</span> Examples</a></li>
-    <li><a href="#results"><span class="nm">05</span> Results</a></li>
-    <li><a href="#findings"><span class="nm">06</span> Findings</a></li>
-    <li><a href="#conclusion"><span class="nm">07</span> Conclusion</a></li>
-    <li><a href="#cite"><span class="nm">08</span> Citation</a></li>
+    <li><a href="#results"><span class="nm">04</span> Results</a></li>
+    <li><a href="#findings"><span class="nm">05</span> Findings</a></li>
+    <li><a href="#conclusion"><span class="nm">06</span> Conclusion</a></li>
+    <li><a href="#examples"><span class="nm">07</span> Examples</a></li>
+    <li><a href="#tasks"><span class="nm">08</span> All problems</a></li>
+    <li><a href="#cite"><span class="nm">09</span> Citation</a></li>
   </ul>
   <div class="railbtns">
     <a class="rb solid" href="https://arxiv.org/abs/2609.01552" data-link="arxiv"><svg class="ic" aria-hidden="true"><use href="#i-arxiv"/></svg>arXiv <span>↗</span></a>
@@ -436,18 +437,6 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
       <figure><img src="assets/figures/memorization_feynman_vs_realsr.webp" alt="Cold-recall rates on AI-Feynman versus SciLaws-Real."><figcaption><b>Memorization comparison</b> on matched models.</figcaption></figure>
     </div>
 
-    <div class="tx">
-      <div class="tx-hd">
-        <h3>Browse the corpus</h3>
-        <div class="tx-ct" id="txct"></div>
-      </div>
-      <div class="tx-ctl">
-        <input id="txq" type="search" placeholder="filter by problem, target or subfield" autocomplete="off" spellcheck="false">
-        <div class="tx-chips" id="txgrp"></div>
-      </div>
-      <div class="tx-ctl"><div class="tx-chips" id="txdom"></div></div>
-      <div class="tx-scroll"><table class="tx-tbl" id="txtbl"></table></div>
-    </div>
   </section>
 
   <section id="settings">
@@ -478,13 +467,6 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
         <figcaption><b>Calibrated worlds against their real counterparts.</b> (a)–(c) single-group tasks; (d) a multi-group task with one shared functional form and group-specific parameters. α is the residual-noise calibration factor; 1.00 keeps the debiased residual scale.</figcaption>
       </figure>
     </div>
-  </section>
-
-  <section id="examples">
-    <h2>Examples</h2>
-    <p class="dek">Eight tasks spanning all six disciplines and both settings, each with one real agent trajectory. The task cards are taken from each task's <code>metadata.yaml</code>; the traces are verbatim logs from the paper's original nine-model run — four reproduced in the appendix, four excerpted from the same archive — with every cut marked. Panel-wide counts in these cards refer to that nine-model run unless they name the fourteen-model panel.</p>
-    <div class="quad" id="case-tabs"></div>
-    <div id="case-view"></div>
   </section>
 
   <section id="results">
@@ -545,6 +527,30 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <h2>Conclusion</h2>
     <p>Current LLMs show some ability to discover scientific laws, but they do not yet do so reliably. Predictive fit does not establish scientific validity; memory helps models recover published forms while full structural recovery stays hard; and agents evaluate better laws than they submit.</p>
     <p><b>Scope.</b> The benchmark covers closed-form law discovery with specified variables and scientific context, which is only part of the discovery process. Validity is judged against constraints drawn from the literature, which may not capture every relevant requirement. The task packages are built to support agents that design informative experiments, reason beyond memorized laws, and reliably pick scientifically valid hypotheses.</p>
+  </section>
+
+  <section id="examples">
+    <h2>Examples</h2>
+    <p class="dek">Eight tasks spanning all six disciplines and both settings, each with one real agent trajectory. The task cards are taken from each task's <code>metadata.yaml</code>; the traces are verbatim logs from the paper's original nine-model run — four reproduced in the appendix, four excerpted from the same archive — with every cut marked. Panel-wide counts in these cards refer to that nine-model run unless they name the fourteen-model panel.</p>
+    <div class="quad" id="case-tabs"></div>
+    <div id="case-view"></div>
+  </section>
+
+  <section id="tasks">
+    <h2>All 118 problems</h2>
+    <p class="dek">Every task in the benchmark, with its discipline, group structure, target and split sizes. Each name links to the task package on Hugging Face.</p>
+    <div class="tx">
+      <div class="tx-hd">
+        <h3>Browse the tasks</h3>
+        <div class="tx-ct" id="txct"></div>
+      </div>
+      <div class="tx-ctl">
+        <input id="txq" type="search" placeholder="filter by problem, target or subfield" autocomplete="off" spellcheck="false">
+        <div class="tx-chips" id="txgrp"></div>
+      </div>
+      <div class="tx-ctl"><div class="tx-chips" id="txdom"></div></div>
+      <div class="tx-scroll"><table class="tx-tbl" id="txtbl"></table></div>
+    </div>
   </section>
 
   <section id="cite">

@@ -225,12 +225,11 @@
   // 10. Ending
   (() => {
     let g = '';
-    g += `<text x="800" y="330" text-anchor="middle" font-size="64" class="disp rise" ${d(.3)}>LLMs can discover <tspan class="real">some</tspan> scientific laws,</text>`;
-    g += `<text x="800" y="420" text-anchor="middle" font-size="64" class="disp rise" ${d(1)}>but not yet <tspan class="rose">reliably</tspan>.</text>`;
-    g += `<text x="800" y="520" text-anchor="middle" font-size="30" class="mute rise" ${d(2)}>The bottleneck: self-evaluation and candidate selection</text>`;
-    g += `<line x1="640" y1="600" x2="960" y2="600" stroke="var(--chalk)" stroke-opacity=".25" class="fade" ${d(2.8)}/>`;
-    g += `<text x="800" y="680" text-anchor="middle" font-size="60" class="disp fade" ${d(3)}>SciLaws<tspan class="real">-</tspan>Bench</text>`;
-    g += `<text x="800" y="740" text-anchor="middle" font-size="26" class="mono par fade" ${d(3.4)}>arXiv:2609.01552</text>`;
+    g += `<text x="800" y="370" text-anchor="middle" font-size="64" class="disp rise" ${d(.3)}>LLMs can discover <tspan class="real">some</tspan> scientific laws,</text>`;
+    g += `<text x="800" y="460" text-anchor="middle" font-size="64" class="disp rise" ${d(1)}>but not yet <tspan class="rose">reliably</tspan>.</text>`;
+    g += `<line x1="640" y1="560" x2="960" y2="560" stroke="var(--chalk)" stroke-opacity=".25" class="fade" ${d(2)}/>`;
+    g += `<text x="800" y="650" text-anchor="middle" font-size="60" class="disp fade" ${d(2.2)}>SciLaws<tspan class="real">-</tspan>Bench</text>`;
+    g += `<text x="800" y="710" text-anchor="middle" font-size="26" class="mono par fade" ${d(2.6)}>arXiv:2609.01552</text>`;
     scenes.push({ name: 'Closing', dur: 8, svg: svg(g),
       cap: 'The real world tests scientific validity; the parallel world tests genuine discovery. <b>SciLaws-Bench</b> measures both.' });
   })();
