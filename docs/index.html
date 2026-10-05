@@ -132,57 +132,25 @@ figure.narrow{max-width:520px}
 @media(max-width:700px){.split{grid-template-columns:minmax(0,1fr)}}
 .h3{font-family:Newsreader,serif;font-size:22px;font-weight:600;letter-spacing:-.015em;margin:0 0 10px}
 
-/* domain list */
-.domlist{margin:20px 0 0;border-top:1px solid var(--line)}
-.domrow{display:grid;grid-template-columns:190px 1fr 46px;gap:16px;align-items:center;
-  padding:11px 0;border-bottom:1px solid var(--line-2);font-size:15px}
-.domrow .nm{font-weight:500}
-.domrow .bar{height:9px;background:var(--bg-2);border-radius:2px;overflow:hidden}
-.domrow .bar i{display:block;height:100%;background:var(--brand);opacity:.75}
-.domrow .ct{font-family:"IBM Plex Mono",monospace;text-align:right;color:var(--fg-3);font-size:14px}
-@media(max-width:620px){.domrow{grid-template-columns:1fr 46px}.domrow .bar{display:none}}
-
-/* task explorer */
-.tx{margin:30px 0 0}
-.tx-hd{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.tx h3{font-family:Newsreader,serif;font-size:22px;font-weight:600;letter-spacing:-.015em;margin:0}
-.tx-ct{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--fg-3);white-space:nowrap}
-.tx-ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0}
-.tx-ctl input{flex:1 1 210px;min-width:0;font-family:inherit;font-size:14px;color:var(--fg);
-  background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:7px 11px;transition:.14s}
-.tx-ctl input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-2)}
-.tx-ctl input::placeholder{color:var(--fg-3)}
-.tx-chips{display:flex;flex-wrap:wrap;gap:6px}
-.tx-chips button{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;
-  background:var(--bg);border:1px solid var(--line);color:var(--fg-2);border-radius:20px;
-  padding:5px 11px;cursor:pointer;transition:.14s;display:inline-flex;align-items:center;gap:6px}
-.tx-chips button:hover{border-color:var(--fg-3);color:var(--fg)}
-.tx-chips button.on{border-color:var(--fg);background:var(--fg);color:var(--bg)}
-.tx-chips button i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85;flex:none}
-.tx-chips button.on i{background:var(--bg)}
-.tx-scroll{margin-top:14px;max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:5px}
-.tx-tbl{min-width:700px;font-size:14px}
-.tx-tbl th{position:sticky;top:0;z-index:1;background:var(--bg);padding:10px 12px;
-  border-bottom:1px solid var(--line);text-align:left}
-.tx-tbl th.r{text-align:right}
-.tx-tbl td{font-family:Inter,sans-serif;font-size:14px;text-align:left;padding:9px 12px;
-  border-bottom:1px solid var(--line-2);color:var(--fg-2);vertical-align:top}
-.tx-tbl td.r{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:13px}
-.tx-tbl tbody tr:first-child td{background:none}
-.tx-tbl tbody tr:hover td{background:var(--card)}
-.tx-tbl td:first-child{white-space:normal;font-weight:600;color:var(--fg);max-width:30ch}
-.tx-tbl .sub{display:block;font-weight:400;font-size:12.5px;color:var(--fg-3);margin-top:2px}
-.tx-tbl .tg{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--fg-2)}
-.tx-tbl .tg em{font-style:normal;color:var(--fg-3)}
-.tx-dom{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:13px}
-.tx-dom i{width:7px;height:7px;border-radius:50%;flex:none}
-.tx-g{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
-  padding:2px 7px;border-radius:3px;background:var(--bg-2);color:var(--fg-3)}
-.tx-g.m{background:var(--brand-2);color:var(--brand)}
-.tx-tbl a{color:inherit;text-decoration:none}
-.tx-tbl a:hover{color:var(--brand);text-decoration:underline}
-.tx-none{padding:26px 14px;color:var(--fg-3);font-size:14px}
-@media(max-width:620px){.tx-scroll{max-height:340px}}
+/* domains with their task names (each list scrolls on its own) */
+.domgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 0}
+@media(max-width:900px){.domgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.domgrid{grid-template-columns:minmax(0,1fr)}}
+.dom{border:1px solid var(--line);border-radius:6px;background:var(--bg);display:flex;flex-direction:column;min-width:0}
+.dom-hd{display:flex;align-items:baseline;gap:8px;padding:12px 14px 8px}
+.dom-hd i{width:8px;height:8px;border-radius:50%;flex:none;align-self:center}
+.dom-hd b{font-size:14.5px;font-weight:600;color:var(--fg)}
+.dom-hd span{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--fg-3)}
+.dom-bar{height:3px;margin:0 14px 6px;background:var(--line-2);border-radius:2px;overflow:hidden}
+.dom-bar i{display:block;height:100%}
+.dom ul{list-style:none;margin:0;padding:4px 0 8px;max-height:210px;overflow-y:auto;overscroll-behavior:contain;
+  border-top:1px solid var(--line-2)}
+.dom li a{display:block;padding:4px 14px;font-size:13.5px;line-height:1.45;color:var(--fg-2);text-decoration:none}
+.dom li a:hover{background:var(--card);color:var(--brand)}
+.dom li a:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
+.dom li .tg{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--fg-3)}
+.dom li em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--fg-3);margin-left:6px}
 
 /* table */
 .tablewrap{overflow-x:auto;margin:24px 0 0}
@@ -383,8 +351,7 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <li><a href="#findings"><span class="nm">05</span> Findings</a></li>
     <li><a href="#conclusion"><span class="nm">06</span> Conclusion</a></li>
     <li><a href="#examples"><span class="nm">07</span> Examples</a></li>
-    <li><a href="#tasks"><span class="nm">08</span> All problems</a></li>
-    <li><a href="#cite"><span class="nm">09</span> Citation</a></li>
+    <li><a href="#cite"><span class="nm">08</span> Citation</a></li>
   </ul>
   <div class="railbtns">
     <a class="rb solid" href="https://arxiv.org/abs/2609.01552" data-link="arxiv"><svg class="ic" aria-hidden="true"><use href="#i-arxiv"/></svg>arXiv <span>↗</span></a>
@@ -423,7 +390,7 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <p class="dek">Mined from active, data-driven literature — not textbooks — with human verification of every eligibility decision that matters.</p>
     <p>A problem is admitted only when three things hold at once: the paper states an established closed-form law with enough validity constraints to check it; the dataset is public and large enough to evaluate on; and, jointly, the target does not leak into the inputs while at least one published formula beats a naive baseline. That last clause is what keeps the benchmark honest — every task has a real law that really works, and a real gap left to close.</p>
     <p><b>66 problems are single-group:</b> one global law, one parameter set. <b>52 are multi-group:</b> related groups share a functional form while a few parameter values differ, so a model must find a law that <em>transfers</em> rather than fit each group on its own. No prior benchmark covers that setting.</p>
-    <div class="domlist" id="domlist"></div>
+    <div class="domgrid" id="domgrid"></div>
     <p style="margin-top:26px">After filtering, papers are converted to Markdown and the relevant task fields are extracted, while the associated data tables are merged and standardized. Each package holds task metadata, executable reference formulas in Python, cleaned data splits, and a frozen, source-grounded validity rubric. Human reviewers check variable mappings, formula implementations, split rationales, and rubric items against the cited sources.</p>
     <figure>
       <img src="assets/figures/pipeline.webp" alt="Worked example of the SciLaws-Bench construction pipeline.">
@@ -536,23 +503,6 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     <div id="case-view"></div>
   </section>
 
-  <section id="tasks">
-    <h2>All 118 problems</h2>
-    <p class="dek">Every task in the benchmark, with its discipline, group structure, target and split sizes. Each name links to the task package on Hugging Face.</p>
-    <div class="tx">
-      <div class="tx-hd">
-        <h3>Browse the tasks</h3>
-        <div class="tx-ct" id="txct"></div>
-      </div>
-      <div class="tx-ctl">
-        <input id="txq" type="search" placeholder="filter by problem, target or subfield" autocomplete="off" spellcheck="false">
-        <div class="tx-chips" id="txgrp"></div>
-      </div>
-      <div class="tx-ctl"><div class="tx-chips" id="txdom"></div></div>
-      <div class="tx-scroll"><table class="tx-tbl" id="txtbl"></table></div>
-    </div>
-  </section>
-
   <section id="cite">
     <h2>Citation</h2>
 <pre><b>@article</b>{huang2026scilaws,
@@ -582,11 +532,19 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     [S.papers,'Source papers'],[S.datapoints,'Real data points']]
     .map(function(c){return '<div><div class="n">'+c[0]+'</div><div class="l">'+c[1]+'</div></div>'}).join('');
 
+  var DOMC={'Astronomy':'#7c3aed','Biology':'#0d9488','Earth & Physics':'#2563eb',
+    'Ecology & Hydrology':'#16a34a','Materials & Engineering':'#d97706','Social Sciences':'#db2777'};
+  var HF='https://huggingface.co/datasets/RealSR/SciLaws-Bench/tree/main/tasks/';
+  function esc(x){return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   const mx=Math.max.apply(null,D.domains.map(function(d){return d.count}));
-  document.getElementById('domlist').innerHTML=D.domains.map(function(d){
-    return '<div class="domrow"><div class="nm">'+d.name+'</div>'+
-      '<div class="bar"><i style="width:'+(100*d.count/mx)+'%"></i></div>'+
-      '<div class="ct">'+d.count+'</div></div>'}).join('');
+  document.getElementById('domgrid').innerHTML=D.domains.map(function(d){
+    var c=DOMC[d.name]||'#8494a8';
+    var ts=D.tasks.filter(function(t){return t.domain===d.name}).sort(function(a,b){return a.name<b.name?-1:1});
+    var seen={};D.tasks.forEach(function(t){seen[t.name]=(seen[t.name]||0)+1});
+    return '<div class="dom"><div class="dom-hd"><i style="background:'+c+'"></i><b>'+esc(d.name)+'</b><span>'+d.count+'</span></div>'+
+      '<div class="dom-bar"><i style="width:'+(100*d.count/mx)+'%;background:'+c+'"></i></div><ul>'+
+      ts.map(function(t){return '<li><a href="'+HF+(t.group==='single'?'typeI/':'typeII/')+esc(t.id)+'" target="_blank" rel="noopener">'+
+        esc(t.name)+(seen[t.name]>1?' <span class="tg">· '+esc(t.target)+'</span>':'')+(t.group==='multi'?'<em>multi</em>':'')+'</a></li>'}).join('')+'</ul></div>'}).join('');
 
   const L=D.leaderboard,K=['sn_single','sn_multi','sn_all','sv_single','sv_multi','sv_all','ss_single','ss_multi','ss_all','submit','hack'];
   const best={};K.forEach(function(k){best[k]=(k==='hack'?Math.min:Math.max).apply(null,L.map(function(r){return r[k]}))});
@@ -631,59 +589,6 @@ footer{padding:36px 0 0;border-top:1px solid var(--line);color:var(--fg-3);font-
     show(0);
     tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
       tabs.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');show(+b.dataset.i)});
-  }
-
-  // ---- task explorer ----
-  if(document.getElementById('txtbl')){
-    var DOMC={'Astronomy':'#7c3aed','Biology':'#0d9488','Earth & Physics':'#2563eb',
-      'Ecology & Hydrology':'#16a34a','Materials & Engineering':'#d97706','Social Sciences':'#db2777'};
-    var T=D.tasks,fd='',fg='',fq='';
-    var tbl=document.getElementById('txtbl'),ct=document.getElementById('txct');
-    var HF='https://huggingface.co/datasets/RealSR/SciLaws-Bench/tree/main/tasks/';
-    function esc(x){return String(x).replace(/[&<>"]/g,function(c){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-    function num(n){return n.toLocaleString('en-US')}
-    function chips(el,items,get,set){
-      el.innerHTML=items.map(function(it){
-        return '<button data-v="'+esc(it.v)+'"'+(get()===it.v?' class="on"':'')+'>'+
-          (it.c?'<i style="background:'+it.c+'"></i>':'')+esc(it.t)+'</button>'}).join('');
-      el.onclick=function(e){var b=e.target.closest('button');if(!b)return;
-        set(b.dataset.v);
-        el.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
-        b.classList.add('on');draw()};
-    }
-    function draw(){
-      var q=fq.trim().toLowerCase();
-      var rows=T.filter(function(t){
-        if(fd&&t.domain!==fd)return false;
-        if(fg&&t.group!==fg)return false;
-        if(q&&(t.name+' '+t.target+' '+t.sub+' '+t.domain).toLowerCase().indexOf(q)<0)return false;
-        return true});
-      ct.textContent=rows.length===T.length?T.length+' problems'
-        :rows.length+' of '+T.length+' problems';
-      if(!rows.length){tbl.innerHTML='<tbody><tr><td class="tx-none">No problem matches that filter.</td></tr></tbody>';return}
-      tbl.innerHTML='<thead><tr><th>Problem</th><th>Discipline</th><th>Type</th><th>Target</th>'+
-        '<th class="r">Inputs</th><th class="r">Train</th><th class="r">Test</th></tr></thead><tbody>'+
-        rows.map(function(t){
-          var dir=(t.group==='single'?'typeI/':'typeII/')+t.id;
-          return '<tr><td><a href="'+HF+esc(dir)+'" target="_blank" rel="noopener">'+esc(t.name)+
-            '</a><span class="sub">'+esc(t.sub)+'</span></td>'+
-            '<td><span class="tx-dom"><i style="background:'+(DOMC[t.domain]||'#8494a8')+'"></i>'+esc(t.domain)+'</span></td>'+
-            '<td><span class="tx-g'+(t.group==='multi'?' m':'')+'">'+(t.group==='multi'?'multi':'single')+'</span></td>'+
-            '<td><span class="tg">'+esc(t.target)+(t.unit?' <em>'+esc(t.unit)+'</em>':'')+'</span></td>'+
-            '<td class="r">'+t.ni+'</td><td class="r">'+num(t.tr)+'</td><td class="r">'+num(t.te)+'</td></tr>'
-        }).join('')+'</tbody>';
-    }
-    chips(document.getElementById('txgrp'),
-      [{v:'',t:'all'},{v:'single',t:'single-group'},{v:'multi',t:'multi-group'}],
-      function(){return fg},function(v){fg=v});
-    chips(document.getElementById('txdom'),
-      [{v:'',t:'all disciplines'}].concat(D.domains.map(function(d){
-        return {v:d.name,t:d.name.toLowerCase()+' \u00b7 '+d.count,c:DOMC[d.name]}})),
-      function(){return fd},function(v){fd=v});
-    var qi=document.getElementById('txq');
-    qi.addEventListener('input',function(){fq=qi.value;draw()});
-    draw();
   }
 
   // scroll spy
