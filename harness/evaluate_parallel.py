@@ -36,6 +36,9 @@ from typing import Any
 import numpy as np
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from eval_formula import call_with_law_constants  # noqa: E402
+
 
 DEFAULT_CHUNK_SIZE = 3
 DEFAULT_MAX_WORKERS = 1
@@ -639,6 +642,7 @@ def _contract_check(stage_task_dir: Path, stage_id: str) -> tuple[bool, str]:
         return False, f"typeII predict first argument must be X, got {predict_sig}"
 
     X = _sample_matrix(metadata, used_inputs, n=8)
+    law = dict(getattr(module, "LAW_CONSTANTS", {}))
     if task_type == "typeII":
         local = getattr(module, "LOCAL_FITTABLE", None)
         if not isinstance(local, dict) or not local:
@@ -648,16 +652,17 @@ def _contract_check(stage_task_dir: Path, stage_id: str) -> tuple[bool, str]:
         fit_sig = inspect.signature(module.fit)
         if list(fit_sig.parameters)[:2] != ["X_fit", "y_fit"]:
             return False, f"typeII fit signature must start fit(X_fit, y_fit), got {fit_sig}"
-        params = module.fit(X, _sample_y(metadata, n=len(X)))
+        params = call_with_law_constants(
+            module.fit, X, _sample_y(metadata, n=len(X)), law_constants=law)
         if not isinstance(params, dict):
             return False, "fit must return a dict"
         missing = set(local) - set(params)
         extra = set(params) - set(local)
         if missing or extra:
             return False, f"fit keys mismatch: missing={sorted(missing)} extra={sorted(extra)}"
-        y = module.predict(X, **params)
+        y = call_with_law_constants(module.predict, X, law_constants=law, local_params=params)
     else:
-        y = module.predict(X)
+        y = call_with_law_constants(module.predict, X, law_constants=law)
 
     arr = np.asarray(y, dtype=float)
     if arr.shape != (len(X),):
