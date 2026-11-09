@@ -8,6 +8,8 @@ submitted formula.py).
 A formula module must expose the v2 contract:
   USED_INPUTS, LAW_CONSTANTS, OTHER_CONSTANTS, LOCAL_FITTABLE,
   predict(X, **params)   and (Type II) fit(X_fit, y_fit, **law_constants).
+Functions may instead read LAW_CONSTANTS from their module globals, as in the
+prompt templates. Call signatures select the convention before execution.
 
 `run_formula` performs NO score normalisation and NO judging — it only
 executes the formula and measures error. The reference-relative score
@@ -16,12 +18,45 @@ and the scoring channel lives in evaluate_numeric.py.
 from __future__ import annotations
 
 import csv
+import inspect
 import random
 import signal
 import time
 from pathlib import Path
 
 import numpy as np
+
+SCORING_INTERFACE_VERSION = "law-kwargs-or-globals-v1"
+
+
+def call_with_law_constants(func, *args, law_constants, local_params=None):
+    """Prefer explicit shared kwargs; otherwise use the prompt's global form.
+
+    Only argument binding can select the alternate form. Never retry a function
+    that has started executing, and never omit fitted local parameters. When
+    signature inspection is unavailable, retain the original explicit call.
+    """
+    local = {} if local_params is None else dict(local_params)
+    law = dict(law_constants)
+    overlap = law.keys() & local.keys()
+    if overlap:
+        raise TypeError(f"shared and local parameter names overlap: {sorted(overlap)}")
+    kwargs = {**law, **local}
+    if law:
+        try:
+            signature = inspect.signature(func, follow_wrapped=False)
+        except (TypeError, ValueError):
+            pass
+        else:
+            try:
+                signature.bind(*args, **kwargs)
+            except TypeError as explicit_error:
+                try:
+                    signature.bind(*args, **local)
+                except TypeError:
+                    raise explicit_error from None
+                kwargs = local
+    return func(*args, **kwargs)
 
 
 # --------------------------------------------------------------------------
@@ -256,7 +291,8 @@ def run_formula(mod, clusters: dict, target_name: str,
                     signal.alarm(int(fit_timeout_seconds))
                 t0 = time.perf_counter()
                 try:
-                    local = mod.fit(X_fit, y_fit, **LAW)
+                    local = call_with_law_constants(
+                        mod.fit, X_fit, y_fit, law_constants=LAW)
                 finally:
                     if fit_timeout_seconds:
                         signal.alarm(0)
@@ -264,7 +300,8 @@ def run_formula(mod, clusters: dict, target_name: str,
             else:
                 local = {}
 
-            y_pred = np.asarray(mod.predict(X_test, **LAW, **local), dtype=float)
+            y_pred = np.asarray(call_with_law_constants(
+                mod.predict, X_test, law_constants=LAW, local_params=local), dtype=float)
             if not np.all(np.isfinite(y_pred)):
                 raise RuntimeError("predict returned non-finite values")
 
@@ -309,7 +346,8 @@ def run_formula_flat(mod, flat: dict, target_name: str) -> dict:
         X_test = (_to_array(test_rows, test_header, used) if used
                   else np.zeros((len(test_rows), 0), dtype=float))
         y_test = _col(test_rows, test_header, target_name)
-        y_pred = np.asarray(mod.predict(X_test, **LAW), dtype=float)
+        y_pred = np.asarray(call_with_law_constants(
+            mod.predict, X_test, law_constants=LAW), dtype=float)
         if not np.all(np.isfinite(y_pred)):
             raise RuntimeError("predict returned non-finite values")
         return {"metrics": metrics(y_test, y_pred), "failed": False, "error": None}

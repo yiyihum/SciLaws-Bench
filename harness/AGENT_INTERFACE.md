@@ -32,6 +32,19 @@ def fit(X, y, **LAW_CONSTANTS):    # Type II only; returns {param: value} per cl
     return {}
 ```
 
+The `law-kwargs-or-globals-v1` evaluator also accepts the prompt-template form
+`fit(X_fit, y_fit)` and `predict(X, **local_params)`, where shared constants are
+read from the module's `LAW_CONSTANTS` dictionary. For each function, it first
+checks whether the signature accepts all shared constants as keyword arguments.
+If so, it uses that call. Otherwise, it checks the call without shared keywords,
+while retaining every local parameter. It chooses the call before execution;
+exceptions raised inside a function are never a reason to retry or switch forms.
+Shared/local parameter name collisions remain errors. The same dispatch is used
+for numeric scoring and the parallel structure gate.
+This changes execution compatibility only; constant-use restrictions and scoring
+rules still apply. Historical scores must remain labeled with their original
+evaluator; compatibility rescoring is a separate result set.
+
 Stay within the anti-dump caps (`metadata.yaml: caps`), which the task message
 lists explicitly: `max_law_constants`, `max_local_params`,
 `max_init_size_per_param`, and `fit_timeout_seconds`. Constants must be baked in

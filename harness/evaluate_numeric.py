@@ -40,6 +40,7 @@ sys.path.insert(0, str(HARNESS_DIR))
 
 from eval_formula import (  # noqa: E402
     METRICS, load_clusters, load_flat, run_formula, run_formula_flat,
+    SCORING_INTERFACE_VERSION,
 )
 # validity_score is intentionally not part of this numeric scorer. It is
 # produced separately by the code-enabled judge described in VALIDITY_JUDGE.md.
@@ -373,6 +374,7 @@ def _zero_score_result(
         score_obj.setdefault("note", note)
     return {
         "submission": label,
+        "scoring_interface_version": SCORING_INTERFACE_VERSION,
         "contract_ok": contract_ok,
         "status": status,
         "error": error,
@@ -542,6 +544,7 @@ def score_one(mod, label: str, data: dict, ref_metrics: dict, meta: dict,
 
     return {
         "submission": label,
+        "scoring_interface_version": SCORING_INTERFACE_VERSION,
         "contract_ok": True,
         "status": "exec_error" if failed else "ok",
         **exec_info,
@@ -580,6 +583,7 @@ def mode_score(task_dir: Path, submission: Path | None) -> int:
                 contract_ok=False,
                 error=f"{type(exc).__name__}: {exc}",
             )
+        result["scoring_interface_version"] = SCORING_INTERFACE_VERSION
         print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 
